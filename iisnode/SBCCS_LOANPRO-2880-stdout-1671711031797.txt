@@ -1,0 +1,2730 @@
+true
+in function
+checking token
+1 20
+0 20
+select count(*) as cnt from view_house_shop_rent_information where 1 AND INCOME_INFORMATION_ID = 854
+12/22/2022, 5:40:31 PM  Requested Method : - POST /api/expenditureInformation/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+1 20
+0 20
+select count(*) as cnt from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 0 } ]
+select * from view_house_shop_rent_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc LIMIT 0,20
+[ RowDataPacket { cnt: 1 } ]
+select * from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc LIMIT 0,20
+[ RowDataPacket { cnt: 1 } ]
+select * from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc LIMIT 0,20
+12/22/2022, 5:40:31 PM  Requested Method : - POST /api/businessFirmInformation/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_business_firm_information where 1 AND INCOME_INFORMATION_ID = 854
+12/22/2022, 5:40:31 PM  Requested Method : - POST /api/businessFirmInformation/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_business_firm_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_business_firm_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+[ RowDataPacket { cnt: 1 } ]
+select * from view_business_firm_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:40:31 PM  Requested Method : - POST /api/guarantorForLoans/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_guarantor_for_loan where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+12/22/2022, 5:40:31 PM  Requested Method : - POST /api/loanTakenInformation/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_taken_information where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_guarantor_for_loan where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[ RowDataPacket { cnt: 1 } ]
+select * from view_loan_taken_information where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[
+  RowDataPacket {
+    ID: 249,
+    CREDIT_INFORMATION_ID: 893,
+    BANK_OR_INSTITUTE_NAME: ' ',
+    BRANCH_NAME: ' ',
+    LOAN_TYPE_ID: 0,
+    SANCTIONED_AMOUNT: 0,
+    INSTALLMENT_AMOUNT: 0,
+    LOAN_OUTSTANDING: 105000,
+    LOAN_OVERDUE_AMOUNT: 0,
+    DUE_DATE: null,
+    SECURITY_OFFERED: null,
+    IS_SUB: 0,
+    CREATED_MODIFIED_DATE: '2022-12-22 16:31:11',
+    READ_ONLY: 'N',
+    ARCHIVE_FLAG: 'F',
+    CLIENT_ID: 1,
+    ACCOUNT_NUMBER: null,
+    IS_SELECTED: '0',
+    SANCTION_DATE: null,
+    REMARK: 'REGULAR',
+    YEAR: 0,
+    LOAN_TYPE_NAME_MR: null,
+    LOAN_TYPE_NAME_EN: null,
+    LOAN_TYPE_NAME_KN: null,
+    REPAYMENT_DATE: null,
+    LOAN_TYPE: 'PKPS MOLAWAD'
+  }
+]
+12/22/2022, 5:40:32 PM  Requested Method : - POST /api/earlierLoanHistory/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_earlier_loan_history where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_earlier_loan_history where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[]
+12/22/2022, 5:40:45 PM  Requested Method : - POST /api/applicantDocument/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_applicant_documents where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 36 } ]
+select * from view_applicant_documents where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by CREATED_MODIFIED_DATE desc
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/incomeSource/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+  {
+  pageIndex: 0,
+  pageSize: 0,
+  sortKey: 'ID',
+  sortValue: 'asc',
+  filter: ''
+}
+  ID asc
+select count(*) as cnt from view_income_source where 1 
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/term/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+1 20
+0 20
+select count(*) as cnt from view_term_master where 1 
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/installmentFrequency/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_installment_frequency where 1 AND IS_ACTIVE = '1'
+[ RowDataPacket { cnt: 5 } ]
+select * from view_income_source where 1  order by ID asc
+[ RowDataPacket { cnt: 7 } ]
+select * from view_installment_frequency where 1 AND IS_ACTIVE = '1' order by ID asc
+[ RowDataPacket { cnt: 8 } ]
+select * from view_term_master where 1  order by ID asc LIMIT 0,20
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/applicantExtraInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_applicant_extra_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B'
+[ RowDataPacket { cnt: 8 } ]
+select * from view_applicant_extra_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B' order by SEQ_NO asc
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/loanTypes/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_types_master where 1  AND STATUS=1
+[ RowDataPacket { cnt: 14 } ]
+select * from view_loan_types_master where 1  AND STATUS=1 order by ID asc
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/applicantExtraInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_applicant_extra_information where 1  AND EXTRA_INFORMATION_ID=12 AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 0 } ]
+select * from view_applicant_extra_information where 1  AND EXTRA_INFORMATION_ID=12 AND PROPOSAL_ID=406 order by SEQ_NO asc
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/expenditureInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = undefined
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/guarantorInformation/getAllInformation/ public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+select * from guarantor_information where PROPOSAL_ID = ? AND VISIBILITY = 1 [ 406 ]
+Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Sequence._packetToError (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Pool.query (D:\project\backend\node_modules\mysql\lib\Pool.js:199:23)
+    at exports.executeQuery (D:\project\backend\utilities\globalModule.js:194:20)
+    at exports.get (D:\project\backend\services\expenditureInformation.js:71:12)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\project\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\project\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\project\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\project\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\project\backend\node_modules\express\lib\router\index.js:275:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'undefined' in 'where clause'",
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select count(*) as cnt from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = undefined'
+}
+resultsGuarentor  [
+  RowDataPacket {
+    ID: 463,
+    PROPOSAL_ID: 406,
+    NAME: 'RAMAGOUDA  CHAKRAVARTI BOLAWADE',
+    MOBILE_NUMBER: '8861336178',
+    CREATED_MODIFIED_DATE: '2022-12-22 16:41:36',
+    READ_ONLY: 'N',
+    ARCHIVE_FLAG: 'F',
+    CLIENT_ID: 1,
+    VISIBILITY: 1,
+    APPLICANT_ID: 604
+  },
+  RowDataPacket {
+    ID: 464,
+    PROPOSAL_ID: 406,
+    NAME: 'BABURAO TAMMANI BALIKAI',
+    MOBILE_NUMBER: '9731842727',
+    CREATED_MODIFIED_DATE: '2022-12-22 16:42:40',
+    READ_ONLY: 'N',
+    ARCHIVE_FLAG: 'F',
+    CLIENT_ID: 1,
+    VISIBILITY: 1,
+    APPLICANT_ID: 605
+  }
+]
+select * from view_personal_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+SET SESSION group_concat_max_len = 4294967290;
+                                        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'PROPOSAL_ID',PROPOSAL_ID,'INCOME_SOURCE_ID',INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID',OTHER_INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID2',OTHER_INCOME_SOURCE_ID2,'IS_SAVED',IS_SAVED,'IS_HOLD_AGRICULTURE_LAND',IS_HOLD_AGRICULTURE_LAND,'CLIENT_ID',CLIENT_ID,
+                                          'SALARIED_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'PLACE_OF_EMPLOYMENT',PLACE_OF_EMPLOYMENT,'ORGANISATION_NAME',ORGANISATION_NAME,'CONTACT_NO_OF_EMPLOYER',CONTACT_NO_OF_EMPLOYER,'POST_OF_EMPLOYMENT',POST_OF_EMPLOYMENT,'GROSS_SALARY',GROSS_SALARY,'TOTAL_DEDUCTION',TOTAL_DEDUCTION,'NET_SALARY',NET_SALARY,'CLIENT_ID',CLIENT_ID,'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data5 FROM view_address_information where ID = i.PLACE_OF_EMPLOYMENT ),'[]'))),']'),'"[','['),']"',']') as data6 FROM view_salaried_information i where INCOME_INFORMATION_ID = m.ID),'[]')),					
+                                          'BUSINESS_FIRM_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CAPITAL',CAPITAL,'TURNOVER_YEARLY',TURNOVER_YEARLY,'INCOME_YEARLY',INCOME_YEARLY,'ID',ID,'TYPE',TYPE,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'NATURE_OF_FIRM',NATURE_OF_FIRM,'ADDRESS_ID',ADDRESS_ID,'CLIENT_ID',CLIENT_ID,
+                                                              'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data4 FROM view_address_information where ID = l.ADDRESS_ID ),'[]')
+                                                                                                                  
+                                          )),']'),'"[','['),']"',']') as data3 FROM view_business_firm_information l where INCOME_INFORMATION_ID = m.ID),'[]')),							
+                                          'AGRICULTURE_LAND_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CURRENT_AGRICULTURE_PRODUCT',CURRENT_AGRICULTURE_PRODUCT,'ANNUAL_INCOME_FROM_THIS_LAND',ANNUAL_INCOME_FROM_THIS_LAND)),']'),'"[','['),']"',']') as data1 FROM view_agriculture_land_information k where INCOME_INFORMATION_ID = m.ID),'[]'))
+                                          )),']'),'"[','['),']"',']') as data FROM view_income_information m where PROPOSAL_ID =? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+select * from financial_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+select * from credit_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+select * from view_property_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+here : []
+select * from view_personal_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+SET SESSION group_concat_max_len = 4294967290;
+                                        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'PROPOSAL_ID',PROPOSAL_ID,'INCOME_SOURCE_ID',INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID',OTHER_INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID2',OTHER_INCOME_SOURCE_ID2,'IS_SAVED',IS_SAVED,'IS_HOLD_AGRICULTURE_LAND',IS_HOLD_AGRICULTURE_LAND,'CLIENT_ID',CLIENT_ID,
+                                          'SALARIED_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'PLACE_OF_EMPLOYMENT',PLACE_OF_EMPLOYMENT,'ORGANISATION_NAME',ORGANISATION_NAME,'CONTACT_NO_OF_EMPLOYER',CONTACT_NO_OF_EMPLOYER,'POST_OF_EMPLOYMENT',POST_OF_EMPLOYMENT,'GROSS_SALARY',GROSS_SALARY,'TOTAL_DEDUCTION',TOTAL_DEDUCTION,'NET_SALARY',NET_SALARY,'CLIENT_ID',CLIENT_ID,'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data5 FROM view_address_information where ID = i.PLACE_OF_EMPLOYMENT ),'[]'))),']'),'"[','['),']"',']') as data6 FROM view_salaried_information i where INCOME_INFORMATION_ID = m.ID),'[]')),					
+                                          'BUSINESS_FIRM_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CAPITAL',CAPITAL,'TURNOVER_YEARLY',TURNOVER_YEARLY,'INCOME_YEARLY',INCOME_YEARLY,'ID',ID,'TYPE',TYPE,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'NATURE_OF_FIRM',NATURE_OF_FIRM,'ADDRESS_ID',ADDRESS_ID,'CLIENT_ID',CLIENT_ID,
+                                                              'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data4 FROM view_address_information where ID = l.ADDRESS_ID ),'[]')
+                                                                                                                  
+                                          )),']'),'"[','['),']"',']') as data3 FROM view_business_firm_information l where INCOME_INFORMATION_ID = m.ID),'[]')),							
+                                          'AGRICULTURE_LAND_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CURRENT_AGRICULTURE_PRODUCT',CURRENT_AGRICULTURE_PRODUCT,'ANNUAL_INCOME_FROM_THIS_LAND',ANNUAL_INCOME_FROM_THIS_LAND)),']'),'"[','['),']"',']') as data1 FROM view_agriculture_land_information k where INCOME_INFORMATION_ID = m.ID),'[]'))
+                                          )),']'),'"[','['),']"',']') as data FROM view_income_information m where PROPOSAL_ID =? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+select * from financial_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/agricultureLandInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = undefined
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/loanDemand/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_demand where 1  AND PROPOSAL_ID=406
+select * from credit_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Sequence._packetToError (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Pool.query (D:\project\backend\node_modules\mysql\lib\Pool.js:199:23)
+    at exports.executeQuery (D:\project\backend\utilities\globalModule.js:194:20)
+    at exports.get (D:\project\backend\services\agricultureLandInformation.js:94:12)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\project\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\project\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\project\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\project\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\project\backend\node_modules\express\lib\router\index.js:275:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'undefined' in 'where clause'",
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select count(*) as cnt from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = undefined'
+}
+[ RowDataPacket { cnt: 1 } ]
+select * from view_loan_demand where 1  AND PROPOSAL_ID=406 order by ID asc
+select * from view_property_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+here : []
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/propertyInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_property_information where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/financialInformation/getFinancialInfo public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+            SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('SHARE_ACCOUNT_NO',SHARE_ACCOUNT_NO,'PERIODS',PERIODS,'TYPE_OF_ACCOUNT',TYPE_OF_ACCOUNT,'IS_PAY_SALES_TAX_FILED',IS_PAY_SALES_TAX_FILED,'FINANCIAL_YEAR_SALES_TAX',FINANCIAL_YEAR_SALES_TAX,'SALES_TAX_PAID_AMOUNT',SALES_TAX_PAID_AMOUNT,'IS_HAVE_TERM_DEPOSIT',IS_HAVE_TERM_DEPOSIT,'IS_HAVE_CURRENT_DEPOSIT',IS_HAVE_CURRENT_DEPOSIT,'IS_HAVE_RECURRING_DEPOSIT',IS_HAVE_RECURRING_DEPOSIT,'BALANCE_AMOUNT2',BALANCE_AMOUNT2,'OTHER_DEPOSIT_ACC_NO2',OTHER_DEPOSIT_ACC_NO2,'ACCOUNT_NO',ACCOUNT_NO,'ACCOUNT_BALANCE',ACCOUNT_BALANCE,'LOAN_TAKEN_YEARS',LOAN_TAKEN_YEARS,'CC_LOAN_TERNOVER',CC_LOAN_TERNOVER,'INCOME_SOURCE_AMOUNT',INCOME_SOURCE_AMOUNT,'YEARLY_INCOME',YEARLY_INCOME,'SAVING_ACCOUNT_NO',SAVING_ACCOUNT_NO,'SAVING_AMOUNT',SAVING_AMOUNT,'OTHER_DEPOSIT_ACC_NO',OTHER_DEPOSIT_ACC_NO,'BALANCE_AMOUNT',BALANCE_AMOUNT,'ID',ID,'PROPOSAL_ID',PROPOSAL_ID,'IS_INCOME_TAX_FILED',IS_INCOME_TAX_FILED,'FINANCIAL_YEAR',FINANCIAL_YEAR,'INCOME_AMOUNT',INCOME_AMOUNT,'TAX_PAID_AMOUNT',TAX_PAID_AMOUNT,'AGRICULTURE_INCOME',AGRICULTURE_INCOME,'OTHER_INCOME',OTHER_INCOME,'MONTHLY_HOUSEHOLD_EXPENSES',MONTHLY_HOUSEHOLD_EXPENSES,'IS_PIGMY',IS_PIGMY,'BANK_NAME',BANK_NAME,'PIGMY_BALANCE',PIGMY_BALANCE,'DAILY_PIGMY_AMOUNT',DAILY_PIGMY_AMOUNT,'CLIENT_ID',CLIENT_ID,'LAST_3_YEAR_INFORMATION',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'TYPE',TYPE,'FINANCIAL_YEAR',FINANCIAL_YEAR,'INCOME_AMOUNT',INCOME_AMOUNT
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_last_3_year_information where FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'TERM_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'T' and FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'RECURING_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'R' and FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'CURRENT_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'C' and FINANCIAL_INFORMATION_ID = m.ID),'[]')
+)),']'),'"[','['),']"',']') as data FROM view_financial_information m  where PROPOSAL_ID = 406 AND TYPE = 'B' 
+[ RowDataPacket { cnt: 1 } ]
+select * from view_property_information where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by ID asc
+[{"ID": 894, "PERIODS": null, "IS_PIGMY": 0, "BANK_NAME": "", "CLIENT_ID": 1, "ACCOUNT_NO": null, "PROPOSAL_ID": 406, "OTHER_INCOME": 0.00, "TERM_DEPOSIT": [], "INCOME_AMOUNT": 0.00, "PIGMY_BALANCE": null, "SAVING_AMOUNT": 500.00, "YEARLY_INCOME": null, "BALANCE_AMOUNT": 0.00, "FINANCIAL_YEAR": 0, "ACCOUNT_BALANCE": null, "BALANCE_AMOUNT2": 0.00, "CURRENT_DEPOSIT": [], "TAX_PAID_AMOUNT": 0.00, "TYPE_OF_ACCOUNT": null, "CC_LOAN_TERNOVER": null, "LOAN_TAKEN_YEARS": null, "RECURING_DEPOSIT": [], "SHARE_ACCOUNT_NO": null, "SAVING_ACCOUNT_NO": "00771010000082", "AGRICULTURE_INCOME": 0.00, "DAILY_PIGMY_AMOUNT": null, "IS_INCOME_TAX_FILED": 0, "INCOME_SOURCE_AMOUNT": "", "IS_HAVE_TERM_DEPOSIT": 0, "OTHER_DEPOSIT_ACC_NO": null, "OTHER_DEPOSIT_ACC_NO2": null, "SALES_TAX_PAID_AMOUNT": 0.00, "IS_PAY_SALES_TAX_FILED": 0, "IS_HAVE_CURRENT_DEPOSIT": 0, "LAST_3_YEAR_INFORMATION": [], "FINANCIAL_YEAR_SALES_TAX": 0, "IS_HAVE_RECURRING_DEPOSIT": 0, "MONTHLY_HOUSEHOLD_EXPENSES": 0.00}]
+addErrlog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/creditInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_credit_information where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_credit_information where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by ID asc
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/incomeInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by ID asc
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/subPropertyInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_sub_property_information where 1  AND PROPOSAL_ID=406
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/jointAccountInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+1 1
+0 1
+select count(*) as cnt from view_joint_account_information where 1 AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 0 } ]
+select * from view_sub_property_information where 1  AND PROPOSAL_ID=406 order by ID desc
+[ RowDataPacket { cnt: 1 } ]
+select * from view_joint_account_information where 1 AND PROPOSAL_ID=406 order by ID asc LIMIT 0,1
+addErrlog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/loanPurpose/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_purpose_master where 1 
+12/22/2022, 5:40:46 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_praposal_master where 1  AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 106 } ]
+select * from view_loan_purpose_master where 1  order by ID asc
+Error: ER_BAD_FIELD_ERROR: Unknown column 'PROPOSAL_ID' in 'where clause'
+    at Sequence._packetToError (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Pool.query (D:\project\backend\node_modules\mysql\lib\Pool.js:199:23)
+    at exports.executeQuery (D:\project\backend\utilities\globalModule.js:194:20)
+    at exports.get (D:\project\backend\services\praposal.js:96:12)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\project\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\project\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\project\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\project\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\project\backend\node_modules\express\lib\router\index.js:275:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'PROPOSAL_ID' in 'where clause'",
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select count(*) as cnt from view_praposal_master where 1  AND PROPOSAL_ID=406'
+}
+addErrlog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:40:48 PM  Requested Method : - POST /api/incomeInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B' order by ID ASC
+12/22/2022, 5:40:48 PM  Requested Method : - POST /api/personalInformation/getPersonalInfo public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+select * from view_personal_information where PROPOSAL_ID = 406 AND TYPE = 'B' 
+select * from view_address_information where ID = 2201
+select * from view_address_information where ID = 2205
+select * from view_family_details where PERSONAL_INFORMATION_ID = 894
+12/22/2022, 5:40:48 PM  Requested Method : - POST /api/loanTakenInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_taken_information where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+12/22/2022, 5:40:48 PM  Requested Method : - POST /api/guarantorForLoans/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_guarantor_for_loan where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_guarantor_for_loan where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[ RowDataPacket { cnt: 1 } ]
+select * from view_loan_taken_information where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[
+  RowDataPacket {
+    ID: 249,
+    CREDIT_INFORMATION_ID: 893,
+    BANK_OR_INSTITUTE_NAME: ' ',
+    BRANCH_NAME: ' ',
+    LOAN_TYPE_ID: 0,
+    SANCTIONED_AMOUNT: 0,
+    INSTALLMENT_AMOUNT: 0,
+    LOAN_OUTSTANDING: 105000,
+    LOAN_OVERDUE_AMOUNT: 0,
+    DUE_DATE: null,
+    SECURITY_OFFERED: null,
+    IS_SUB: 0,
+    CREATED_MODIFIED_DATE: '2022-12-22 16:31:11',
+    READ_ONLY: 'N',
+    ARCHIVE_FLAG: 'F',
+    CLIENT_ID: 1,
+    ACCOUNT_NUMBER: null,
+    IS_SELECTED: '0',
+    SANCTION_DATE: null,
+    REMARK: 'REGULAR',
+    YEAR: 0,
+    LOAN_TYPE_NAME_MR: null,
+    LOAN_TYPE_NAME_EN: null,
+    LOAN_TYPE_NAME_KN: null,
+    REPAYMENT_DATE: null,
+    LOAN_TYPE: 'PKPS MOLAWAD'
+  }
+]
+12/22/2022, 5:40:48 PM  Requested Method : - POST /api/addressInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_address_information where 1  AND ID=2206
+12/22/2022, 5:40:48 PM  Requested Method : - POST /api/earlierLoanHistory/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_earlier_loan_history where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_address_information where 1  AND ID=2206 order by ID desc
+[ RowDataPacket { cnt: 0 } ]
+select * from view_earlier_loan_history where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[]
+12/22/2022, 5:40:48 PM  Requested Method : - POST /api/depositsInBank/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_deposits_in_bank where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_deposits_in_bank where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+12/22/2022, 5:40:48 PM  Requested Method : - POST /api/agricultureLandInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854
+12/22/2022, 5:40:48 PM  Requested Method : - POST /api/expenditureInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+[ RowDataPacket { cnt: 1 } ]
+select * from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:40:48 PM  Requested Method : - POST /api/houseShopRentInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+1 20
+0 20
+select count(*) as cnt from view_house_shop_rent_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 0 } ]
+select * from view_house_shop_rent_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc LIMIT 0,20
+12/22/2022, 5:40:48 PM  Requested Method : - POST /api/addressInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_address_information where 1  AND ID=2211
+[ RowDataPacket { cnt: 1 } ]
+select * from view_address_information where 1  AND ID=2211 order by ID desc
+12/22/2022, 5:40:48 PM  Requested Method : - POST /api/businessFirmInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_business_firm_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_business_firm_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:41:30 PM  Requested Method : - POST /api/globalSettings/getPagesInformation public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+select VALUE from global_settings where KEYWORD in ('PAGE1', 'PAGE2','PAGE3','PAGE4','PAGE0','SUPPORT','BANK_NAME','ABOUT_US_URL')
+12/22/2022, 5:41:49 PM  Requested Method : - POST /api/user/getPraposalChartData public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+SELECT
+            AAA.date_field,
+            IFNULL(BBB.COUNT,0) AS COUNT
+        FROM(SELECT date_field
+        FROM
+        (
+            SELECT
+                MAKEDATE(2022,1) +
+                INTERVAL (12-1) MONTH +
+                INTERVAL daynum DAY date_field
+            FROM
+            (
+                SELECT t*10+u daynum
+                FROM
+                    (SELECT 0 t UNION SELECT 1 UNION SELECT 2 UNION SELECT 3) A,
+                    (SELECT 0 u UNION SELECT 1 UNION SELECT 2 UNION SELECT 3
+                    UNION SELECT 4 UNION SELECT 5 UNION SELECT 6 UNION SELECT 7
+                    UNION SELECT 8 UNION SELECT 9) B
+                ORDER BY daynum
+            ) AA
+        ) AAA
+        WHERE MONTH(date_field) = '12') AAA LEFT JOIN (select DISTINCT(DATE_FORMAT(CREATED_ON_DATETIME, '%Y-%m-%d')) AS date_field ,sum(LOAN_AMOUNT) as COUNT from view_praposal_master where MONTH(CREATED_ON_DATETIME)= '12' AND YEAR(CREATED_ON_DATETIME)='2022' and CURRENT_STAGE_ID=2 GROUP BY DATE_FORMAT(CREATED_ON_DATETIME, '%Y-%m-%d')) BBB
+        USING (date_field) order by date_field;
+12/22/2022, 5:41:49 PM  Requested Method : - POST /api/user/getBranchLineChart public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+SELECT  ID,view_branch_master.NAME_MR,view_branch_master.NAME_EN,view_branch_master.NAME_KN,ifnull(a.COUNT,0) AS CNT,ifnull(a.TOTAL_AMOUNT,0) AS TOTAL_AMOUNT
+    FROM view_branch_master LEFT JOIN (select
+            BRANCH_NAME,
+            COUNT(*) AS COUNT,
+            SUM(LOAN_AMOUNT) AS TOTAL_AMOUNT
+               FROM view_praposal_master where 1  AND ( CREATED_ON_DATETIME BETWEEN '2022-12-22:00:00:00' AND '2022-12-22:23:59:59' ) 
+                 group by BRANCH_NAME ) a on (view_branch_master.NAME_MR = a.BRANCH_NAME);;
+12/22/2022, 5:41:49 PM  Requested Method : - POST /api/user/getLoanTypeLineChart public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+SELECT ID AS LOAN_TYPE_ID,NAME_MR,NAME_EN,NAME_KN,ifnull(a.COUNT,0) AS CNT,ifnull(a.TOTAL_AMOUNT,0) AS TOTAL_AMOUNT
+	FROM view_loan_scheme_master LEFT JOIN (select 
+		LOAN_TYPE_ID AS LOAN_TYPE_ID,
+		COUNT(*) AS COUNT,
+		SUM(LOAN_AMOUNT) AS TOTAL_AMOUNT
+            FROM view_praposal_master WHERE 1  AND ( CREATED_ON_DATETIME BETWEEN '2022-12-22:00:00:00' AND '2022-12-22:23:59:59' ) 
+                group by LOAN_TYPE_ID ) a on (view_loan_scheme_master.ID = a.LOAN_TYPE_ID) ;
+12/22/2022, 5:41:49 PM  Requested Method : - POST /api/proposalLogInformation/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_proposal_log_information where 1 
+12/22/2022, 5:41:49 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1 
+12/22/2022, 5:41:49 PM  Requested Method : - POST /api/user/getDashboardCounts public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+SELECT COUNT(*) AS TOTAL_BRANCHES FROM view_branch_master;
+        SELECT COUNT(*) AS TOTAL_USERS FROM view_user_master;
+        SELECT COUNT(*) AS TOTAL_DOCUMENTS FROM view_document_master;
+        SELECT COUNT(*) AS TOTAL_LOAN_TYPES FROM view_loan_scheme_master;
+    
+        SELECT COUNT(*) AS TOTAL_PRAPOSALS,
+        (SELECT COUNT(*) FROM view_praposal_master WHERE CURRENT_STAGE_ID NOT IN(6,13))AS IN_PROCESS_PRAPOSALS,
+        (SELECT COUNT(*) FROM view_praposal_master WHERE CURRENT_STAGE_ID=13)AS DISBURSED_PRAPOSALS ,
+        (SELECT COUNT(*) FROM view_praposal_master WHERE CURRENT_STAGE_ID=6)AS REJECTED_PRAPOSALS
+        FROM view_praposal_master;
+
+        SELECT SUM(LOAN_AMOUNT) AS TOTAL_LOAN_AMOUNT,
+        (SELECT SUM(LOAN_AMOUNT) FROM view_praposal_master WHERE CURRENT_STAGE_ID NOT IN(6,13))AS IN_PROCESS_LOAN_AMOUNT,
+        (SELECT SUM(LOAN_AMOUNT) FROM view_praposal_master WHERE CURRENT_STAGE_ID=13)AS DISBURSED_LOAN_AMOUNT,
+        (SELECT SUM(LOAN_AMOUNT) FROM view_praposal_master WHERE CURRENT_STAGE_ID=6)AS REJECTED_LOAN_AMOUNT
+        FROM view_praposal_master;
+
+        SELECT COUNT(*) AS TOTAL_APPLICANT_DOCUMENTS, 
+        (SELECT COUNT(*) FROM view_applicant_documents WHERE IS_UPLOADED=0)AS PENDING_DOCUMENTS ,
+        (SELECT COUNT(*) FROM view_applicant_documents WHERE IS_APPROVED=1)AS APPROVED_DOCUMENTS,
+        (SELECT COUNT(*) FROM view_applicant_documents WHERE IS_APPROVED=0)AS REJECTED_DOCUMENTS 
+        FROM view_applicant_documents;
+
+        SELECT COUNT(*)AS TOTAL_APPLICANTS,
+        (SELECT COUNT(APPLICANT_ID) from view_praposal_master where CURRENT_STAGE_ID=13)AS LOAN_DISBURSED_APPLICANTS,
+        (SELECT COUNT(APPLICANT_ID) from view_praposal_master where CURRENT_STAGE_ID=6)AS LOAN_REJECTED_APPLICANTS,
+        (SELECT COUNT(distinct APPLICANT_ID) from view_praposal_master where CURRENT_STAGE_ID NOT IN(6,13))AS LOAN_IN_PROCESS_APPLICANTS FROM view_applicant_master;
+[ RowDataPacket { cnt: 155 } ]
+select * from view_branch_master where 1  order by ID DESC
+12/22/2022, 5:41:49 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_user_master where 1 
+[ RowDataPacket { cnt: 327 } ]
+select * from view_user_master where 1  order by ID DESC
+12/22/2022, 5:41:49 PM  Requested Method : - POST /api/praposal/getPraposalNumber public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+SELECT ID,LOAN_KEY AS PRAPOSAL_NUMBER FROM view_praposal_master WHERE 1  ;
+[ RowDataPacket { cnt: 13427 } ]
+select * from view_proposal_log_information where 1  order by id desc LIMIT 0,10
+12/22/2022, 5:41:49 PM  Requested Method : - POST /api/loanScheme/get public Ip : undefined supportkey :  undefined
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_scheme_master where 1 
+[ RowDataPacket { cnt: 15 } ]
+select * from view_loan_scheme_master where 1  order by ID asc
+12/22/2022, 5:43:19 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%malik%' OR EMAIL_ID like '%malik%' OR MOBILE_NUMBER like '%malik%' OR PASSWORD like '%malik%' )
+[ RowDataPacket { cnt: 2 } ]
+select * from view_user_master where 1  AND ( NAME like '%malik%' OR EMAIL_ID like '%malik%' OR MOBILE_NUMBER like '%malik%' OR PASSWORD like '%malik%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:43:34 PM  Requested Method : - PUT /api/user/update/ public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+{
+  ID: 58,
+  ROLE_ID: 5,
+  BRANCH_ID: 28,
+  NAME: 'Malikwad(BA)',
+  EMAIL_ID: 'malikwad.ba',
+  MOBILE_NUMBER: '9988663311',
+  IS_ACTIVE: 1,
+  STATUS: 'Active',
+  PASSWORD: 'eccbc87e4b5ce2fe28308fd9f2a7baf3',
+  CREATED_MODIFIED_DATE: '2022-12-15 05:52:32',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  LAST_LOGIN_DATETIME: null,
+  CLOUD_ID: null,
+  DEVICE_ID: null,
+  APP_VERSION: null,
+  LOAN_LIMIT: 0
+}
+here 1
+UPDATE user_master SET ROLE_ID= ? , BRANCH_ID= ? , NAME= ? , EMAIL_ID= ? , MOBILE_NUMBER= ? , IS_ACTIVE= ? , PASSWORD= ? , CLIENT_ID= ? ,  CREATED_MODIFIED_DATE = '2022-12-22 17:43:34' where ID = 58  [
+  5,
+  28,
+  'Malikwad(BA)',
+  'malikwad.ba',
+  '9988663311',
+  '1',
+  'eccbc87e4b5ce2fe28308fd9f2a7baf3',
+  1
+]
+here 2
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  serverStatus: 3,
+  warningCount: 0,
+  message: '(Rows matched: 1  Changed: 1  Warnings: 0',
+  protocol41: true,
+  changedRows: 1
+}
+12/22/2022, 5:43:34 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%malik%' OR EMAIL_ID like '%malik%' OR MOBILE_NUMBER like '%malik%' OR PASSWORD like '%malik%' )
+[ RowDataPacket { cnt: 2 } ]
+select * from view_user_master where 1  AND ( NAME like '%malik%' OR EMAIL_ID like '%malik%' OR MOBILE_NUMBER like '%malik%' OR PASSWORD like '%malik%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:43:41 PM  Requested Method : - PUT /api/user/update/ public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+{
+  ID: 59,
+  ROLE_ID: 4,
+  BRANCH_ID: 28,
+  NAME: 'Malikwad(BM)',
+  EMAIL_ID: 'malikwad.bm',
+  MOBILE_NUMBER: '9898775544',
+  IS_ACTIVE: 1,
+  STATUS: 'Active',
+  PASSWORD: 'eccbc87e4b5ce2fe28308fd9f2a7baf3',
+  CREATED_MODIFIED_DATE: '2022-12-15 05:52:10',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  LAST_LOGIN_DATETIME: null,
+  CLOUD_ID: null,
+  DEVICE_ID: null,
+  APP_VERSION: null,
+  LOAN_LIMIT: 0
+}
+here 1
+UPDATE user_master SET ROLE_ID= ? , BRANCH_ID= ? , NAME= ? , EMAIL_ID= ? , MOBILE_NUMBER= ? , IS_ACTIVE= ? , PASSWORD= ? , CLIENT_ID= ? ,  CREATED_MODIFIED_DATE = '2022-12-22 17:43:41' where ID = 59  [
+  4,
+  28,
+  'Malikwad(BM)',
+  'malikwad.bm',
+  '9898775544',
+  '1',
+  'eccbc87e4b5ce2fe28308fd9f2a7baf3',
+  1
+]
+here 2
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  serverStatus: 3,
+  warningCount: 0,
+  message: '(Rows matched: 1  Changed: 1  Warnings: 0',
+  protocol41: true,
+  changedRows: 1
+}
+12/22/2022, 5:43:41 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%malik%' OR EMAIL_ID like '%malik%' OR MOBILE_NUMBER like '%malik%' OR PASSWORD like '%malik%' )
+[ RowDataPacket { cnt: 2 } ]
+select * from view_user_master where 1  AND ( NAME like '%malik%' OR EMAIL_ID like '%malik%' OR MOBILE_NUMBER like '%malik%' OR PASSWORD like '%malik%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:43:48 PM  Requested Method : - PUT /api/user/update/ public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+{
+  ID: 58,
+  ROLE_ID: 5,
+  BRANCH_ID: 28,
+  NAME: 'Malikwad(BA)',
+  EMAIL_ID: 'malikwad.ba',
+  MOBILE_NUMBER: '9988663311',
+  IS_ACTIVE: 1,
+  STATUS: 'Active',
+  PASSWORD: 'eccbc87e4b5ce2fe28308fd9f2a7baf3',
+  CREATED_MODIFIED_DATE: '2022-12-22 17:43:34',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  LAST_LOGIN_DATETIME: null,
+  CLOUD_ID: null,
+  DEVICE_ID: null,
+  APP_VERSION: null,
+  LOAN_LIMIT: 0
+}
+here 1
+UPDATE user_master SET ROLE_ID= ? , BRANCH_ID= ? , NAME= ? , EMAIL_ID= ? , MOBILE_NUMBER= ? , IS_ACTIVE= ? , PASSWORD= ? , CLIENT_ID= ? ,  CREATED_MODIFIED_DATE = '2022-12-22 17:43:48' where ID = 58  [
+  5,
+  28,
+  'Malikwad(BA)',
+  'malikwad.ba',
+  '9988663311',
+  '1',
+  'eccbc87e4b5ce2fe28308fd9f2a7baf3',
+  1
+]
+here 2
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  serverStatus: 3,
+  warningCount: 0,
+  message: '(Rows matched: 1  Changed: 1  Warnings: 0',
+  protocol41: true,
+  changedRows: 1
+}
+12/22/2022, 5:43:49 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%malik%' OR EMAIL_ID like '%malik%' OR MOBILE_NUMBER like '%malik%' OR PASSWORD like '%malik%' )
+[ RowDataPacket { cnt: 2 } ]
+select * from view_user_master where 1  AND ( NAME like '%malik%' OR EMAIL_ID like '%malik%' OR MOBILE_NUMBER like '%malik%' OR PASSWORD like '%malik%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:43:49 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 56,
+  ACTIVITY_DETAILS: 'ApplicantProposal - Sort on desc SEQUENCE_NUMBER',
+  ACTIVITY_TIME: '2022-12-22 17:43:49',
+  CLIENT_ID: 1
+}
+supportkey :  
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208803,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:43:49 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 56,
+  ACTIVITY_DETAILS: 'ApplicantProposal - Search For  ',
+  ACTIVITY_TIME: '2022-12-22 17:43:49',
+  CLIENT_ID: 1
+}
+supportkey :  
+12/22/2022, 5:43:49 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_praposal_master where 1 
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208804,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+[ RowDataPacket { cnt: 391 } ]
+select * from view_praposal_master where 1  order by SEQUENCE_NUMBER desc LIMIT 0,10
+12/22/2022, 5:43:49 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_praposal_master where 1 
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+[ RowDataPacket { cnt: 391 } ]
+select * from view_praposal_master where 1  order by SEQUENCE_NUMBER desc
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:43:52 PM  Requested Method : - POST /api/proposalLogInformation/create public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO proposal_log_information SET ? {
+  PROPOSAL_ID: 0,
+  LOG_ACTION: 'logged out from the system',
+  DESCRIPTION: 'Chikodi(BA) logged out from system.',
+  LOG_DATETIME: '2022-12-22 17:43:52',
+  LOG_TYPE: 'I',
+  USER_ID: 56,
+  OLD_STAGE_ID: 0,
+  NEW_STAGE_ID: 0,
+  CLIENT_ID: 1
+}
+supportkey :  
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 13428,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:43:57 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%nipani%' OR EMAIL_ID like '%nipani%' OR MOBILE_NUMBER like '%nipani%' OR PASSWORD like '%nipani%' )
+[ RowDataPacket { cnt: 4 } ]
+select * from view_user_master where 1  AND ( NAME like '%nipani%' OR EMAIL_ID like '%nipani%' OR MOBILE_NUMBER like '%nipani%' OR PASSWORD like '%nipani%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:43:57 PM  Requested Method : - POST /api/proposalLogInformation/create public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO proposal_log_information SET ? {
+  PROPOSAL_ID: 0,
+  LOG_ACTION: 'logged out from the system',
+  DESCRIPTION: 'Chikodi(BA) logged out from system.',
+  LOG_DATETIME: '2022-12-22 17:43:57',
+  LOG_TYPE: 'I',
+  USER_ID: 56,
+  OLD_STAGE_ID: 0,
+  NEW_STAGE_ID: 0,
+  CLIENT_ID: 1
+}
+supportkey :  
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 13429,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:44:01 PM  Requested Method : - POST /api/user/getPraposalChartData public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+SELECT
+            AAA.date_field,
+            IFNULL(BBB.COUNT,0) AS COUNT
+        FROM(SELECT date_field
+        FROM
+        (
+            SELECT
+                MAKEDATE(2022,1) +
+                INTERVAL (12-1) MONTH +
+                INTERVAL daynum DAY date_field
+            FROM
+            (
+                SELECT t*10+u daynum
+                FROM
+                    (SELECT 0 t UNION SELECT 1 UNION SELECT 2 UNION SELECT 3) A,
+                    (SELECT 0 u UNION SELECT 1 UNION SELECT 2 UNION SELECT 3
+                    UNION SELECT 4 UNION SELECT 5 UNION SELECT 6 UNION SELECT 7
+                    UNION SELECT 8 UNION SELECT 9) B
+                ORDER BY daynum
+            ) AA
+        ) AAA
+        WHERE MONTH(date_field) = '12') AAA LEFT JOIN (select DISTINCT(DATE_FORMAT(CREATED_ON_DATETIME, '%Y-%m-%d')) AS date_field ,sum(LOAN_AMOUNT) as COUNT from view_praposal_master where MONTH(CREATED_ON_DATETIME)= '12' AND YEAR(CREATED_ON_DATETIME)='2022' and CURRENT_STAGE_ID=2 GROUP BY DATE_FORMAT(CREATED_ON_DATETIME, '%Y-%m-%d')) BBB
+        USING (date_field) order by date_field;
+12/22/2022, 5:44:01 PM  Requested Method : - POST /api/user/getLoanTypeLineChart public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+SELECT ID AS LOAN_TYPE_ID,NAME_MR,NAME_EN,NAME_KN,ifnull(a.COUNT,0) AS CNT,ifnull(a.TOTAL_AMOUNT,0) AS TOTAL_AMOUNT
+	FROM view_loan_scheme_master LEFT JOIN (select 
+		LOAN_TYPE_ID AS LOAN_TYPE_ID,
+		COUNT(*) AS COUNT,
+		SUM(LOAN_AMOUNT) AS TOTAL_AMOUNT
+            FROM view_praposal_master WHERE 1  AND ( CREATED_ON_DATETIME BETWEEN '2022-12-22:00:00:00' AND '2022-12-22:23:59:59' ) 
+                group by LOAN_TYPE_ID ) a on (view_loan_scheme_master.ID = a.LOAN_TYPE_ID) ;
+12/22/2022, 5:44:01 PM  Requested Method : - POST /api/user/getBranchLineChart public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+SELECT  ID,view_branch_master.NAME_MR,view_branch_master.NAME_EN,view_branch_master.NAME_KN,ifnull(a.COUNT,0) AS CNT,ifnull(a.TOTAL_AMOUNT,0) AS TOTAL_AMOUNT
+    FROM view_branch_master LEFT JOIN (select
+            BRANCH_NAME,
+            COUNT(*) AS COUNT,
+            SUM(LOAN_AMOUNT) AS TOTAL_AMOUNT
+               FROM view_praposal_master where 1  AND ( CREATED_ON_DATETIME BETWEEN '2022-12-22:00:00:00' AND '2022-12-22:23:59:59' ) 
+                 group by BRANCH_NAME ) a on (view_branch_master.NAME_MR = a.BRANCH_NAME);;
+12/22/2022, 5:44:01 PM  Requested Method : - POST /api/proposalLogInformation/get public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_proposal_log_information where 1 
+12/22/2022, 5:44:01 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_user_master where 1 
+[ RowDataPacket { cnt: 327 } ]
+select * from view_user_master where 1  order by ID DESC
+12/22/2022, 5:44:01 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1 
+12/22/2022, 5:44:01 PM  Requested Method : - POST /api/user/getDashboardCounts public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+SELECT COUNT(*) AS TOTAL_BRANCHES FROM view_branch_master;
+        SELECT COUNT(*) AS TOTAL_USERS FROM view_user_master;
+        SELECT COUNT(*) AS TOTAL_DOCUMENTS FROM view_document_master;
+        SELECT COUNT(*) AS TOTAL_LOAN_TYPES FROM view_loan_scheme_master;
+    
+        SELECT COUNT(*) AS TOTAL_PRAPOSALS,
+        (SELECT COUNT(*) FROM view_praposal_master WHERE CURRENT_STAGE_ID NOT IN(6,13))AS IN_PROCESS_PRAPOSALS,
+        (SELECT COUNT(*) FROM view_praposal_master WHERE CURRENT_STAGE_ID=13)AS DISBURSED_PRAPOSALS ,
+        (SELECT COUNT(*) FROM view_praposal_master WHERE CURRENT_STAGE_ID=6)AS REJECTED_PRAPOSALS
+        FROM view_praposal_master;
+
+        SELECT SUM(LOAN_AMOUNT) AS TOTAL_LOAN_AMOUNT,
+        (SELECT SUM(LOAN_AMOUNT) FROM view_praposal_master WHERE CURRENT_STAGE_ID NOT IN(6,13))AS IN_PROCESS_LOAN_AMOUNT,
+        (SELECT SUM(LOAN_AMOUNT) FROM view_praposal_master WHERE CURRENT_STAGE_ID=13)AS DISBURSED_LOAN_AMOUNT,
+        (SELECT SUM(LOAN_AMOUNT) FROM view_praposal_master WHERE CURRENT_STAGE_ID=6)AS REJECTED_LOAN_AMOUNT
+        FROM view_praposal_master;
+
+        SELECT COUNT(*) AS TOTAL_APPLICANT_DOCUMENTS, 
+        (SELECT COUNT(*) FROM view_applicant_documents WHERE IS_UPLOADED=0)AS PENDING_DOCUMENTS ,
+        (SELECT COUNT(*) FROM view_applicant_documents WHERE IS_APPROVED=1)AS APPROVED_DOCUMENTS,
+        (SELECT COUNT(*) FROM view_applicant_documents WHERE IS_APPROVED=0)AS REJECTED_DOCUMENTS 
+        FROM view_applicant_documents;
+
+        SELECT COUNT(*)AS TOTAL_APPLICANTS,
+        (SELECT COUNT(APPLICANT_ID) from view_praposal_master where CURRENT_STAGE_ID=13)AS LOAN_DISBURSED_APPLICANTS,
+        (SELECT COUNT(APPLICANT_ID) from view_praposal_master where CURRENT_STAGE_ID=6)AS LOAN_REJECTED_APPLICANTS,
+        (SELECT COUNT(distinct APPLICANT_ID) from view_praposal_master where CURRENT_STAGE_ID NOT IN(6,13))AS LOAN_IN_PROCESS_APPLICANTS FROM view_applicant_master;
+[ RowDataPacket { cnt: 155 } ]
+select * from view_branch_master where 1  order by ID DESC
+12/22/2022, 5:44:02 PM  Requested Method : - POST /api/praposal/getPraposalNumber public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+SELECT ID,LOAN_KEY AS PRAPOSAL_NUMBER FROM view_praposal_master WHERE 1  ;
+[ RowDataPacket { cnt: 13429 } ]
+select * from view_proposal_log_information where 1  order by id desc LIMIT 0,10
+12/22/2022, 5:44:02 PM  Requested Method : - POST /api/loanScheme/get public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_scheme_master where 1 
+[ RowDataPacket { cnt: 15 } ]
+select * from view_loan_scheme_master where 1  order by ID asc
+12/22/2022, 5:44:04 PM  Requested Method : - POST /api/proposalLogInformation/create public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO proposal_log_information SET ? {
+  PROPOSAL_ID: 0,
+  LOG_ACTION: 'logged out from the system',
+  DESCRIPTION: 'Chikodi(BA) logged out from system.',
+  LOG_DATETIME: '2022-12-22 17:44:04',
+  LOG_TYPE: 'I',
+  USER_ID: 56,
+  OLD_STAGE_ID: 0,
+  NEW_STAGE_ID: 0,
+  CLIENT_ID: 1
+}
+supportkey :  
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 13430,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:44:13 PM  Requested Method : - PUT /api/user/update/ public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+{
+  ID: 60,
+  ROLE_ID: 5,
+  BRANCH_ID: 29,
+  NAME: 'Nipani(BA)',
+  EMAIL_ID: 'nipani.ba',
+  MOBILE_NUMBER: '9898989898',
+  IS_ACTIVE: 1,
+  STATUS: 'Active',
+  PASSWORD: 'a87ff679a2f3e71d9181a67b7542122c',
+  CREATED_MODIFIED_DATE: '2022-12-15 05:51:58',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  LAST_LOGIN_DATETIME: null,
+  CLOUD_ID: null,
+  DEVICE_ID: null,
+  APP_VERSION: null,
+  LOAN_LIMIT: 0
+}
+here 1
+UPDATE user_master SET ROLE_ID= ? , BRANCH_ID= ? , NAME= ? , EMAIL_ID= ? , MOBILE_NUMBER= ? , IS_ACTIVE= ? , PASSWORD= ? , CLIENT_ID= ? ,  CREATED_MODIFIED_DATE = '2022-12-22 17:44:13' where ID = 60  [
+  5,
+  29,
+  'Nipani(BA)',
+  'nipani.ba',
+  '9898989898',
+  '1',
+  'a87ff679a2f3e71d9181a67b7542122c',
+  1
+]
+here 2
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  serverStatus: 3,
+  warningCount: 0,
+  message: '(Rows matched: 1  Changed: 1  Warnings: 0',
+  protocol41: true,
+  changedRows: 1
+}
+12/22/2022, 5:44:13 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%nipani%' OR EMAIL_ID like '%nipani%' OR MOBILE_NUMBER like '%nipani%' OR PASSWORD like '%nipani%' )
+[ RowDataPacket { cnt: 4 } ]
+select * from view_user_master where 1  AND ( NAME like '%nipani%' OR EMAIL_ID like '%nipani%' OR MOBILE_NUMBER like '%nipani%' OR PASSWORD like '%nipani%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:44:20 PM  Requested Method : - PUT /api/user/update/ public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+{
+  ID: 61,
+  ROLE_ID: 4,
+  BRANCH_ID: 29,
+  NAME: 'Nipani(BM)',
+  EMAIL_ID: 'nipani.bm',
+  MOBILE_NUMBER: '9855332211',
+  IS_ACTIVE: 1,
+  STATUS: 'Active',
+  PASSWORD: 'a87ff679a2f3e71d9181a67b7542122c',
+  CREATED_MODIFIED_DATE: '2022-12-15 05:51:47',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  LAST_LOGIN_DATETIME: null,
+  CLOUD_ID: null,
+  DEVICE_ID: null,
+  APP_VERSION: null,
+  LOAN_LIMIT: 0
+}
+here 1
+UPDATE user_master SET ROLE_ID= ? , BRANCH_ID= ? , NAME= ? , EMAIL_ID= ? , MOBILE_NUMBER= ? , IS_ACTIVE= ? , PASSWORD= ? , CLIENT_ID= ? ,  CREATED_MODIFIED_DATE = '2022-12-22 17:44:20' where ID = 61  [
+  4,
+  29,
+  'Nipani(BM)',
+  'nipani.bm',
+  '9855332211',
+  '1',
+  'a87ff679a2f3e71d9181a67b7542122c',
+  1
+]
+here 2
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  serverStatus: 3,
+  warningCount: 0,
+  message: '(Rows matched: 1  Changed: 1  Warnings: 0',
+  protocol41: true,
+  changedRows: 1
+}
+12/22/2022, 5:44:20 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%nipani%' OR EMAIL_ID like '%nipani%' OR MOBILE_NUMBER like '%nipani%' OR PASSWORD like '%nipani%' )
+[ RowDataPacket { cnt: 4 } ]
+select * from view_user_master where 1  AND ( NAME like '%nipani%' OR EMAIL_ID like '%nipani%' OR MOBILE_NUMBER like '%nipani%' OR PASSWORD like '%nipani%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:44:25 PM  Requested Method : - POST /api/globalSettings/getPagesInformation public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+select VALUE from global_settings where KEYWORD in ('PAGE1', 'PAGE2','PAGE3','PAGE4','PAGE0','SUPPORT','BANK_NAME','ABOUT_US_URL')
+12/22/2022, 5:44:34 PM  Requested Method : - POST /api/user/getForms public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4294967290;SELECT replace(REPLACE(( CONCAT('[',GROUP_CONCAT(JSON_OBJECT('level',1,'title',m.FORM_NAME,'icon',m.ICON,'link',m.link,'SEQ_NO',SEQ_NO,'children',( IFNULL((SELECT replace(REPLACE(( CONCAT('[',GROUP_CONCAT(JSON_OBJECT('level',2,'title',FORM_NAME,'icon',ICON,'link',link,'SEQ_NO',SEQ_NO)),']')),'"[','['),']"',']') FROM view_role_details WHERE PARENT_ID = m.FORM_ID AND ROLE_ID = m.ROLE_ID  and IS_ALLOWED=1 AND SHOW_IN_MENU = 1 order by SEQ_NO ASC),'[]') )
+            )),']')),'"[','['),']"',']') AS data FROM view_role_details m WHERE PARENT_ID = 0 AND ROLE_ID = 5 AND IS_ALLOWED = 1 AND SHOW_IN_MENU = 1 order by SEQ_NO ASC
+12/22/2022, 5:44:34 PM  Requested Method : - POST /api/globalSettings/getPagesInformation public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+select VALUE from global_settings where KEYWORD in ('PAGE1', 'PAGE2','PAGE3','PAGE4','PAGE0','SUPPORT','BANK_NAME','ABOUT_US_URL')
+12/22/2022, 5:44:41 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+12/22/2022, 5:44:41 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'ApplicantProposal - Sort on desc id',
+  ACTIVITY_TIME: '2022-12-22 17:44:41',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'ApplicantProposal - Search For  ',
+  ACTIVITY_TIME: '2022-12-22 17:44:41',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208805,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:44:41 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_praposal_master where 1 
+12/22/2022, 5:44:41 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_praposal_master where 1 
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208806,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+[ RowDataPacket { cnt: 391 } ]
+select * from view_praposal_master where 1  order by id desc
+[ RowDataPacket { cnt: 391 } ]
+select * from view_praposal_master where 1  order by id desc LIMIT 0,10
+addDblog Response :  success
+addDblog Response :  success
+12/22/2022, 5:44:41 PM  Requested Method : - POST /api/proposalStage/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_proposal_stage_master where 1 AND STATUS=1
+[ RowDataPacket { cnt: 14 } ]
+select * from view_proposal_stage_master where 1 AND STATUS=1 order by SEQUENCE_NUMBER asc
+12/22/2022, 5:44:41 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1 
+[ RowDataPacket { cnt: 155 } ]
+select * from view_branch_master where 1  order by ID asc
+12/22/2022, 5:44:41 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'ApplicantProposal - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:44:41',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+12/22/2022, 5:44:41 PM  Requested Method : - POST /api/loanScheme/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_scheme_master where 1 
+[ RowDataPacket { cnt: 15 } ]
+select * from view_loan_scheme_master where 1  order by ID desc
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208807,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:44:42 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:44:42',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208808,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+12/22/2022, 5:44:42 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1 
+12/22/2022, 5:44:42 PM  Requested Method : - POST /api/loanScheme/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_scheme_master where 1  AND IS_ACTIVE = 1
+12/22/2022, 5:44:42 PM  Requested Method : - POST /api/addressInformation/getAddress/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_pincode_master where 1 
+[ RowDataPacket { cnt: 155 } ]
+select * from view_branch_master where 1  order by ID asc
+[ RowDataPacket { cnt: 15 } ]
+select * from view_loan_scheme_master where 1  AND IS_ACTIVE = 1 order by ID asc
+[ RowDataPacket { cnt: 4454 } ]
+select * from view_pincode_master where 1  order by TALUKA asc
+addDblog Response :  success
+12/22/2022, 5:44:42 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:44:42',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208809,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+12/22/2022, 5:44:42 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1 
+[ RowDataPacket { cnt: 155 } ]
+select * from view_branch_master where 1  order by ID asc
+12/22/2022, 5:44:42 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:44:42',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208810,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+12/22/2022, 5:44:42 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:44:42',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208811,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+12/22/2022, 5:44:43 PM  Requested Method : - POST /api/incomeyear/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_income_year where 1 
+12/22/2022, 5:44:43 PM  Requested Method : - POST /api/loanPurpose/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_purpose_master where 1 
+[ RowDataPacket { cnt: 106 } ]
+select * from view_loan_purpose_master where 1  order by ID asc
+[ RowDataPacket { cnt: 11 } ]
+select * from view_income_year where 1  order by ID desc
+12/22/2022, 5:44:43 PM  Requested Method : - POST /api/loanPurpose/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_purpose_master where 1 AND LOAN_TYPE_ID =undefined
+Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Sequence._packetToError (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Pool.query (D:\project\backend\node_modules\mysql\lib\Pool.js:199:23)
+    at exports.executeQuery (D:\project\backend\utilities\globalModule.js:194:20)
+    at exports.get (D:\project\backend\services\loanpurpose.js:64:12)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\project\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\project\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\project\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\project\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\project\backend\node_modules\express\lib\router\index.js:275:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'undefined' in 'where clause'",
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select count(*) as cnt from view_loan_purpose_master where 1 AND LOAN_TYPE_ID =undefined'
+}
+12/22/2022, 5:44:43 PM  Requested Method : - POST /api/term/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+1 20
+0 20
+select count(*) as cnt from view_term_master where 1 
+[ RowDataPacket { cnt: 8 } ]
+select * from view_term_master where 1  order by ID asc LIMIT 0,20
+addErrlog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:44:43 PM  Requested Method : - POST /api/installmentFrequency/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_installment_frequency where 1 AND IS_ACTIVE = '1'
+12/22/2022, 5:44:43 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:44:43',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+[ RowDataPacket { cnt: 7 } ]
+select * from view_installment_frequency where 1 AND IS_ACTIVE = '1' order by ID asc
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208812,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+12/22/2022, 5:44:43 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+12/22/2022, 5:44:43 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": " इतर", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+[{"key": 1, "title": " इतर", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+12/22/2022, 5:44:43 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:44:43',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208813,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:44:43 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:44:43',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208814,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+12/22/2022, 5:44:43 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+12/22/2022, 5:44:43 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": " इतर", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+[{"key": 1, "title": " इतर", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+addDblog Response :  success
+12/22/2022, 5:44:43 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:44:43',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208815,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:44:43 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": " इतर", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+12/22/2022, 5:44:43 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": " इतर", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+addDblog Response :  success
+12/22/2022, 5:44:44 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": " इतर", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+12/22/2022, 5:44:44 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": " इतर", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+12/22/2022, 5:44:44 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1 
+[ RowDataPacket { cnt: 155 } ]
+select * from view_branch_master where 1  order by ID DESC
+12/22/2022, 5:44:44 PM  Requested Method : - POST /api/loanScheme/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_scheme_master where 1 
+[ RowDataPacket { cnt: 15 } ]
+select * from view_loan_scheme_master where 1  order by ID asc
+12/22/2022, 5:44:44 PM  Requested Method : - POST /api/user/getPraposalChartData public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SELECT
+            AAA.date_field,
+            IFNULL(BBB.COUNT,0) AS COUNT
+        FROM(SELECT date_field
+        FROM
+        (
+            SELECT
+                MAKEDATE(2022,1) +
+                INTERVAL (12-1) MONTH +
+                INTERVAL daynum DAY date_field
+            FROM
+            (
+                SELECT t*10+u daynum
+                FROM
+                    (SELECT 0 t UNION SELECT 1 UNION SELECT 2 UNION SELECT 3) A,
+                    (SELECT 0 u UNION SELECT 1 UNION SELECT 2 UNION SELECT 3
+                    UNION SELECT 4 UNION SELECT 5 UNION SELECT 6 UNION SELECT 7
+                    UNION SELECT 8 UNION SELECT 9) B
+                ORDER BY daynum
+            ) AA
+        ) AAA
+        WHERE MONTH(date_field) = '12') AAA LEFT JOIN (select DISTINCT(DATE_FORMAT(CREATED_ON_DATETIME, '%Y-%m-%d')) AS date_field ,sum(LOAN_AMOUNT) as COUNT from view_praposal_master where MONTH(CREATED_ON_DATETIME)= '12' AND YEAR(CREATED_ON_DATETIME)='2022' and CURRENT_STAGE_ID=2 GROUP BY DATE_FORMAT(CREATED_ON_DATETIME, '%Y-%m-%d')) BBB
+        USING (date_field) order by date_field;
+12/22/2022, 5:44:44 PM  Requested Method : - POST /api/user/getLoanTypeLineChart public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SELECT ID AS LOAN_TYPE_ID,NAME_MR,NAME_EN,NAME_KN,ifnull(a.COUNT,0) AS CNT,ifnull(a.TOTAL_AMOUNT,0) AS TOTAL_AMOUNT
+	FROM view_loan_scheme_master LEFT JOIN (select 
+		LOAN_TYPE_ID AS LOAN_TYPE_ID,
+		COUNT(*) AS COUNT,
+		SUM(LOAN_AMOUNT) AS TOTAL_AMOUNT
+            FROM view_praposal_master WHERE 1  AND ( CREATED_ON_DATETIME BETWEEN '2022-12-22:00:00:00' AND '2022-12-22:23:59:59' ) 
+                group by LOAN_TYPE_ID ) a on (view_loan_scheme_master.ID = a.LOAN_TYPE_ID) ;
+12/22/2022, 5:44:44 PM  Requested Method : - POST /api/user/getBranchLineChart public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SELECT  ID,view_branch_master.NAME_MR,view_branch_master.NAME_EN,view_branch_master.NAME_KN,ifnull(a.COUNT,0) AS CNT,ifnull(a.TOTAL_AMOUNT,0) AS TOTAL_AMOUNT
+    FROM view_branch_master LEFT JOIN (select
+            BRANCH_NAME,
+            COUNT(*) AS COUNT,
+            SUM(LOAN_AMOUNT) AS TOTAL_AMOUNT
+               FROM view_praposal_master where 1  AND ( CREATED_ON_DATETIME BETWEEN '2022-12-22:00:00:00' AND '2022-12-22:23:59:59' ) 
+                 group by BRANCH_NAME ) a on (view_branch_master.NAME_MR = a.BRANCH_NAME);;
+12/22/2022, 5:44:44 PM  Requested Method : - POST /api/proposalLogInformation/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_proposal_log_information where 1 
+12/22/2022, 5:44:44 PM  Requested Method : - POST /api/user/getDashboardCounts public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SELECT COUNT(*) AS TOTAL_BRANCHES FROM view_branch_master;
+        SELECT COUNT(*) AS TOTAL_USERS FROM view_user_master;
+        SELECT COUNT(*) AS TOTAL_DOCUMENTS FROM view_document_master;
+        SELECT COUNT(*) AS TOTAL_LOAN_TYPES FROM view_loan_scheme_master;
+    
+        SELECT COUNT(*) AS TOTAL_PRAPOSALS,
+        (SELECT COUNT(*) FROM view_praposal_master WHERE CURRENT_STAGE_ID NOT IN(6,13))AS IN_PROCESS_PRAPOSALS,
+        (SELECT COUNT(*) FROM view_praposal_master WHERE CURRENT_STAGE_ID=13)AS DISBURSED_PRAPOSALS ,
+        (SELECT COUNT(*) FROM view_praposal_master WHERE CURRENT_STAGE_ID=6)AS REJECTED_PRAPOSALS
+        FROM view_praposal_master;
+
+        SELECT SUM(LOAN_AMOUNT) AS TOTAL_LOAN_AMOUNT,
+        (SELECT SUM(LOAN_AMOUNT) FROM view_praposal_master WHERE CURRENT_STAGE_ID NOT IN(6,13))AS IN_PROCESS_LOAN_AMOUNT,
+        (SELECT SUM(LOAN_AMOUNT) FROM view_praposal_master WHERE CURRENT_STAGE_ID=13)AS DISBURSED_LOAN_AMOUNT,
+        (SELECT SUM(LOAN_AMOUNT) FROM view_praposal_master WHERE CURRENT_STAGE_ID=6)AS REJECTED_LOAN_AMOUNT
+        FROM view_praposal_master;
+
+        SELECT COUNT(*) AS TOTAL_APPLICANT_DOCUMENTS, 
+        (SELECT COUNT(*) FROM view_applicant_documents WHERE IS_UPLOADED=0)AS PENDING_DOCUMENTS ,
+        (SELECT COUNT(*) FROM view_applicant_documents WHERE IS_APPROVED=1)AS APPROVED_DOCUMENTS,
+        (SELECT COUNT(*) FROM view_applicant_documents WHERE IS_APPROVED=0)AS REJECTED_DOCUMENTS 
+        FROM view_applicant_documents;
+
+        SELECT COUNT(*)AS TOTAL_APPLICANTS,
+        (SELECT COUNT(APPLICANT_ID) from view_praposal_master where CURRENT_STAGE_ID=13)AS LOAN_DISBURSED_APPLICANTS,
+        (SELECT COUNT(APPLICANT_ID) from view_praposal_master where CURRENT_STAGE_ID=6)AS LOAN_REJECTED_APPLICANTS,
+        (SELECT COUNT(distinct APPLICANT_ID) from view_praposal_master where CURRENT_STAGE_ID NOT IN(6,13))AS LOAN_IN_PROCESS_APPLICANTS FROM view_applicant_master;
+12/22/2022, 5:44:44 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_user_master where 1 
+12/22/2022, 5:44:44 PM  Requested Method : - POST /api/praposal/getPraposalNumber public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SELECT ID,LOAN_KEY AS PRAPOSAL_NUMBER FROM view_praposal_master WHERE 1  ;
+[ RowDataPacket { cnt: 327 } ]
+select * from view_user_master where 1  order by ID DESC
+[ RowDataPacket { cnt: 13430 } ]
+select * from view_proposal_log_information where 1  order by id desc LIMIT 0,10
+12/22/2022, 5:44:58 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%bija%' OR EMAIL_ID like '%bija%' OR MOBILE_NUMBER like '%bija%' OR PASSWORD like '%bija%' )
+[ RowDataPacket { cnt: 0 } ]
+select * from view_user_master where 1  AND ( NAME like '%bija%' OR EMAIL_ID like '%bija%' OR MOBILE_NUMBER like '%bija%' OR PASSWORD like '%bija%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:45:04 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%bijapur%' OR EMAIL_ID like '%bijapur%' OR MOBILE_NUMBER like '%bijapur%' OR PASSWORD like '%bijapur%' )
+[ RowDataPacket { cnt: 0 } ]
+select * from view_user_master where 1  AND ( NAME like '%bijapur%' OR EMAIL_ID like '%bijapur%' OR MOBILE_NUMBER like '%bijapur%' OR PASSWORD like '%bijapur%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:45:26 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%bel%' OR EMAIL_ID like '%bel%' OR MOBILE_NUMBER like '%bel%' OR PASSWORD like '%bel%' )
+[ RowDataPacket { cnt: 8 } ]
+select * from view_user_master where 1  AND ( NAME like '%bel%' OR EMAIL_ID like '%bel%' OR MOBILE_NUMBER like '%bel%' OR PASSWORD like '%bel%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:45:52 PM  Requested Method : - PUT /api/user/update/ public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+{
+  ID: 62,
+  ROLE_ID: 5,
+  BRANCH_ID: 30,
+  NAME: 'Belgavi(BA)',
+  EMAIL_ID: 'belgavi.ba',
+  MOBILE_NUMBER: '9877767564',
+  IS_ACTIVE: 1,
+  STATUS: 'Active',
+  PASSWORD: 'e4da3b7fbbce2345d7772b0674a318d5',
+  CREATED_MODIFIED_DATE: '2022-12-15 05:51:33',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  LAST_LOGIN_DATETIME: null,
+  CLOUD_ID: null,
+  DEVICE_ID: null,
+  APP_VERSION: null,
+  LOAN_LIMIT: 0
+}
+here 1
+UPDATE user_master SET ROLE_ID= ? , BRANCH_ID= ? , NAME= ? , EMAIL_ID= ? , MOBILE_NUMBER= ? , IS_ACTIVE= ? , PASSWORD= ? , CLIENT_ID= ? ,  CREATED_MODIFIED_DATE = '2022-12-22 17:45:52' where ID = 62  [
+  5,
+  30,
+  'Belgavi(BA)',
+  'belgavi.ba',
+  '9877767564',
+  '1',
+  'e4da3b7fbbce2345d7772b0674a318d5',
+  1
+]
+here 2
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  serverStatus: 3,
+  warningCount: 0,
+  message: '(Rows matched: 1  Changed: 1  Warnings: 0',
+  protocol41: true,
+  changedRows: 1
+}
+12/22/2022, 5:45:52 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%bel%' OR EMAIL_ID like '%bel%' OR MOBILE_NUMBER like '%bel%' OR PASSWORD like '%bel%' )
+[ RowDataPacket { cnt: 8 } ]
+select * from view_user_master where 1  AND ( NAME like '%bel%' OR EMAIL_ID like '%bel%' OR MOBILE_NUMBER like '%bel%' OR PASSWORD like '%bel%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:46:01 PM  Requested Method : - PUT /api/user/update/ public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+{
+  ID: 63,
+  ROLE_ID: 4,
+  BRANCH_ID: 30,
+  NAME: 'Belgavi(BM)',
+  EMAIL_ID: 'belgavi.bm',
+  MOBILE_NUMBER: '9855347812',
+  IS_ACTIVE: 1,
+  STATUS: 'Active',
+  PASSWORD: 'e4da3b7fbbce2345d7772b0674a318d5',
+  CREATED_MODIFIED_DATE: '2022-12-15 05:51:22',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  LAST_LOGIN_DATETIME: null,
+  CLOUD_ID: null,
+  DEVICE_ID: null,
+  APP_VERSION: null,
+  LOAN_LIMIT: 0
+}
+here 1
+UPDATE user_master SET ROLE_ID= ? , BRANCH_ID= ? , NAME= ? , EMAIL_ID= ? , MOBILE_NUMBER= ? , IS_ACTIVE= ? , PASSWORD= ? , CLIENT_ID= ? ,  CREATED_MODIFIED_DATE = '2022-12-22 17:46:01' where ID = 63  [
+  4,
+  30,
+  'Belgavi(BM)',
+  'belgavi.bm',
+  '9855347812',
+  '1',
+  'e4da3b7fbbce2345d7772b0674a318d5',
+  1
+]
+here 2
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  serverStatus: 3,
+  warningCount: 0,
+  message: '(Rows matched: 1  Changed: 1  Warnings: 0',
+  protocol41: true,
+  changedRows: 1
+}
+12/22/2022, 5:46:01 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%bel%' OR EMAIL_ID like '%bel%' OR MOBILE_NUMBER like '%bel%' OR PASSWORD like '%bel%' )
+[ RowDataPacket { cnt: 8 } ]
+select * from view_user_master where 1  AND ( NAME like '%bel%' OR EMAIL_ID like '%bel%' OR MOBILE_NUMBER like '%bel%' OR PASSWORD like '%bel%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:46:13 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%vijapur%' OR EMAIL_ID like '%vijapur%' OR MOBILE_NUMBER like '%vijapur%' OR PASSWORD like '%vijapur%' )
+[ RowDataPacket { cnt: 0 } ]
+select * from view_user_master where 1  AND ( NAME like '%vijapur%' OR EMAIL_ID like '%vijapur%' OR MOBILE_NUMBER like '%vijapur%' OR PASSWORD like '%vijapur%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:46:21 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%vijay%' OR EMAIL_ID like '%vijay%' OR MOBILE_NUMBER like '%vijay%' OR PASSWORD like '%vijay%' )
+[ RowDataPacket { cnt: 2 } ]
+select * from view_user_master where 1  AND ( NAME like '%vijay%' OR EMAIL_ID like '%vijay%' OR MOBILE_NUMBER like '%vijay%' OR PASSWORD like '%vijay%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:46:28 PM  Requested Method : - PUT /api/user/update/ public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+{
+  ID: 94,
+  ROLE_ID: 5,
+  BRANCH_ID: 46,
+  NAME: 'Vijaypur(BA)',
+  EMAIL_ID: 'Vijaypur.ba',
+  MOBILE_NUMBER: '9888888888',
+  IS_ACTIVE: 1,
+  STATUS: 'Active',
+  PASSWORD: '3c59dc048e8850243be8079a5c74d079',
+  CREATED_MODIFIED_DATE: '2022-12-15 06:46:08',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  LAST_LOGIN_DATETIME: null,
+  CLOUD_ID: null,
+  DEVICE_ID: null,
+  APP_VERSION: null,
+  LOAN_LIMIT: 0
+}
+here 1
+UPDATE user_master SET ROLE_ID= ? , BRANCH_ID= ? , NAME= ? , EMAIL_ID= ? , MOBILE_NUMBER= ? , IS_ACTIVE= ? , PASSWORD= ? , CLIENT_ID= ? ,  CREATED_MODIFIED_DATE = '2022-12-22 17:46:28' where ID = 94  [
+  5,
+  46,
+  'Vijaypur(BA)',
+  'Vijaypur.ba',
+  '9888888888',
+  '1',
+  '3c59dc048e8850243be8079a5c74d079',
+  1
+]
+here 2
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  serverStatus: 3,
+  warningCount: 0,
+  message: '(Rows matched: 1  Changed: 1  Warnings: 0',
+  protocol41: true,
+  changedRows: 1
+}
+12/22/2022, 5:46:28 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%vijay%' OR EMAIL_ID like '%vijay%' OR MOBILE_NUMBER like '%vijay%' OR PASSWORD like '%vijay%' )
+[ RowDataPacket { cnt: 2 } ]
+select * from view_user_master where 1  AND ( NAME like '%vijay%' OR EMAIL_ID like '%vijay%' OR MOBILE_NUMBER like '%vijay%' OR PASSWORD like '%vijay%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:46:35 PM  Requested Method : - PUT /api/user/update/ public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+{
+  ID: 94,
+  ROLE_ID: 5,
+  BRANCH_ID: 46,
+  NAME: 'Vijaypur(BA)',
+  EMAIL_ID: 'Vijaypur.ba',
+  MOBILE_NUMBER: '9888888888',
+  IS_ACTIVE: 1,
+  STATUS: 'Active',
+  PASSWORD: '3c59dc048e8850243be8079a5c74d079',
+  CREATED_MODIFIED_DATE: '2022-12-15 06:46:08',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  LAST_LOGIN_DATETIME: null,
+  CLOUD_ID: null,
+  DEVICE_ID: null,
+  APP_VERSION: null,
+  LOAN_LIMIT: 0
+}
+here 1
+UPDATE user_master SET ROLE_ID= ? , BRANCH_ID= ? , NAME= ? , EMAIL_ID= ? , MOBILE_NUMBER= ? , IS_ACTIVE= ? , PASSWORD= ? , CLIENT_ID= ? ,  CREATED_MODIFIED_DATE = '2022-12-22 17:46:35' where ID = 94  [
+  5,
+  46,
+  'Vijaypur(BA)',
+  'Vijaypur.ba',
+  '9888888888',
+  '1',
+  '3c59dc048e8850243be8079a5c74d079',
+  1
+]
+here 2
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  serverStatus: 3,
+  warningCount: 0,
+  message: '(Rows matched: 1  Changed: 1  Warnings: 0',
+  protocol41: true,
+  changedRows: 1
+}
+12/22/2022, 5:46:35 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%vijay%' OR EMAIL_ID like '%vijay%' OR MOBILE_NUMBER like '%vijay%' OR PASSWORD like '%vijay%' )
+[ RowDataPacket { cnt: 2 } ]
+select * from view_user_master where 1  AND ( NAME like '%vijay%' OR EMAIL_ID like '%vijay%' OR MOBILE_NUMBER like '%vijay%' OR PASSWORD like '%vijay%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:46:41 PM  Requested Method : - PUT /api/user/update/ public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+{
+  ID: 95,
+  ROLE_ID: 4,
+  BRANCH_ID: 46,
+  NAME: 'Vijaypur(BM)',
+  EMAIL_ID: 'Vijaypur.bm',
+  MOBILE_NUMBER: '9867876876',
+  IS_ACTIVE: 1,
+  STATUS: 'Active',
+  PASSWORD: '3c59dc048e8850243be8079a5c74d079',
+  CREATED_MODIFIED_DATE: '2022-12-22 14:48:02',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  LAST_LOGIN_DATETIME: '2022-12-22 14:48:02',
+  CLOUD_ID: '',
+  DEVICE_ID: '0Parv7AZcpcQpdnU',
+  APP_VERSION: '',
+  LOAN_LIMIT: 0
+}
+here 1
+UPDATE user_master SET ROLE_ID= ? , BRANCH_ID= ? , NAME= ? , EMAIL_ID= ? , MOBILE_NUMBER= ? , IS_ACTIVE= ? , PASSWORD= ? , CLIENT_ID= ? ,  CREATED_MODIFIED_DATE = '2022-12-22 17:46:41' where ID = 95  [
+  4,
+  46,
+  'Vijaypur(BM)',
+  'Vijaypur.bm',
+  '9867876876',
+  '1',
+  '3c59dc048e8850243be8079a5c74d079',
+  1
+]
+here 2
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  serverStatus: 3,
+  warningCount: 0,
+  message: '(Rows matched: 1  Changed: 1  Warnings: 0',
+  protocol41: true,
+  changedRows: 1
+}
+12/22/2022, 5:46:41 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%vijay%' OR EMAIL_ID like '%vijay%' OR MOBILE_NUMBER like '%vijay%' OR PASSWORD like '%vijay%' )
+[ RowDataPacket { cnt: 2 } ]
+select * from view_user_master where 1  AND ( NAME like '%vijay%' OR EMAIL_ID like '%vijay%' OR MOBILE_NUMBER like '%vijay%' OR PASSWORD like '%vijay%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:46:49 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%raibag%' OR EMAIL_ID like '%raibag%' OR MOBILE_NUMBER like '%raibag%' OR PASSWORD like '%raibag%' )
+[ RowDataPacket { cnt: 2 } ]
+select * from view_user_master where 1  AND ( NAME like '%raibag%' OR EMAIL_ID like '%raibag%' OR MOBILE_NUMBER like '%raibag%' OR PASSWORD like '%raibag%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:46:56 PM  Requested Method : - PUT /api/user/update/ public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+{
+  ID: 131,
+  ROLE_ID: 5,
+  BRANCH_ID: 67,
+  NAME: 'raibag .ba',
+  EMAIL_ID: 'raibag .ba',
+  MOBILE_NUMBER: '9876556789',
+  IS_ACTIVE: 1,
+  STATUS: 'Active',
+  PASSWORD: 'd9d4f495e875a2e075a1a4a6e1b9770f',
+  CREATED_MODIFIED_DATE: '2022-12-15 07:36:08',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  LAST_LOGIN_DATETIME: null,
+  CLOUD_ID: null,
+  DEVICE_ID: null,
+  APP_VERSION: null,
+  LOAN_LIMIT: 0
+}
+here 1
+UPDATE user_master SET ROLE_ID= ? , BRANCH_ID= ? , NAME= ? , EMAIL_ID= ? , MOBILE_NUMBER= ? , IS_ACTIVE= ? , PASSWORD= ? , CLIENT_ID= ? ,  CREATED_MODIFIED_DATE = '2022-12-22 17:46:56' where ID = 131  [
+  5,
+  67,
+  'raibag .ba',
+  'raibag .ba',
+  '9876556789',
+  '1',
+  'd9d4f495e875a2e075a1a4a6e1b9770f',
+  1
+]
+here 2
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  serverStatus: 3,
+  warningCount: 0,
+  message: '(Rows matched: 1  Changed: 1  Warnings: 0',
+  protocol41: true,
+  changedRows: 1
+}
+12/22/2022, 5:46:56 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%raibag%' OR EMAIL_ID like '%raibag%' OR MOBILE_NUMBER like '%raibag%' OR PASSWORD like '%raibag%' )
+[ RowDataPacket { cnt: 2 } ]
+select * from view_user_master where 1  AND ( NAME like '%raibag%' OR EMAIL_ID like '%raibag%' OR MOBILE_NUMBER like '%raibag%' OR PASSWORD like '%raibag%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:47:02 PM  Requested Method : - PUT /api/user/update/ public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+{
+  ID: 130,
+  ROLE_ID: 4,
+  BRANCH_ID: 67,
+  NAME: 'raibag .bm',
+  EMAIL_ID: 'raibag .bm',
+  MOBILE_NUMBER: '9876556789',
+  IS_ACTIVE: 1,
+  STATUS: 'Active',
+  PASSWORD: 'd9d4f495e875a2e075a1a4a6e1b9770f',
+  CREATED_MODIFIED_DATE: '2022-12-15 07:35:48',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  LAST_LOGIN_DATETIME: null,
+  CLOUD_ID: null,
+  DEVICE_ID: null,
+  APP_VERSION: null,
+  LOAN_LIMIT: 0
+}
+here 1
+UPDATE user_master SET ROLE_ID= ? , BRANCH_ID= ? , NAME= ? , EMAIL_ID= ? , MOBILE_NUMBER= ? , IS_ACTIVE= ? , PASSWORD= ? , CLIENT_ID= ? ,  CREATED_MODIFIED_DATE = '2022-12-22 17:47:02' where ID = 130  [
+  4,
+  67,
+  'raibag .bm',
+  'raibag .bm',
+  '9876556789',
+  '1',
+  'd9d4f495e875a2e075a1a4a6e1b9770f',
+  1
+]
+here 2
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  serverStatus: 3,
+  warningCount: 0,
+  message: '(Rows matched: 1  Changed: 1  Warnings: 0',
+  protocol41: true,
+  changedRows: 1
+}
+12/22/2022, 5:47:03 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%raibag%' OR EMAIL_ID like '%raibag%' OR MOBILE_NUMBER like '%raibag%' OR PASSWORD like '%raibag%' )
+[ RowDataPacket { cnt: 2 } ]
+select * from view_user_master where 1  AND ( NAME like '%raibag%' OR EMAIL_ID like '%raibag%' OR MOBILE_NUMBER like '%raibag%' OR PASSWORD like '%raibag%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:47:19 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%sou%' OR EMAIL_ID like '%sou%' OR MOBILE_NUMBER like '%sou%' OR PASSWORD like '%sou%' )
+[ RowDataPacket { cnt: 2 } ]
+select * from view_user_master where 1  AND ( NAME like '%sou%' OR EMAIL_ID like '%sou%' OR MOBILE_NUMBER like '%sou%' OR PASSWORD like '%sou%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:48:32 PM  Requested Method : - POST /user/login public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+SELECT * FROM view_user_master  WHERE  (MOBILE_NUMBER =? or EMAIL_ID=?) and PASSWORD =? and IS_ACTIVE = 1 [ 'soundatti.ba', 'soundatti.ba', '68d30a9594728bc39aa24be94b319d21' ]
+supportkey :  HMSKNNn12161614
+addDblog Response :  success
+12/22/2022, 5:48:54 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%soun%' OR EMAIL_ID like '%soun%' OR MOBILE_NUMBER like '%soun%' OR PASSWORD like '%soun%' )
+[ RowDataPacket { cnt: 2 } ]
+select * from view_user_master where 1  AND ( NAME like '%soun%' OR EMAIL_ID like '%soun%' OR MOBILE_NUMBER like '%soun%' OR PASSWORD like '%soun%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:48:55 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%soun%' OR EMAIL_ID like '%soun%' OR MOBILE_NUMBER like '%soun%' OR PASSWORD like '%soun%' )
+[ RowDataPacket { cnt: 2 } ]
+select * from view_user_master where 1  AND ( NAME like '%soun%' OR EMAIL_ID like '%soun%' OR MOBILE_NUMBER like '%soun%' OR PASSWORD like '%soun%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:48:58 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%sou%' OR EMAIL_ID like '%sou%' OR MOBILE_NUMBER like '%sou%' OR PASSWORD like '%sou%' )
+[ RowDataPacket { cnt: 2 } ]
+select * from view_user_master where 1  AND ( NAME like '%sou%' OR EMAIL_ID like '%sou%' OR MOBILE_NUMBER like '%sou%' OR PASSWORD like '%sou%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:49:00 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%sou%' OR EMAIL_ID like '%sou%' OR MOBILE_NUMBER like '%sou%' OR PASSWORD like '%sou%' )
+[ RowDataPacket { cnt: 2 } ]
+select * from view_user_master where 1  AND ( NAME like '%sou%' OR EMAIL_ID like '%sou%' OR MOBILE_NUMBER like '%sou%' OR PASSWORD like '%sou%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:49:04 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%sav%' OR EMAIL_ID like '%sav%' OR MOBILE_NUMBER like '%sav%' OR PASSWORD like '%sav%' )
+[ RowDataPacket { cnt: 8 } ]
+select * from view_user_master where 1  AND ( NAME like '%sav%' OR EMAIL_ID like '%sav%' OR MOBILE_NUMBER like '%sav%' OR PASSWORD like '%sav%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:49:22 PM  Requested Method : - POST /user/login public Ip : undefined supportkey :  YuGoT1w12221748
+Checking apiKey
+true
+in function
+SELECT * FROM view_user_master  WHERE  (MOBILE_NUMBER =? or EMAIL_ID=?) and PASSWORD =? and IS_ACTIVE = 1 [ 'sagar.bm', 'sagar.bm', '02522a2b2726fb0a03bb19f2d8d9524d' ]
+supportkey :  YuGoT1w12221748
+UPDATE  user_master SET LAST_LOGIN_DATETIME = ?, CLOUD_ID = ?, DEVICE_ID= ?,APP_VERSION =? where ID = ? [ '2022-12-22 17:49:22', '', 'UNTUQubrxkxIbCfS', '', 293 ]
+supportkey :  YuGoT1w12221748
+insert into proposal_log_information(PROPOSAL_ID,LOG_ACTION,DESCRIPTION,LOG_DATETIME,LOG_TYPE,USER_ID,OLD_STAGE_ID,NEW_STAGE_ID,CLIENT_ID) values (0,'Logged logged in the system.',CONCAT((select NAME from user_master where ID = 293),' logged in the system.'),'2022-12-22 17:49:22','I',293,0,0,1)
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 13431,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+addDblog Response :  success
+12/22/2022, 5:49:22 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  YuGoT1w12221748
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1  AND MANAGER_ID=293
+[ RowDataPacket { cnt: 0 } ]
+select * from view_branch_master where 1  AND MANAGER_ID=293 order by ID DESC
+12/22/2022, 5:49:23 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  YuGoT1w12221748
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 293,
+  ACTIVITY_DETAILS: 'Login Successfully',
+  ACTIVITY_TIME: '2022-12-22 17:49:23',
+  CLIENT_ID: 1
+}
+supportkey :  YuGoT1w12221748
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208816,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+12/22/2022, 5:49:24 PM  Requested Method : - POST /api/user/getForms public Ip : undefined supportkey :  YuGoT1w12221748
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4294967290;SELECT replace(REPLACE(( CONCAT('[',GROUP_CONCAT(JSON_OBJECT('level',1,'title',m.FORM_NAME,'icon',m.ICON,'link',m.link,'SEQ_NO',SEQ_NO,'children',( IFNULL((SELECT replace(REPLACE(( CONCAT('[',GROUP_CONCAT(JSON_OBJECT('level',2,'title',FORM_NAME,'icon',ICON,'link',link,'SEQ_NO',SEQ_NO)),']')),'"[','['),']"',']') FROM view_role_details WHERE PARENT_ID = m.FORM_ID AND ROLE_ID = m.ROLE_ID  and IS_ALLOWED=1 AND SHOW_IN_MENU = 1 order by SEQ_NO ASC),'[]') )
+            )),']')),'"[','['),']"',']') AS data FROM view_role_details m WHERE PARENT_ID = 0 AND ROLE_ID = 4 AND IS_ALLOWED = 1 AND SHOW_IN_MENU = 1 order by SEQ_NO ASC
+12/22/2022, 5:49:24 PM  Requested Method : - POST /api/globalSettings/getPagesInformation public Ip : undefined supportkey :  YuGoT1w12221748
+Checking apiKey
+true
+in function
+checking token
+select VALUE from global_settings where KEYWORD in ('PAGE1', 'PAGE2','PAGE3','PAGE4','PAGE0','SUPPORT','BANK_NAME','ABOUT_US_URL')
+12/22/2022, 5:49:25 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 229,
+  ACTIVITY_DETAILS: 'ApplicantProposal - Sort on desc id',
+  ACTIVITY_TIME: '2022-12-22 17:49:25',
+  CLIENT_ID: 1
+}
+supportkey :  
+12/22/2022, 5:49:25 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 229,
+  ACTIVITY_DETAILS: 'ApplicantProposal - Search For  ',
+  ACTIVITY_TIME: '2022-12-22 17:49:25',
+  CLIENT_ID: 1
+}
+supportkey :  
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208817,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208818,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:49:25 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_praposal_master where 1 
+12/22/2022, 5:49:25 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_praposal_master where 1 
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+[ RowDataPacket { cnt: 391 } ]
+select * from view_praposal_master where 1  order by id desc LIMIT 0,10
+[ RowDataPacket { cnt: 391 } ]
+select * from view_praposal_master where 1  order by id desc
+12/22/2022, 5:49:27 PM  Requested Method : - POST /api/proposalLogInformation/create public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO proposal_log_information SET ? {
+  PROPOSAL_ID: 0,
+  LOG_ACTION: 'logged out from the system',
+  DESCRIPTION: 'kalloligkk.ba logged out from system.',
+  LOG_DATETIME: '2022-12-22 17:49:27',
+  LOG_TYPE: 'I',
+  USER_ID: 229,
+  OLD_STAGE_ID: 0,
+  NEW_STAGE_ID: 0,
+  CLIENT_ID: 1
+}
+supportkey :  
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 13432,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:49:43 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 126,
+  ACTIVITY_DETAILS: 'ApplicantProposal - Sort on desc id',
+  ACTIVITY_TIME: '2022-12-22 17:49:43',
+  CLIENT_ID: 1
+}
+supportkey :  
+12/22/2022, 5:49:43 PM  Requested Method : - POST /api/proposalStage/get public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_proposal_stage_master where 1 AND STATUS=1
+[ RowDataPacket { cnt: 14 } ]
+select * from view_proposal_stage_master where 1 AND STATUS=1 order by SEQUENCE_NUMBER asc
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208819,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:49:43 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1 
+[ RowDataPacket { cnt: 155 } ]
+select * from view_branch_master where 1  order by ID asc
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:49:43 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_praposal_master where 1 
+[ RowDataPacket { cnt: 391 } ]
+select * from view_praposal_master where 1  order by id desc
+12/22/2022, 5:49:43 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_praposal_master where 1 
+12/22/2022, 5:49:43 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 126,
+  ACTIVITY_DETAILS: 'ApplicantProposal - Search For  ',
+  ACTIVITY_TIME: '2022-12-22 17:49:43',
+  CLIENT_ID: 1
+}
+supportkey :  
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208820,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+[ RowDataPacket { cnt: 391 } ]
+select * from view_praposal_master where 1  order by id desc LIMIT 0,10

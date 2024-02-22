@@ -1,0 +1,741 @@
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////--vehicle allocation ----------------////////////////////////////
+            async.eachSeries(trainerData, function iteratorOverElems(trainer, callback) {
+        
+                                                    db.executeDML(`INSERT INTO vehicle_allocation_colleges (VEHICLE_ALLOCATION_ID,COLLEGE_ID,LOCATION_NAME,CLIENT_ID) VALUES (?,?,?,?)`, [VEHICLE_ALLOCATION_ID, trainer.key, '', CLIENT_ID], supportKey, connection, (error, resultVehicleAllocationColleges) => {
+                                                        if (error) {
+                                                            console.log(error);
+                                                            callback(error);
+                                                            // db.rollbackConnection(connection);
+                                                            // res.send({
+                                                            //     "code": 400,
+                                                            //     "message": "Failed to insert vehicle allocation information"
+                                                            // });
+                                                        }
+                                                        else {
+        
+                                                            var VEHICLE_ALLOCATION_COLLEGES_ID = resultVehicleAllocationColleges.insertId;
+        
+                                                            var insertQuery = `INSERT INTO vehicle_allocation_colleges_trainers (VEHICLE_ALLOCATION_COLLEGES_ID,TRAINER_ID,EMPLOYEE_ID,CLIENT_ID) VALUES ?`;
+                                                            console.log(trainer.children);
+                                                            for (let i = 0; i < trainer.children.length; i++) {
+                                                                const trainers = trainer.children[i];
+        
+                                                                if (trainers.checked) {
+                                                                    var rec = [VEHICLE_ALLOCATION_COLLEGES_ID, trainers.key, 0, CLIENT_ID];
+                                                                    trainersVehicleData.push(rec);
+                                                                }
+        
+                                                            }
+                                                            console.log(trainersVehicleData);
+        
+                                                            db.executeDML(insertQuery, [trainersVehicleData], supportKey, connection, (error, results) => {
+                                                                if (error) {
+                                                                    console.log(error);
+                                                                    callback(error);
+                                                                }
+                                                                else {
+        
+                                                                    callback();
+        
+                                                                }
+                                                            })
+                                                        }
+                                                    })
+                                                },
+                                                    function subCb(error) {
+                                                        if (error) {
+                                                            //rollback
+                                                            console.log("error")
+        
+                                                            db.rollbackConnection(connection);
+                                                            res.send({
+                                                                "code": 400,
+                                                                "message": "Failed to Insert Vehicle allocation details"
+                                                            });
+        
+                                                        } else {
+        
+        
+                                                            if (IS_OTHERS == 1) {
+        
+        
+                                                                db.executeDML(`INSERT INTO vehicle_allocation_colleges (VEHICLE_ALLOCATION_ID,COLLEGE_ID,LOCATION_NAME,CLIENT_ID) VALUES (?,?,?,?)`, [VEHICLE_ALLOCATION_ID, 0, LOCATION_NAME, CLIENT_ID], supportKey, connection, (error, resultVehicleAllocationColleges1) => {
+                                                                    if (error) {
+                                                                        console.log(error);
+                                                                        callback(error);
+                                                                        // db.rollbackConnection(connection);
+                                                                        // res.send({
+                                                                        //     "code": 400,
+                                                                        //     "message": "Failed to insert vehicle allocation information"
+                                                                        // });
+                                                                    }
+                                                                    else {
+                                                                        var trainersVehicleData1 = []
+                                                                        var VEHICLE_ALLOCATION_COLLEGES_ID1 = resultVehicleAllocationColleges1.insertId;
+        
+                                                                        var insertQuery = `INSERT INTO vehicle_allocation_colleges_trainers (VEHICLE_ALLOCATION_COLLEGES_ID,TRAINER_ID,EMPLOYEE_ID,CLIENT_ID) VALUES ?`;
+                                                                        // console.log(empDetails);
+        
+                                                                        for (let i = 0; i < empData.length; i++) {
+                                                                            const emp = empData[i];
+        
+                                                                            if (emp.IS_SELECTED == 1) {
+                                                                                var rec = [VEHICLE_ALLOCATION_COLLEGES_ID1, 0, emp.ID, CLIENT_ID];
+                                                                                trainersVehicleData1.push(rec);
+                                                                            }
+                                                                        }
+                                                                        console.log(trainersVehicleData1)
+                                                                        if (trainersVehicleData1.length > 0) {
+                                                                            db.executeDML(insertQuery, [trainersVehicleData1], supportKey, connection, (error, results) => {
+                                                                                if (error) {
+                                                                                    console.log("error")
+        
+                                                                                    db.rollbackConnection(connection);
+                                                                                    res.send({
+                                                                                        "code": 400,
+                                                                                        "message": "Failed to Insert Vehicle allocation details"
+                                                                                    });
+                                                                                }
+                                                                                else {
+        
+                                                                                    console.log("Commit");
+        
+                                                                                    db.commitConnection(connection);
+        
+                                                                                    res.send({
+                                                                                        "code": 200,
+                                                                                        "message": "New vehicle allocation details Successfully added",
+                                                                                    });
+        
+                                                                                }
+                                                                            })
+                                                                        }
+                                                                        else {
+                                                                            console.log("Commit");
+        
+                                                                            db.commitConnection(connection);
+        
+                                                                            res.send({
+                                                                                "code": 200,
+                                                                                "message": "New vehicle allocation details Successfully added",
+                                                                            });
+        
+                                                                        }
+        
+                                                                    }
+                                                                });
+        
+                                                            }
+                                                            else {
+        
+                                                                console.log("Commit");
+        
+                                                                db.commitConnection(connection);
+        
+                                                                res.send({
+                                                                    "code": 200,
+                                                                    "message": "New vehicle allocation details Successfully added",
+                                                                });
+                                                            }
+        
+                                                        }
+        
+                                                    });
+        
+
+        //////////////////////////////////////----------------------------------------------------//////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const mm = require('../../utilities/globalModule');
+const db = require('../../utilities/dbModule');
+const { validationResult, body } = require('express-validator');
+const logger = require("../../utilities/logger");
+
+const applicationkey = process.env.APPLICATION_KEY;
+
+var batchSchedule = "batch_schedule";
+var viewBatchSchedule = "view_" + batchSchedule;
+var async = require('async');
+
+function reqData(req) {
+
+    var data = {
+        BATCH_ID: req.body.BATCH_ID,
+        DATE: req.body.DATE,
+        START_TIME: req.body.START_TIME,
+        END_TIME: req.body.END_TIME,
+        IS_BREAK: req.body.IS_BREAK ? '1' : '0',
+        BREAK_START_TIME: req.body.BREAK_START_TIME,
+        BREAK_END_TIME: req.body.BREAK_END_TIME,
+        IS_SESSION_CREATED: req.body.IS_SESSION_CREATED,
+        SESSION_ID: req.body.SESSION_ID,
+
+        CLIENT_ID: req.body.CLIENT_ID
+
+    }
+    return data;
+}
+
+
+
+exports.validate = function () {
+    return [
+
+        body('BATCH_ID').isInt(),
+        body('DATE', ' parameter missing').exists(),
+        body('START_TIME', ' parameter missing').exists(),
+        body('END_TIME', ' parameter missing').exists(),
+        body('BREAK_START_TIME', ' parameter missing').exists(),
+        body('BREAK_END_TIME', ' parameter missing').exists(),
+        body('IS_SESSION_CREATED', ' parameter missing').exists(),
+        body('SESSION_ID').isInt(),
+        body('ID').optional(),
+
+
+    ]
+}
+
+
+exports.get = (req, res) => {
+
+    var pageIndex = req.body.pageIndex ? req.body.pageIndex : '';
+
+    var pageSize = req.body.pageSize ? req.body.pageSize : '';
+    var start = 0;
+    var end = 0;
+
+    console.log(pageIndex + " " + pageSize)
+    if (pageIndex != '' && pageSize != '') {
+        start = (pageIndex - 1) * pageSize;
+        end = pageSize;
+        console.log(start + " " + end);
+    }
+
+    let sortKey = req.body.sortKey ? req.body.sortKey : 'ID';
+    let sortValue = req.body.sortValue ? req.body.sortValue : 'DESC';
+    let filter = req.body.filter ? req.body.filter : '';
+
+    let criteria = '';
+
+    if (pageIndex === '' && pageSize === '')
+        criteria = filter + " order by " + sortKey + " " + sortValue;
+    else
+        criteria = filter + " order by " + sortKey + " " + sortValue + " LIMIT " + start + "," + end;
+
+    let countCriteria = filter;
+
+    var deviceid = req.headers['deviceid']; var supportKey = req.headers['supportkey'];//Supportkey ;//Supportkey
+    try {
+        mm.executeQuery('select count(*) as cnt from ' + viewBatchSchedule + ' where 1 ' + countCriteria, supportKey, (error, results1) => {
+            if (error) {
+                console.log(error);
+                //logger.error('APIK:' + req.headers['apikey'] +' '+supportKey+ ' ' + req.method + " " + req.url + ' ' + JSON.stringify(error), req.headers['supportkey']);
+                logger.error(supportKey + ' ' + req.method + " " + req.url + ' ' + JSON.stringify(error), applicationkey, supportKey, deviceid);
+                res.send({
+                    "code": 400,
+                    "message": "Failed to get batchSchedules count.",
+                });
+            }
+            else {
+                console.log(results1);
+                mm.executeQuery('select * from ' + viewBatchSchedule + ' where 1 ' + criteria, supportKey, (error, results) => {
+                    if (error) {
+                        console.log(error);
+                        //logger.error('APIK:' + req.headers['apikey'] +' '+supportKey+ ' ' + req.method + " " + req.url + ' ' + JSON.stringify(error), req.headers['supportkey']);
+                        logger.error(supportKey + ' ' + req.method + " " + req.url + ' ' + JSON.stringify(error), applicationkey, supportKey, deviceid);
+                        res.send({
+                            "code": 400,
+                            "message": "Failed to get batchSchedule information."
+                        });
+                    }
+                    else {
+
+
+                        res.send({
+                            "code": 200,
+                            "message": "success",
+                            "count": results1[0].cnt,
+                            "data": results
+                        });
+                    }
+                });
+            }
+        });
+    } catch (error) {
+        //logger.error('APIK:' + req.headers['apikey'] +' '+supportKey+ ' ' + req.method + " " + req.url + ' ' + JSON.stringify(error), req.headers['supportkey']);
+        logger.error(supportKey + ' ' + req.method + " " + req.url + ' ' + JSON.stringify(error), applicationkey, supportKey, deviceid);
+        console.log(error);
+    }
+
+}
+
+
+exports.create = (req, res) => {
+
+    var data = reqData(req);
+    const errors = validationResult(req);
+
+    var deviceid = req.headers['deviceid']; var supportKey = req.headers['supportkey'];//Supportkey ;//Supportkey
+
+    if (!errors.isEmpty()) {
+
+        console.log(errors);
+        res.send({
+            "code": 422,
+            "message": errors.errors
+        });
+    }
+    else {
+        try {
+            mm.executeQueryData('INSERT INTO ' + batchSchedule + ' SET ?', data, supportKey, (error, results) => {
+                if (error) {
+                    console.log(error);
+                    //logger.error('APIK:' + req.headers['apikey'] +' '+supportKey+ ' ' + req.method + " " + req.url + ' ' + JSON.stringify(error), req.headers['supportkey']);
+                    logger.error(supportKey + ' ' + req.method + " " + req.url + ' ' + JSON.stringify(error), applicationkey, supportKey, deviceid);
+                    res.send({
+                        "code": 400,
+                        "message": "Failed to save batchSchedule information..."
+                    });
+                }
+                else {
+                    console.log(results);
+                    res.send({
+                        "code": 200,
+                        "message": "BatchSchedule information saved successfully...",
+                    });
+                }
+            });
+        } catch (error) {
+            //logger.error('APIK:' + req.headers['apikey'] +' '+supportKey+ ' ' + req.method + " " + req.url + ' ' + JSON.stringify(error), req.headers['supportkey']);
+            logger.error(supportKey + ' ' + req.method + " " + req.url + ' ' + JSON.stringify(error), applicationkey, supportKey, deviceid);
+            console.log(error)
+        }
+    }
+}
+
+
+
+exports.update = (req, res) => {
+    const errors = validationResult(req);
+    //console.log(req.body);
+    var data = reqData(req);
+
+    var deviceid = req.headers['deviceid']; var supportKey = req.headers['supportkey'];//Supportkey ;//Supportkey
+    var criteria = {
+        ID: req.body.ID,
+    };
+    var systemDate = mm.getSystemDate();
+    var setData = "";
+    var recordData = [];
+    Object.keys(data).forEach(key => {
+
+        //data[key] ? setData += `${key}= '${data[key]}', ` : true;
+        // setData += `${key}= :"${key}", `;
+        data[key] ? setData += `${key}= ? , ` : true;
+        data[key] ? recordData.push(data[key]) : true;
+    });
+
+    if (!errors.isEmpty()) {
+        console.log(errors);
+        res.send({
+            "code": 422,
+            "message": errors.errors
+        });
+    }
+    else {
+        try {
+            mm.executeQueryData(`UPDATE ` + batchSchedule + ` SET ${setData} CREATED_MODIFIED_DATE = '${systemDate}' where ID = ${criteria.ID} `, recordData, supportKey, (error, results) => {
+                if (error) {
+                    //logger.error('APIK:' + req.headers['apikey'] +' '+supportKey+ ' ' + req.method + " " + req.url + ' ' + JSON.stringify(error), req.headers['supportkey']);
+                    logger.error(supportKey + ' ' + req.method + " " + req.url + ' ' + JSON.stringify(error), applicationkey, supportKey, deviceid);
+                    console.log(error);
+                    res.send({
+                        "code": 400,
+                        "message": "Failed to update batchSchedule information."
+                    });
+                }
+                else {
+                    console.log(results);
+                    res.send({
+                        "code": 200,
+                        "message": "BatchSchedule information updated successfully...",
+                    });
+                }
+            });
+        } catch (error) {
+            //logger.error('APIK:' + req.headers['apikey'] +' '+supportKey+ ' ' + req.method + " " + req.url + ' ' + JSON.stringify(error), req.headers['supportkey']);
+            logger.error(supportKey + ' ' + req.method + " " + req.url + ' ' + JSON.stringify(error), applicationkey, supportKey, deviceid);
+            console.log(error);
+        }
+    }
+}
+
+
+
+
+exports.retrieveScheduleStat = (req, res) => {
+
+    var GROUP_ID = req.body.GROUP_ID;
+
+    var FROM_DATE = req.body.FROM_DATE;
+    var TO_DATE = req.body.TO_DATE;
+
+    var days = req.body.DAYS.split(',');
+
+    var COLLEGE_ID = req.body.COLLEGE_ID;
+
+    var SLOTS_DATA = JSON.parse(req.body.SLOTS_DATA);
+
+    console.log(GROUP_ID, FROM_DATE, TO_DATE, days, COLLEGE_ID, SLOTS_DATA)
+    var holidayCount = 0, sessionDays = 0, totalSessionCount = 0, totalHours;
+
+
+
+    var intermediateDates = mm.intermediateDates(FROM_DATE, TO_DATE);
+
+    console.log(intermediateDates);
+
+    var batchScheduleData = [];
+
+    var supportKey = req.headers['supportkey'];
+
+    mm.executeQuery(`SELECT * FROM view_scheduling_batch_group_batch_mapping where BATCH_GROUP_ID = ${GROUP_ID}`, supportKey, (error, resultsSchedulerGroups) => {
+        if (error) {
+            console.log(error);
+        }
+        else {
+            console.log("resultsSchedulerGroups", resultsSchedulerGroups.length);
+
+            if (resultsSchedulerGroups.length > 0) {
+
+                mm.executeQuery(`select * from view_college_holiday_master where COLLEGE_ID = ${COLLEGE_ID} and DATE between '${FROM_DATE}' and '${TO_DATE}' AND IS_HOLIDAY = 1`, supportKey, (error, resultsIsHoliday) => {
+                    if (error) {
+                        console.log(error);
+                    }
+                    else {
+                        console.log("resultsIsHoliday",resultsIsHoliday.length)
+                        if (resultsIsHoliday.length > 0) {
+                            console.log("intermediateDates", intermediateDates.length);
+
+                            intermediateDates.forEach(date => {
+
+                                console.log("days", days);
+
+                                days.forEach(repeatDate => {
+
+                                    //console.log("days", repeatDate);
+                                    if (new Date(date).getDay() == repeatDate) {
+
+                                        resultsIsHoliday.forEach(holidayDates => {
+                                            console.log(date,holidayDates.DATE)
+
+                                            if (date == holidayDates.DATE) {
+                                                holidayCount += 1;
+                                            }
+                                            else {
+                                                //sessionDays += 1;
+                                                SLOTS_DATA.forEach(slots => {
+
+                                                    totalSessionCount += 1;
+
+                                                    // totalHours 
+                                                    var date2 = new Date(slots.END_TIME)
+                                                    var date1 = new Date(slots.START_TIME)
+
+                                                    totalHours += (Math.floor((Math.abs(date2 - date1) / 1000) / 3600) % 24) + ":" + (Math.floor((Math.abs(date2 - date1) / 1000) / 60) % 60) + ":" + ((Math.abs(date2 - date1) / 1000) % 60);
+                                                    resultsSchedulerGroups.forEach(scheduledBatch => {
+                                                        var scheduleData = {
+
+                                                            BATCH_ID: scheduledBatch.BATCH_ID,
+                                                            DATE: date,
+                                                            START_TIME: slots.START_TIME,
+                                                            END_TIME: slots.END_TIME,
+                                                            IS_BREAK: slots.IS_BREAK,
+                                                            BREAK_START_TIME: slots.BREAK_START_TIME,
+                                                            BREAK_END_TIME: slots.BREAK_END_TIME,
+                                                            IS_SESSION_CREATED: 0,
+                                                            SESSION_ID: 0
+
+                                                        }
+                                                        batchScheduleData.push(scheduleData);
+
+                                                    });
+                                                });
+                                            }
+                                        });
+                                    }
+                                });
+                            });
+
+                        }
+                        else {
+                            //no Holiday data
+                        }
+                        console.log("batchScheduleData  ",batchScheduleData.length);
+
+                        
+                var validationResult = [];
+                var stats = {
+                    "holidayCount": holidayCount,
+                    "sessionDays": sessionDays,
+                   // "totalHours": totalHours,
+                    "totalSessionCount": totalSessionCount,
+
+                }
+
+                console.log(stats);
+               
+
+
+                // async.eachSeries(batchScheduleData, function iteratorOverElems(batchData, callback) {
+                //     mm.executeQuery(`select * from view_batch_schedule b where BATCH_ID IN(SELECT BATCH_ID FROM scheduling_batch_group_batch_mapping WHERE BATCH_GROUP_ID = ${GROUP_ID})  AND b.END_TIME >='${batchData.START_TIME}' AND b.START_TIME <= '${batchData.END_TIME}' `, supportKey, (error, resultsSchedule) => {
+                //         if (error) {
+                //             console.log(error);
+                //         }
+                //         else {
+                //             if (resultsSchedule.length > 0) {
+
+                //                 validationResult.push(batchData);
+                //                 callback(validationResult);
+
+                //             }
+                //             else {
+
+                //                 callback();
+
+                //             }
+                //         }
+                //     });
+
+                // }, function subCb(error) {
+                //     if (error) {
+                //         //rollback
+                //         //db.rollbackConnection(connection);
+                //         res.send({
+                //             "code": 400,
+                //             "message": " Batch schedule information overLapped...",
+                //             "Error": error
+                //         });
+                //     } else {
+                //         //db.commitConnection(connection);
+
+                //         res.send({
+                //             "code": 200,
+                //             "message": "success",
+                //             "data": {
+                //                 "stats": stats,
+                //                 "batchScheduleData": batchScheduleData
+                //             },
+                //         });
+                //     }
+                // });
+
+
+
+
+                    }
+
+                });
+
+
+
+
+            }
+            else {
+
+                res.send({
+                    "code": 400,
+                    "message": "No batch Group "
+                });
+
+            }
+        }
+    });
+}
+
+
+
+
+
+
+
+//method for get record of calender 
+exports.retrieveSchedule = (req, res) => {
+    try {
+
+        var COLLEGE_ID = req.body.COLLEGE_ID;
+        var month = req.body.MONTH;
+        var year = req.body.YEAR;
+
+
+        db.executeDQL(`select DATE,(select count(*) from batch_schedule where DATE =m.DATE ) AS SESSIONS_COUNT from view_college_holiday_master m where COLLEGE_ID =${COLLEGE_ID} AND MONTH(DATE) = ${month} and YEAR(DATE) = ${year}`, supportKey, (error, results) => {
+            if (error) {
+                console.log(error);
+                res.send({
+                    "code": 400,
+                    "message": "Failed to get calender record."
+                });
+            }
+            else {
+                console.log(results);
+                res.send({
+                    "code": 200,
+                    "message": "success",
+                    "data": results
+                });
+            }
+        });
+
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+// exports.retrieveDaySchedule = (req,res) =>{
+
+//     var COLLEGE_ID = req.body.COLLEGE_ID;
+
+//     var DATE  = req.body.DATE;
+
+
+
+
+
+// }
+
+
+//METHOD TO GET BATCH SCEDULE  FOR EDIT
+exports.retrieveScheduleDetails = (req, res) => {
+
+    try {
+        var scheduleId = req.body.SCHEDULE_ID;
+
+        mm.executeQuery(`select s.*,(select END_DATE from batch_schedule where BATCH_ID = s.BATCH_ID AND DAYOFWEEK(DATE) = DAYOFWEEK(s.DATE) AND START_TIME = s.START_TIME AND END_TIME = s.END_TIME ORDER BY DATE DESC LIMIT 1) as SCHEDULE_END_DATE from view_batch_schedule s where ID = ${scheduleId}`, supportKey, (error, resultsBatchSchedule) => {
+            if (error) {
+                console.log(error);
+                res.send({
+                    "code": 400,
+                    "message": "Failed to get Batch Schedule record for edit"
+                });
+            }
+            else {
+                res.send({
+                    "code": 200,
+                    "message": "success",
+                    "data": resultsBatchSchedule
+                });
+            }
+        })
+    } catch (error) {
+        console.log(error);
+    }
+
+}
+
+
+
+exports.createSchedule = (req, res) => {
+    try {
+
+        var batchScheduleData = req.body.data;
+
+        var connection = db.openConnection();
+        var insertQuery = `INSERT INTO batch_schedule(BATCH_ID,DATE,START_TIME,END_TIME,IS_BREAK,BREAK_START_TIME,BREAK_END_TIME,IS_SESSION_CREATED,SESSION_ID,CLIENT_ID) VALUES  ?`;
+
+        var recordData = [];
+        batchScheduleData.forEach(scheduleItem => {
+
+            var rec = [scheduleItem.BATCH_ID, scheduleItem.START_TIME, scheduleItem.END_TIME, scheduleItem.IS_BREAK, scheduleItem.BREAK_START_TIME, scheduleItem.BREAK_END_TIME, scheduleItem.IS_SESSION_CREATED, scheduleItem.CLIENT_ID];
+            recordData.push(rec);
+
+        });
+
+
+        db.executeDML(insertQuery, recordData, supportKey, connection, (error, results) => {
+            if (error) {
+                console.log(error);
+                db.rollbackConnection(connection);
+            }
+            else {
+                db.commitConnection(connection);
+                res.send({
+                    "code": 200,
+                    "message": "Batch Schedule Information successfully inserted",
+                });
+            }
+        });
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

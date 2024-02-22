@@ -1,0 +1,11 @@
+const express = require('express');
+const router = express.Router();
+const addressInformationService = require('../services/userBranchMapping');
+
+router
+.post('/get',addressInformationService.get)
+.post('/create',addressInformationService.validate(),addressInformationService.create)
+.put('/update',addressInformationService.validate(),addressInformationService.update)
+.post('/addBulk',addressInformationService.addBulk)
+
+module.exports = router;

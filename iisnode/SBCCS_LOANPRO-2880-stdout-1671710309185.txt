@@ -1,0 +1,2056 @@
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+            SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('SHARE_ACCOUNT_NO',SHARE_ACCOUNT_NO,'PERIODS',PERIODS,'TYPE_OF_ACCOUNT',TYPE_OF_ACCOUNT,'IS_PAY_SALES_TAX_FILED',IS_PAY_SALES_TAX_FILED,'FINANCIAL_YEAR_SALES_TAX',FINANCIAL_YEAR_SALES_TAX,'SALES_TAX_PAID_AMOUNT',SALES_TAX_PAID_AMOUNT,'IS_HAVE_TERM_DEPOSIT',IS_HAVE_TERM_DEPOSIT,'IS_HAVE_CURRENT_DEPOSIT',IS_HAVE_CURRENT_DEPOSIT,'IS_HAVE_RECURRING_DEPOSIT',IS_HAVE_RECURRING_DEPOSIT,'BALANCE_AMOUNT2',BALANCE_AMOUNT2,'OTHER_DEPOSIT_ACC_NO2',OTHER_DEPOSIT_ACC_NO2,'ACCOUNT_NO',ACCOUNT_NO,'ACCOUNT_BALANCE',ACCOUNT_BALANCE,'LOAN_TAKEN_YEARS',LOAN_TAKEN_YEARS,'CC_LOAN_TERNOVER',CC_LOAN_TERNOVER,'INCOME_SOURCE_AMOUNT',INCOME_SOURCE_AMOUNT,'YEARLY_INCOME',YEARLY_INCOME,'SAVING_ACCOUNT_NO',SAVING_ACCOUNT_NO,'SAVING_AMOUNT',SAVING_AMOUNT,'OTHER_DEPOSIT_ACC_NO',OTHER_DEPOSIT_ACC_NO,'BALANCE_AMOUNT',BALANCE_AMOUNT,'ID',ID,'PROPOSAL_ID',PROPOSAL_ID,'IS_INCOME_TAX_FILED',IS_INCOME_TAX_FILED,'FINANCIAL_YEAR',FINANCIAL_YEAR,'INCOME_AMOUNT',INCOME_AMOUNT,'TAX_PAID_AMOUNT',TAX_PAID_AMOUNT,'AGRICULTURE_INCOME',AGRICULTURE_INCOME,'OTHER_INCOME',OTHER_INCOME,'MONTHLY_HOUSEHOLD_EXPENSES',MONTHLY_HOUSEHOLD_EXPENSES,'IS_PIGMY',IS_PIGMY,'BANK_NAME',BANK_NAME,'PIGMY_BALANCE',PIGMY_BALANCE,'DAILY_PIGMY_AMOUNT',DAILY_PIGMY_AMOUNT,'CLIENT_ID',CLIENT_ID,'LAST_3_YEAR_INFORMATION',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'TYPE',TYPE,'FINANCIAL_YEAR',FINANCIAL_YEAR,'INCOME_AMOUNT',INCOME_AMOUNT
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_last_3_year_information where FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'TERM_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'T' and FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'RECURING_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'R' and FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'CURRENT_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'C' and FINANCIAL_INFORMATION_ID = m.ID),'[]')
+)),']'),'"[','['),']"',']') as data FROM view_financial_information m  where PROPOSAL_ID = 406 AND TYPE = 'B' 
+[{"ID": 894, "PERIODS": null, "IS_PIGMY": 0, "BANK_NAME": "", "CLIENT_ID": 1, "ACCOUNT_NO": null, "PROPOSAL_ID": 406, "OTHER_INCOME": 0.00, "TERM_DEPOSIT": [], "INCOME_AMOUNT": 0.00, "PIGMY_BALANCE": null, "SAVING_AMOUNT": 500.00, "YEARLY_INCOME": null, "BALANCE_AMOUNT": 0.00, "FINANCIAL_YEAR": 0, "ACCOUNT_BALANCE": null, "BALANCE_AMOUNT2": 0.00, "CURRENT_DEPOSIT": [], "TAX_PAID_AMOUNT": 0.00, "TYPE_OF_ACCOUNT": null, "CC_LOAN_TERNOVER": null, "LOAN_TAKEN_YEARS": null, "RECURING_DEPOSIT": [], "SHARE_ACCOUNT_NO": null, "SAVING_ACCOUNT_NO": "00771010000082", "AGRICULTURE_INCOME": 0.00, "DAILY_PIGMY_AMOUNT": null, "IS_INCOME_TAX_FILED": 0, "INCOME_SOURCE_AMOUNT": "", "IS_HAVE_TERM_DEPOSIT": 0, "OTHER_DEPOSIT_ACC_NO": null, "OTHER_DEPOSIT_ACC_NO2": null, "SALES_TAX_PAID_AMOUNT": 0.00, "IS_PAY_SALES_TAX_FILED": 0, "IS_HAVE_CURRENT_DEPOSIT": 0, "LAST_3_YEAR_INFORMATION": [], "FINANCIAL_YEAR_SALES_TAX": 0, "IS_HAVE_RECURRING_DEPOSIT": 0, "MONTHLY_HOUSEHOLD_EXPENSES": 0.00}]
+12/22/2022, 5:28:29 PM  Requested Method : - POST /api/incomeInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+12/22/2022, 5:28:29 PM  Requested Method : - POST /api/creditInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_credit_information where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_credit_information where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by ID asc
+[ RowDataPacket { cnt: 1 } ]
+select * from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by ID asc
+12/22/2022, 5:28:29 PM  Requested Method : - POST /api/subPropertyInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_sub_property_information where 1  AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 0 } ]
+select * from view_sub_property_information where 1  AND PROPOSAL_ID=406 order by ID desc
+12/22/2022, 5:28:29 PM  Requested Method : - POST /api/jointAccountInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+1 1
+0 1
+select count(*) as cnt from view_joint_account_information where 1 AND PROPOSAL_ID=406
+12/22/2022, 5:28:29 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_praposal_master where 1  AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 1 } ]
+select * from view_joint_account_information where 1 AND PROPOSAL_ID=406 order by ID asc LIMIT 0,1
+Error: ER_BAD_FIELD_ERROR: Unknown column 'PROPOSAL_ID' in 'where clause'
+    at Sequence._packetToError (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Pool.query (D:\project\backend\node_modules\mysql\lib\Pool.js:199:23)
+    at exports.executeQuery (D:\project\backend\utilities\globalModule.js:194:20)
+    at exports.get (D:\project\backend\services\praposal.js:96:12)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\project\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\project\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\project\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\project\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\project\backend\node_modules\express\lib\router\index.js:275:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'PROPOSAL_ID' in 'where clause'",
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select count(*) as cnt from view_praposal_master where 1  AND PROPOSAL_ID=406'
+}
+12/22/2022, 5:28:29 PM  Requested Method : - POST /api/loanPurpose/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_purpose_master where 1 
+[ RowDataPacket { cnt: 106 } ]
+select * from view_loan_purpose_master where 1  order by ID asc
+12/22/2022, 5:28:29 PM  Requested Method : - POST /api/vehicleLoan/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_vehicle_loan where 1 AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 0 } ]
+select * from view_vehicle_loan where 1 AND PROPOSAL_ID=406 order by ID asc
+12/22/2022, 5:28:29 PM  Requested Method : - POST /api/incomeInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B' order by ID ASC
+addErrlog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:28:29 PM  Requested Method : - POST /api/agricultureLandInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:28:29 PM  Requested Method : - POST /api/expenditureInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:28:29 PM  Requested Method : - POST /api/personalInformation/getPersonalInfo public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+select * from view_personal_information where PROPOSAL_ID = 406 AND TYPE = 'B' 
+12/22/2022, 5:28:29 PM  Requested Method : - POST /api/addressInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_address_information where 1  AND ID=2206
+[ RowDataPacket { cnt: 1 } ]
+select * from view_address_information where 1  AND ID=2206 order by ID desc
+select * from view_address_information where ID = 2201
+select * from view_address_information where ID = 2205
+select * from view_family_details where PERSONAL_INFORMATION_ID = 894
+12/22/2022, 5:28:29 PM  Requested Method : - POST /api/houseShopRentInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+1 20
+0 20
+select count(*) as cnt from view_house_shop_rent_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 0 } ]
+select * from view_house_shop_rent_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc LIMIT 0,20
+12/22/2022, 5:28:30 PM  Requested Method : - POST /api/businessFirmInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_business_firm_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_business_firm_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:28:30 PM  Requested Method : - POST /api/loanTakenInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_taken_information where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+12/22/2022, 5:28:30 PM  Requested Method : - POST /api/depositsInBank/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_deposits_in_bank where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_deposits_in_bank where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[ RowDataPacket { cnt: 1 } ]
+select * from view_loan_taken_information where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[
+  RowDataPacket {
+    ID: 249,
+    CREDIT_INFORMATION_ID: 893,
+    BANK_OR_INSTITUTE_NAME: ' ',
+    BRANCH_NAME: ' ',
+    LOAN_TYPE_ID: 0,
+    SANCTIONED_AMOUNT: 0,
+    INSTALLMENT_AMOUNT: 0,
+    LOAN_OUTSTANDING: 105000,
+    LOAN_OVERDUE_AMOUNT: 0,
+    DUE_DATE: null,
+    SECURITY_OFFERED: null,
+    IS_SUB: 0,
+    CREATED_MODIFIED_DATE: '2022-12-22 16:31:11',
+    READ_ONLY: 'N',
+    ARCHIVE_FLAG: 'F',
+    CLIENT_ID: 1,
+    ACCOUNT_NUMBER: null,
+    IS_SELECTED: '0',
+    SANCTION_DATE: null,
+    REMARK: 'REGULAR',
+    YEAR: 0,
+    LOAN_TYPE_NAME_MR: null,
+    LOAN_TYPE_NAME_EN: null,
+    LOAN_TYPE_NAME_KN: null,
+    REPAYMENT_DATE: null,
+    LOAN_TYPE: 'PKPS MOLAWAD'
+  }
+]
+12/22/2022, 5:28:30 PM  Requested Method : - POST /api/guarantorForLoans/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_guarantor_for_loan where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_guarantor_for_loan where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+12/22/2022, 5:28:30 PM  Requested Method : - POST /api/earlierLoanHistory/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_earlier_loan_history where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_earlier_loan_history where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[]
+12/22/2022, 5:28:30 PM  Requested Method : - POST /api/addressInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_address_information where 1  AND ID=2211
+[ RowDataPacket { cnt: 1 } ]
+select * from view_address_information where 1  AND ID=2211 order by ID desc
+12/22/2022, 5:28:34 PM  Requested Method : - POST /api/applicantDocument/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_applicant_documents where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 36 } ]
+select * from view_applicant_documents where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by CREATED_MODIFIED_DATE desc
+12/22/2022, 5:28:34 PM  Requested Method : - POST /api/incomeSource/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+  {
+  pageIndex: 0,
+  pageSize: 0,
+  sortKey: 'ID',
+  sortValue: 'asc',
+  filter: ''
+}
+  ID asc
+select count(*) as cnt from view_income_source where 1 
+[ RowDataPacket { cnt: 5 } ]
+select * from view_income_source where 1  order by ID asc
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/installmentFrequency/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_installment_frequency where 1 AND IS_ACTIVE = '1'
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/applicantExtraInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_applicant_extra_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B'
+[ RowDataPacket { cnt: 7 } ]
+select * from view_installment_frequency where 1 AND IS_ACTIVE = '1' order by ID asc
+[ RowDataPacket { cnt: 8 } ]
+select * from view_applicant_extra_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B' order by SEQ_NO asc
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/loanTypes/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_types_master where 1  AND STATUS=1
+[ RowDataPacket { cnt: 14 } ]
+select * from view_loan_types_master where 1  AND STATUS=1 order by ID asc
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/term/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+1 20
+0 20
+select count(*) as cnt from view_term_master where 1 
+[ RowDataPacket { cnt: 8 } ]
+select * from view_term_master where 1  order by ID asc LIMIT 0,20
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/guarantorInformation/getAllInformation/ public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+select * from guarantor_information where PROPOSAL_ID = ? AND VISIBILITY = 1 [ 406 ]
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/applicantExtraInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_applicant_extra_information where 1  AND EXTRA_INFORMATION_ID=12 AND PROPOSAL_ID=406
+resultsGuarentor  [
+  RowDataPacket {
+    ID: 463,
+    PROPOSAL_ID: 406,
+    NAME: 'RAMAGOUDA  CHAKRAVARTI BOLAWADE',
+    MOBILE_NUMBER: '8861336178',
+    CREATED_MODIFIED_DATE: '2022-12-22 16:41:36',
+    READ_ONLY: 'N',
+    ARCHIVE_FLAG: 'F',
+    CLIENT_ID: 1,
+    VISIBILITY: 1,
+    APPLICANT_ID: 604
+  },
+  RowDataPacket {
+    ID: 464,
+    PROPOSAL_ID: 406,
+    NAME: 'BABURAO TAMMANI BALIKAI',
+    MOBILE_NUMBER: '9731842727',
+    CREATED_MODIFIED_DATE: '2022-12-22 16:42:40',
+    READ_ONLY: 'N',
+    ARCHIVE_FLAG: 'F',
+    CLIENT_ID: 1,
+    VISIBILITY: 1,
+    APPLICANT_ID: 605
+  }
+]
+select * from view_personal_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+[ RowDataPacket { cnt: 0 } ]
+select * from view_applicant_extra_information where 1  AND EXTRA_INFORMATION_ID=12 AND PROPOSAL_ID=406 order by SEQ_NO asc
+SET SESSION group_concat_max_len = 4294967290;
+                                        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'PROPOSAL_ID',PROPOSAL_ID,'INCOME_SOURCE_ID',INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID',OTHER_INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID2',OTHER_INCOME_SOURCE_ID2,'IS_SAVED',IS_SAVED,'IS_HOLD_AGRICULTURE_LAND',IS_HOLD_AGRICULTURE_LAND,'CLIENT_ID',CLIENT_ID,
+                                          'SALARIED_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'PLACE_OF_EMPLOYMENT',PLACE_OF_EMPLOYMENT,'ORGANISATION_NAME',ORGANISATION_NAME,'CONTACT_NO_OF_EMPLOYER',CONTACT_NO_OF_EMPLOYER,'POST_OF_EMPLOYMENT',POST_OF_EMPLOYMENT,'GROSS_SALARY',GROSS_SALARY,'TOTAL_DEDUCTION',TOTAL_DEDUCTION,'NET_SALARY',NET_SALARY,'CLIENT_ID',CLIENT_ID,'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data5 FROM view_address_information where ID = i.PLACE_OF_EMPLOYMENT ),'[]'))),']'),'"[','['),']"',']') as data6 FROM view_salaried_information i where INCOME_INFORMATION_ID = m.ID),'[]')),					
+                                          'BUSINESS_FIRM_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CAPITAL',CAPITAL,'TURNOVER_YEARLY',TURNOVER_YEARLY,'INCOME_YEARLY',INCOME_YEARLY,'ID',ID,'TYPE',TYPE,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'NATURE_OF_FIRM',NATURE_OF_FIRM,'ADDRESS_ID',ADDRESS_ID,'CLIENT_ID',CLIENT_ID,
+                                                              'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data4 FROM view_address_information where ID = l.ADDRESS_ID ),'[]')
+                                                                                                                  
+                                          )),']'),'"[','['),']"',']') as data3 FROM view_business_firm_information l where INCOME_INFORMATION_ID = m.ID),'[]')),							
+                                          'AGRICULTURE_LAND_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CURRENT_AGRICULTURE_PRODUCT',CURRENT_AGRICULTURE_PRODUCT,'ANNUAL_INCOME_FROM_THIS_LAND',ANNUAL_INCOME_FROM_THIS_LAND)),']'),'"[','['),']"',']') as data1 FROM view_agriculture_land_information k where INCOME_INFORMATION_ID = m.ID),'[]'))
+                                          )),']'),'"[','['),']"',']') as data FROM view_income_information m where PROPOSAL_ID =? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+select * from financial_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+select * from credit_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+select * from view_property_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+here : []
+select * from view_personal_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+SET SESSION group_concat_max_len = 4294967290;
+                                        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'PROPOSAL_ID',PROPOSAL_ID,'INCOME_SOURCE_ID',INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID',OTHER_INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID2',OTHER_INCOME_SOURCE_ID2,'IS_SAVED',IS_SAVED,'IS_HOLD_AGRICULTURE_LAND',IS_HOLD_AGRICULTURE_LAND,'CLIENT_ID',CLIENT_ID,
+                                          'SALARIED_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'PLACE_OF_EMPLOYMENT',PLACE_OF_EMPLOYMENT,'ORGANISATION_NAME',ORGANISATION_NAME,'CONTACT_NO_OF_EMPLOYER',CONTACT_NO_OF_EMPLOYER,'POST_OF_EMPLOYMENT',POST_OF_EMPLOYMENT,'GROSS_SALARY',GROSS_SALARY,'TOTAL_DEDUCTION',TOTAL_DEDUCTION,'NET_SALARY',NET_SALARY,'CLIENT_ID',CLIENT_ID,'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data5 FROM view_address_information where ID = i.PLACE_OF_EMPLOYMENT ),'[]'))),']'),'"[','['),']"',']') as data6 FROM view_salaried_information i where INCOME_INFORMATION_ID = m.ID),'[]')),					
+                                          'BUSINESS_FIRM_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CAPITAL',CAPITAL,'TURNOVER_YEARLY',TURNOVER_YEARLY,'INCOME_YEARLY',INCOME_YEARLY,'ID',ID,'TYPE',TYPE,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'NATURE_OF_FIRM',NATURE_OF_FIRM,'ADDRESS_ID',ADDRESS_ID,'CLIENT_ID',CLIENT_ID,
+                                                              'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data4 FROM view_address_information where ID = l.ADDRESS_ID ),'[]')
+                                                                                                                  
+                                          )),']'),'"[','['),']"',']') as data3 FROM view_business_firm_information l where INCOME_INFORMATION_ID = m.ID),'[]')),							
+                                          'AGRICULTURE_LAND_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CURRENT_AGRICULTURE_PRODUCT',CURRENT_AGRICULTURE_PRODUCT,'ANNUAL_INCOME_FROM_THIS_LAND',ANNUAL_INCOME_FROM_THIS_LAND)),']'),'"[','['),']"',']') as data1 FROM view_agriculture_land_information k where INCOME_INFORMATION_ID = m.ID),'[]'))
+                                          )),']'),'"[','['),']"',']') as data FROM view_income_information m where PROPOSAL_ID =? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/agricultureLandInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854
+select * from financial_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+[ RowDataPacket { cnt: 1 } ]
+select * from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+select * from credit_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+select * from view_property_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+here : []
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/loanDemand/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_demand where 1  AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 1 } ]
+select * from view_loan_demand where 1  AND PROPOSAL_ID=406 order by ID asc
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/expenditureInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/financialInformation/getFinancialInfo public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+            SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('SHARE_ACCOUNT_NO',SHARE_ACCOUNT_NO,'PERIODS',PERIODS,'TYPE_OF_ACCOUNT',TYPE_OF_ACCOUNT,'IS_PAY_SALES_TAX_FILED',IS_PAY_SALES_TAX_FILED,'FINANCIAL_YEAR_SALES_TAX',FINANCIAL_YEAR_SALES_TAX,'SALES_TAX_PAID_AMOUNT',SALES_TAX_PAID_AMOUNT,'IS_HAVE_TERM_DEPOSIT',IS_HAVE_TERM_DEPOSIT,'IS_HAVE_CURRENT_DEPOSIT',IS_HAVE_CURRENT_DEPOSIT,'IS_HAVE_RECURRING_DEPOSIT',IS_HAVE_RECURRING_DEPOSIT,'BALANCE_AMOUNT2',BALANCE_AMOUNT2,'OTHER_DEPOSIT_ACC_NO2',OTHER_DEPOSIT_ACC_NO2,'ACCOUNT_NO',ACCOUNT_NO,'ACCOUNT_BALANCE',ACCOUNT_BALANCE,'LOAN_TAKEN_YEARS',LOAN_TAKEN_YEARS,'CC_LOAN_TERNOVER',CC_LOAN_TERNOVER,'INCOME_SOURCE_AMOUNT',INCOME_SOURCE_AMOUNT,'YEARLY_INCOME',YEARLY_INCOME,'SAVING_ACCOUNT_NO',SAVING_ACCOUNT_NO,'SAVING_AMOUNT',SAVING_AMOUNT,'OTHER_DEPOSIT_ACC_NO',OTHER_DEPOSIT_ACC_NO,'BALANCE_AMOUNT',BALANCE_AMOUNT,'ID',ID,'PROPOSAL_ID',PROPOSAL_ID,'IS_INCOME_TAX_FILED',IS_INCOME_TAX_FILED,'FINANCIAL_YEAR',FINANCIAL_YEAR,'INCOME_AMOUNT',INCOME_AMOUNT,'TAX_PAID_AMOUNT',TAX_PAID_AMOUNT,'AGRICULTURE_INCOME',AGRICULTURE_INCOME,'OTHER_INCOME',OTHER_INCOME,'MONTHLY_HOUSEHOLD_EXPENSES',MONTHLY_HOUSEHOLD_EXPENSES,'IS_PIGMY',IS_PIGMY,'BANK_NAME',BANK_NAME,'PIGMY_BALANCE',PIGMY_BALANCE,'DAILY_PIGMY_AMOUNT',DAILY_PIGMY_AMOUNT,'CLIENT_ID',CLIENT_ID,'LAST_3_YEAR_INFORMATION',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'TYPE',TYPE,'FINANCIAL_YEAR',FINANCIAL_YEAR,'INCOME_AMOUNT',INCOME_AMOUNT
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_last_3_year_information where FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'TERM_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'T' and FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'RECURING_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'R' and FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'CURRENT_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'C' and FINANCIAL_INFORMATION_ID = m.ID),'[]')
+)),']'),'"[','['),']"',']') as data FROM view_financial_information m  where PROPOSAL_ID = 406 AND TYPE = 'B' 
+[{"ID": 894, "PERIODS": null, "IS_PIGMY": 0, "BANK_NAME": "", "CLIENT_ID": 1, "ACCOUNT_NO": null, "PROPOSAL_ID": 406, "OTHER_INCOME": 0.00, "TERM_DEPOSIT": [], "INCOME_AMOUNT": 0.00, "PIGMY_BALANCE": null, "SAVING_AMOUNT": 500.00, "YEARLY_INCOME": null, "BALANCE_AMOUNT": 0.00, "FINANCIAL_YEAR": 0, "ACCOUNT_BALANCE": null, "BALANCE_AMOUNT2": 0.00, "CURRENT_DEPOSIT": [], "TAX_PAID_AMOUNT": 0.00, "TYPE_OF_ACCOUNT": null, "CC_LOAN_TERNOVER": null, "LOAN_TAKEN_YEARS": null, "RECURING_DEPOSIT": [], "SHARE_ACCOUNT_NO": null, "SAVING_ACCOUNT_NO": "00771010000082", "AGRICULTURE_INCOME": 0.00, "DAILY_PIGMY_AMOUNT": null, "IS_INCOME_TAX_FILED": 0, "INCOME_SOURCE_AMOUNT": "", "IS_HAVE_TERM_DEPOSIT": 0, "OTHER_DEPOSIT_ACC_NO": null, "OTHER_DEPOSIT_ACC_NO2": null, "SALES_TAX_PAID_AMOUNT": 0.00, "IS_PAY_SALES_TAX_FILED": 0, "IS_HAVE_CURRENT_DEPOSIT": 0, "LAST_3_YEAR_INFORMATION": [], "FINANCIAL_YEAR_SALES_TAX": 0, "IS_HAVE_RECURRING_DEPOSIT": 0, "MONTHLY_HOUSEHOLD_EXPENSES": 0.00}]
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/propertyInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_property_information where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_property_information where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by ID asc
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/creditInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_credit_information where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_credit_information where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by ID asc
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/incomeInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by ID asc
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/subPropertyInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_sub_property_information where 1  AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 0 } ]
+select * from view_sub_property_information where 1  AND PROPOSAL_ID=406 order by ID desc
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/jointAccountInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+1 1
+0 1
+select count(*) as cnt from view_joint_account_information where 1 AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 1 } ]
+select * from view_joint_account_information where 1 AND PROPOSAL_ID=406 order by ID asc LIMIT 0,1
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_praposal_master where 1  AND PROPOSAL_ID=406
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/loanPurpose/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_purpose_master where 1 
+[ RowDataPacket { cnt: 106 } ]
+select * from view_loan_purpose_master where 1  order by ID asc
+Error: ER_BAD_FIELD_ERROR: Unknown column 'PROPOSAL_ID' in 'where clause'
+    at Sequence._packetToError (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Pool.query (D:\project\backend\node_modules\mysql\lib\Pool.js:199:23)
+    at exports.executeQuery (D:\project\backend\utilities\globalModule.js:194:20)
+    at exports.get (D:\project\backend\services\praposal.js:96:12)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\project\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\project\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\project\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\project\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\project\backend\node_modules\express\lib\router\index.js:275:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'PROPOSAL_ID' in 'where clause'",
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select count(*) as cnt from view_praposal_master where 1  AND PROPOSAL_ID=406'
+}
+12/22/2022, 5:28:35 PM  Requested Method : - POST /api/incomeInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B' order by ID ASC
+addErrlog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:28:35 PM  Requested Method : - POST /user/login public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+SELECT * FROM view_user_master  WHERE  (MOBILE_NUMBER =? or EMAIL_ID=?) and PASSWORD =? and IS_ACTIVE = 1 [ 'dattawad.ba', 'dattawad.ba', '07e1cd7dca89a1678042477183b7ac3f' ]
+supportkey :  
+UPDATE  user_master SET LAST_LOGIN_DATETIME = ?, CLOUD_ID = ?, DEVICE_ID= ?,APP_VERSION =? where ID = ? [ '2022-12-22 17:28:35', '', '6GcmDKgkz5I7cubx', '', 263 ]
+supportkey :  
+insert into proposal_log_information(PROPOSAL_ID,LOG_ACTION,DESCRIPTION,LOG_DATETIME,LOG_TYPE,USER_ID,OLD_STAGE_ID,NEW_STAGE_ID,CLIENT_ID) values (0,'Logged logged in the system.',CONCAT((select NAME from user_master where ID = 263),' logged in the system.'),'2022-12-22 17:28:36','I',263,0,0,1)
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 13406,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:28:36 PM  Requested Method : - POST /api/agricultureLandInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:28:36 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1  AND ASSISTANT_ID=263
+[ RowDataPacket { cnt: 0 } ]
+select * from view_branch_master where 1  AND ASSISTANT_ID=263 order by ID DESC
+12/22/2022, 5:28:36 PM  Requested Method : - POST /api/expenditureInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:28:36 PM  Requested Method : - POST /api/personalInformation/getPersonalInfo public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+select * from view_personal_information where PROPOSAL_ID = 406 AND TYPE = 'B' 
+12/22/2022, 5:28:36 PM  Requested Method : - POST /api/addressInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_address_information where 1  AND ID=2206
+[ RowDataPacket { cnt: 1 } ]
+select * from view_address_information where 1  AND ID=2206 order by ID desc
+select * from view_address_information where ID = 2201
+select * from view_address_information where ID = 2205
+select * from view_family_details where PERSONAL_INFORMATION_ID = 894
+12/22/2022, 5:28:36 PM  Requested Method : - POST /api/loanTakenInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_taken_information where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_loan_taken_information where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[
+  RowDataPacket {
+    ID: 249,
+    CREDIT_INFORMATION_ID: 893,
+    BANK_OR_INSTITUTE_NAME: ' ',
+    BRANCH_NAME: ' ',
+    LOAN_TYPE_ID: 0,
+    SANCTIONED_AMOUNT: 0,
+    INSTALLMENT_AMOUNT: 0,
+    LOAN_OUTSTANDING: 105000,
+    LOAN_OVERDUE_AMOUNT: 0,
+    DUE_DATE: null,
+    SECURITY_OFFERED: null,
+    IS_SUB: 0,
+    CREATED_MODIFIED_DATE: '2022-12-22 16:31:11',
+    READ_ONLY: 'N',
+    ARCHIVE_FLAG: 'F',
+    CLIENT_ID: 1,
+    ACCOUNT_NUMBER: null,
+    IS_SELECTED: '0',
+    SANCTION_DATE: null,
+    REMARK: 'REGULAR',
+    YEAR: 0,
+    LOAN_TYPE_NAME_MR: null,
+    LOAN_TYPE_NAME_EN: null,
+    LOAN_TYPE_NAME_KN: null,
+    REPAYMENT_DATE: null,
+    LOAN_TYPE: 'PKPS MOLAWAD'
+  }
+]
+12/22/2022, 5:28:36 PM  Requested Method : - POST /api/guarantorForLoans/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_guarantor_for_loan where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_guarantor_for_loan where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+12/22/2022, 5:28:36 PM  Requested Method : - POST /api/depositsInBank/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_deposits_in_bank where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+12/22/2022, 5:28:36 PM  Requested Method : - POST /api/earlierLoanHistory/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_earlier_loan_history where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_deposits_in_bank where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[ RowDataPacket { cnt: 0 } ]
+select * from view_earlier_loan_history where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[]
+12/22/2022, 5:28:36 PM  Requested Method : - POST /api/houseShopRentInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+1 20
+0 20
+select count(*) as cnt from view_house_shop_rent_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 0 } ]
+select * from view_house_shop_rent_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc LIMIT 0,20
+12/22/2022, 5:28:36 PM  Requested Method : - POST /api/businessFirmInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_business_firm_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_business_firm_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:28:36 PM  Requested Method : - POST /api/addressInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_address_information where 1  AND ID=2211
+[ RowDataPacket { cnt: 1 } ]
+select * from view_address_information where 1  AND ID=2211 order by ID desc
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/applicantDocument/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_applicant_documents where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 36 } ]
+select * from view_applicant_documents where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by CREATED_MODIFIED_DATE desc
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/applicantExtraInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_applicant_extra_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B'
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/incomeSource/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+  {
+  pageIndex: 0,
+  pageSize: 0,
+  sortKey: 'ID',
+  sortValue: 'asc',
+  filter: ''
+}
+  ID asc
+select count(*) as cnt from view_income_source where 1 
+[ RowDataPacket { cnt: 8 } ]
+select * from view_applicant_extra_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B' order by SEQ_NO asc
+[ RowDataPacket { cnt: 5 } ]
+select * from view_income_source where 1  order by ID asc
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/installmentFrequency/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_installment_frequency where 1 AND IS_ACTIVE = '1'
+[ RowDataPacket { cnt: 7 } ]
+select * from view_installment_frequency where 1 AND IS_ACTIVE = '1' order by ID asc
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/term/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+1 20
+0 20
+select count(*) as cnt from view_term_master where 1 
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/loanTypes/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_types_master where 1  AND STATUS=1
+[ RowDataPacket { cnt: 14 } ]
+select * from view_loan_types_master where 1  AND STATUS=1 order by ID asc
+[ RowDataPacket { cnt: 8 } ]
+select * from view_term_master where 1  order by ID asc LIMIT 0,20
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/guarantorInformation/getAllInformation/ public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+select * from guarantor_information where PROPOSAL_ID = ? AND VISIBILITY = 1 [ 406 ]
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/applicantExtraInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_applicant_extra_information where 1  AND EXTRA_INFORMATION_ID=12 AND PROPOSAL_ID=406
+resultsGuarentor  [
+  RowDataPacket {
+    ID: 463,
+    PROPOSAL_ID: 406,
+    NAME: 'RAMAGOUDA  CHAKRAVARTI BOLAWADE',
+    MOBILE_NUMBER: '8861336178',
+    CREATED_MODIFIED_DATE: '2022-12-22 16:41:36',
+    READ_ONLY: 'N',
+    ARCHIVE_FLAG: 'F',
+    CLIENT_ID: 1,
+    VISIBILITY: 1,
+    APPLICANT_ID: 604
+  },
+  RowDataPacket {
+    ID: 464,
+    PROPOSAL_ID: 406,
+    NAME: 'BABURAO TAMMANI BALIKAI',
+    MOBILE_NUMBER: '9731842727',
+    CREATED_MODIFIED_DATE: '2022-12-22 16:42:40',
+    READ_ONLY: 'N',
+    ARCHIVE_FLAG: 'F',
+    CLIENT_ID: 1,
+    VISIBILITY: 1,
+    APPLICANT_ID: 605
+  }
+]
+select * from view_personal_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+[ RowDataPacket { cnt: 0 } ]
+select * from view_applicant_extra_information where 1  AND EXTRA_INFORMATION_ID=12 AND PROPOSAL_ID=406 order by SEQ_NO asc
+SET SESSION group_concat_max_len = 4294967290;
+                                        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'PROPOSAL_ID',PROPOSAL_ID,'INCOME_SOURCE_ID',INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID',OTHER_INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID2',OTHER_INCOME_SOURCE_ID2,'IS_SAVED',IS_SAVED,'IS_HOLD_AGRICULTURE_LAND',IS_HOLD_AGRICULTURE_LAND,'CLIENT_ID',CLIENT_ID,
+                                          'SALARIED_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'PLACE_OF_EMPLOYMENT',PLACE_OF_EMPLOYMENT,'ORGANISATION_NAME',ORGANISATION_NAME,'CONTACT_NO_OF_EMPLOYER',CONTACT_NO_OF_EMPLOYER,'POST_OF_EMPLOYMENT',POST_OF_EMPLOYMENT,'GROSS_SALARY',GROSS_SALARY,'TOTAL_DEDUCTION',TOTAL_DEDUCTION,'NET_SALARY',NET_SALARY,'CLIENT_ID',CLIENT_ID,'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data5 FROM view_address_information where ID = i.PLACE_OF_EMPLOYMENT ),'[]'))),']'),'"[','['),']"',']') as data6 FROM view_salaried_information i where INCOME_INFORMATION_ID = m.ID),'[]')),					
+                                          'BUSINESS_FIRM_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CAPITAL',CAPITAL,'TURNOVER_YEARLY',TURNOVER_YEARLY,'INCOME_YEARLY',INCOME_YEARLY,'ID',ID,'TYPE',TYPE,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'NATURE_OF_FIRM',NATURE_OF_FIRM,'ADDRESS_ID',ADDRESS_ID,'CLIENT_ID',CLIENT_ID,
+                                                              'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data4 FROM view_address_information where ID = l.ADDRESS_ID ),'[]')
+                                                                                                                  
+                                          )),']'),'"[','['),']"',']') as data3 FROM view_business_firm_information l where INCOME_INFORMATION_ID = m.ID),'[]')),							
+                                          'AGRICULTURE_LAND_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CURRENT_AGRICULTURE_PRODUCT',CURRENT_AGRICULTURE_PRODUCT,'ANNUAL_INCOME_FROM_THIS_LAND',ANNUAL_INCOME_FROM_THIS_LAND)),']'),'"[','['),']"',']') as data1 FROM view_agriculture_land_information k where INCOME_INFORMATION_ID = m.ID),'[]'))
+                                          )),']'),'"[','['),']"',']') as data FROM view_income_information m where PROPOSAL_ID =? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+select * from financial_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+select * from credit_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+select * from view_property_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+here : []
+select * from view_personal_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+SET SESSION group_concat_max_len = 4294967290;
+                                        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'PROPOSAL_ID',PROPOSAL_ID,'INCOME_SOURCE_ID',INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID',OTHER_INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID2',OTHER_INCOME_SOURCE_ID2,'IS_SAVED',IS_SAVED,'IS_HOLD_AGRICULTURE_LAND',IS_HOLD_AGRICULTURE_LAND,'CLIENT_ID',CLIENT_ID,
+                                          'SALARIED_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'PLACE_OF_EMPLOYMENT',PLACE_OF_EMPLOYMENT,'ORGANISATION_NAME',ORGANISATION_NAME,'CONTACT_NO_OF_EMPLOYER',CONTACT_NO_OF_EMPLOYER,'POST_OF_EMPLOYMENT',POST_OF_EMPLOYMENT,'GROSS_SALARY',GROSS_SALARY,'TOTAL_DEDUCTION',TOTAL_DEDUCTION,'NET_SALARY',NET_SALARY,'CLIENT_ID',CLIENT_ID,'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data5 FROM view_address_information where ID = i.PLACE_OF_EMPLOYMENT ),'[]'))),']'),'"[','['),']"',']') as data6 FROM view_salaried_information i where INCOME_INFORMATION_ID = m.ID),'[]')),					
+                                          'BUSINESS_FIRM_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CAPITAL',CAPITAL,'TURNOVER_YEARLY',TURNOVER_YEARLY,'INCOME_YEARLY',INCOME_YEARLY,'ID',ID,'TYPE',TYPE,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'NATURE_OF_FIRM',NATURE_OF_FIRM,'ADDRESS_ID',ADDRESS_ID,'CLIENT_ID',CLIENT_ID,
+                                                              'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data4 FROM view_address_information where ID = l.ADDRESS_ID ),'[]')
+                                                                                                                  
+                                          )),']'),'"[','['),']"',']') as data3 FROM view_business_firm_information l where INCOME_INFORMATION_ID = m.ID),'[]')),							
+                                          'AGRICULTURE_LAND_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CURRENT_AGRICULTURE_PRODUCT',CURRENT_AGRICULTURE_PRODUCT,'ANNUAL_INCOME_FROM_THIS_LAND',ANNUAL_INCOME_FROM_THIS_LAND)),']'),'"[','['),']"',']') as data1 FROM view_agriculture_land_information k where INCOME_INFORMATION_ID = m.ID),'[]'))
+                                          )),']'),'"[','['),']"',']') as data FROM view_income_information m where PROPOSAL_ID =? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+select * from financial_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+select * from credit_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+select * from view_property_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+here : []
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/expenditureInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/agricultureLandInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/propertyInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_property_information where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_property_information where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by ID asc
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/loanDemand/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_demand where 1  AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 1 } ]
+select * from view_loan_demand where 1  AND PROPOSAL_ID=406 order by ID asc
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/creditInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_credit_information where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_credit_information where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by ID asc
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/financialInformation/getFinancialInfo public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+            SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('SHARE_ACCOUNT_NO',SHARE_ACCOUNT_NO,'PERIODS',PERIODS,'TYPE_OF_ACCOUNT',TYPE_OF_ACCOUNT,'IS_PAY_SALES_TAX_FILED',IS_PAY_SALES_TAX_FILED,'FINANCIAL_YEAR_SALES_TAX',FINANCIAL_YEAR_SALES_TAX,'SALES_TAX_PAID_AMOUNT',SALES_TAX_PAID_AMOUNT,'IS_HAVE_TERM_DEPOSIT',IS_HAVE_TERM_DEPOSIT,'IS_HAVE_CURRENT_DEPOSIT',IS_HAVE_CURRENT_DEPOSIT,'IS_HAVE_RECURRING_DEPOSIT',IS_HAVE_RECURRING_DEPOSIT,'BALANCE_AMOUNT2',BALANCE_AMOUNT2,'OTHER_DEPOSIT_ACC_NO2',OTHER_DEPOSIT_ACC_NO2,'ACCOUNT_NO',ACCOUNT_NO,'ACCOUNT_BALANCE',ACCOUNT_BALANCE,'LOAN_TAKEN_YEARS',LOAN_TAKEN_YEARS,'CC_LOAN_TERNOVER',CC_LOAN_TERNOVER,'INCOME_SOURCE_AMOUNT',INCOME_SOURCE_AMOUNT,'YEARLY_INCOME',YEARLY_INCOME,'SAVING_ACCOUNT_NO',SAVING_ACCOUNT_NO,'SAVING_AMOUNT',SAVING_AMOUNT,'OTHER_DEPOSIT_ACC_NO',OTHER_DEPOSIT_ACC_NO,'BALANCE_AMOUNT',BALANCE_AMOUNT,'ID',ID,'PROPOSAL_ID',PROPOSAL_ID,'IS_INCOME_TAX_FILED',IS_INCOME_TAX_FILED,'FINANCIAL_YEAR',FINANCIAL_YEAR,'INCOME_AMOUNT',INCOME_AMOUNT,'TAX_PAID_AMOUNT',TAX_PAID_AMOUNT,'AGRICULTURE_INCOME',AGRICULTURE_INCOME,'OTHER_INCOME',OTHER_INCOME,'MONTHLY_HOUSEHOLD_EXPENSES',MONTHLY_HOUSEHOLD_EXPENSES,'IS_PIGMY',IS_PIGMY,'BANK_NAME',BANK_NAME,'PIGMY_BALANCE',PIGMY_BALANCE,'DAILY_PIGMY_AMOUNT',DAILY_PIGMY_AMOUNT,'CLIENT_ID',CLIENT_ID,'LAST_3_YEAR_INFORMATION',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'TYPE',TYPE,'FINANCIAL_YEAR',FINANCIAL_YEAR,'INCOME_AMOUNT',INCOME_AMOUNT
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_last_3_year_information where FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'TERM_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'T' and FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'RECURING_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'R' and FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'CURRENT_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'C' and FINANCIAL_INFORMATION_ID = m.ID),'[]')
+)),']'),'"[','['),']"',']') as data FROM view_financial_information m  where PROPOSAL_ID = 406 AND TYPE = 'B' 
+[{"ID": 894, "PERIODS": null, "IS_PIGMY": 0, "BANK_NAME": "", "CLIENT_ID": 1, "ACCOUNT_NO": null, "PROPOSAL_ID": 406, "OTHER_INCOME": 0.00, "TERM_DEPOSIT": [], "INCOME_AMOUNT": 0.00, "PIGMY_BALANCE": null, "SAVING_AMOUNT": 500.00, "YEARLY_INCOME": null, "BALANCE_AMOUNT": 0.00, "FINANCIAL_YEAR": 0, "ACCOUNT_BALANCE": null, "BALANCE_AMOUNT2": 0.00, "CURRENT_DEPOSIT": [], "TAX_PAID_AMOUNT": 0.00, "TYPE_OF_ACCOUNT": null, "CC_LOAN_TERNOVER": null, "LOAN_TAKEN_YEARS": null, "RECURING_DEPOSIT": [], "SHARE_ACCOUNT_NO": null, "SAVING_ACCOUNT_NO": "00771010000082", "AGRICULTURE_INCOME": 0.00, "DAILY_PIGMY_AMOUNT": null, "IS_INCOME_TAX_FILED": 0, "INCOME_SOURCE_AMOUNT": "", "IS_HAVE_TERM_DEPOSIT": 0, "OTHER_DEPOSIT_ACC_NO": null, "OTHER_DEPOSIT_ACC_NO2": null, "SALES_TAX_PAID_AMOUNT": 0.00, "IS_PAY_SALES_TAX_FILED": 0, "IS_HAVE_CURRENT_DEPOSIT": 0, "LAST_3_YEAR_INFORMATION": [], "FINANCIAL_YEAR_SALES_TAX": 0, "IS_HAVE_RECURRING_DEPOSIT": 0, "MONTHLY_HOUSEHOLD_EXPENSES": 0.00}]
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/subPropertyInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_sub_property_information where 1  AND PROPOSAL_ID=406
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/incomeInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_sub_property_information where 1  AND PROPOSAL_ID=406 order by ID desc
+[ RowDataPacket { cnt: 1 } ]
+select * from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by ID asc
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/jointAccountInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+1 1
+0 1
+select count(*) as cnt from view_joint_account_information where 1 AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 1 } ]
+select * from view_joint_account_information where 1 AND PROPOSAL_ID=406 order by ID asc LIMIT 0,1
+12/22/2022, 5:28:44 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_praposal_master where 1  AND PROPOSAL_ID=406
+Error: ER_BAD_FIELD_ERROR: Unknown column 'PROPOSAL_ID' in 'where clause'
+    at Sequence._packetToError (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Pool.query (D:\project\backend\node_modules\mysql\lib\Pool.js:199:23)
+    at exports.executeQuery (D:\project\backend\utilities\globalModule.js:194:20)
+    at exports.get (D:\project\backend\services\praposal.js:96:12)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\project\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\project\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\project\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\project\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\project\backend\node_modules\express\lib\router\index.js:275:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'PROPOSAL_ID' in 'where clause'",
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select count(*) as cnt from view_praposal_master where 1  AND PROPOSAL_ID=406'
+}
+12/22/2022, 5:28:45 PM  Requested Method : - POST /api/loanPurpose/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_purpose_master where 1 
+[ RowDataPacket { cnt: 106 } ]
+select * from view_loan_purpose_master where 1  order by ID asc
+12/22/2022, 5:28:45 PM  Requested Method : - POST /api/incomeInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B' order by ID ASC
+addErrlog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:28:45 PM  Requested Method : - POST /api/agricultureLandInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:28:45 PM  Requested Method : - POST /api/expenditureInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:28:45 PM  Requested Method : - POST /api/personalInformation/getPersonalInfo public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+select * from view_personal_information where PROPOSAL_ID = 406 AND TYPE = 'B' 
+12/22/2022, 5:28:45 PM  Requested Method : - POST /api/addressInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_address_information where 1  AND ID=2206
+[ RowDataPacket { cnt: 1 } ]
+select * from view_address_information where 1  AND ID=2206 order by ID desc
+select * from view_address_information where ID = 2201
+select * from view_address_information where ID = 2205
+select * from view_family_details where PERSONAL_INFORMATION_ID = 894
+12/22/2022, 5:28:45 PM  Requested Method : - POST /api/guarantorForLoans/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_guarantor_for_loan where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_guarantor_for_loan where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+12/22/2022, 5:28:45 PM  Requested Method : - POST /api/loanTakenInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_taken_information where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_loan_taken_information where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[
+  RowDataPacket {
+    ID: 249,
+    CREDIT_INFORMATION_ID: 893,
+    BANK_OR_INSTITUTE_NAME: ' ',
+    BRANCH_NAME: ' ',
+    LOAN_TYPE_ID: 0,
+    SANCTIONED_AMOUNT: 0,
+    INSTALLMENT_AMOUNT: 0,
+    LOAN_OUTSTANDING: 105000,
+    LOAN_OVERDUE_AMOUNT: 0,
+    DUE_DATE: null,
+    SECURITY_OFFERED: null,
+    IS_SUB: 0,
+    CREATED_MODIFIED_DATE: '2022-12-22 16:31:11',
+    READ_ONLY: 'N',
+    ARCHIVE_FLAG: 'F',
+    CLIENT_ID: 1,
+    ACCOUNT_NUMBER: null,
+    IS_SELECTED: '0',
+    SANCTION_DATE: null,
+    REMARK: 'REGULAR',
+    YEAR: 0,
+    LOAN_TYPE_NAME_MR: null,
+    LOAN_TYPE_NAME_EN: null,
+    LOAN_TYPE_NAME_KN: null,
+    REPAYMENT_DATE: null,
+    LOAN_TYPE: 'PKPS MOLAWAD'
+  }
+]
+12/22/2022, 5:28:45 PM  Requested Method : - POST /api/depositsInBank/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_deposits_in_bank where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_deposits_in_bank where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+12/22/2022, 5:28:45 PM  Requested Method : - POST /api/earlierLoanHistory/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_earlier_loan_history where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_earlier_loan_history where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[]
+12/22/2022, 5:28:45 PM  Requested Method : - POST /api/houseShopRentInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+1 20
+0 20
+select count(*) as cnt from view_house_shop_rent_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 0 } ]
+select * from view_house_shop_rent_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc LIMIT 0,20
+12/22/2022, 5:28:45 PM  Requested Method : - POST /api/businessFirmInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_business_firm_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_business_firm_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:28:45 PM  Requested Method : - POST /api/addressInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_address_information where 1  AND ID=2211
+[ RowDataPacket { cnt: 1 } ]
+select * from view_address_information where 1  AND ID=2211 order by ID desc
+12/22/2022, 5:28:48 PM  Requested Method : - POST /api/proposalLogInformation/create public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+12/22/2022, 5:29:02 PM  Requested Method : - POST /user/login public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+SELECT * FROM view_user_master  WHERE  (MOBILE_NUMBER =? or EMAIL_ID=?) and PASSWORD =? and IS_ACTIVE = 1 [
+  'sbcdwd@gmail.com',
+  'sbcdwd@gmail.com',
+  '07e1cd7dca89a1678042477183b7ac3f'
+]
+supportkey :  
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:29:16 PM  Requested Method : - POST /user/login public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+SELECT * FROM view_user_master  WHERE  (MOBILE_NUMBER =? or EMAIL_ID=?) and PASSWORD =? and IS_ACTIVE = 1 [ 'dattawad.bm', 'dattawad.bm', '07e1cd7dca89a1678042477183b7ac3f' ]
+supportkey :  
+UPDATE  user_master SET LAST_LOGIN_DATETIME = ?, CLOUD_ID = ?, DEVICE_ID= ?,APP_VERSION =? where ID = ? [ '2022-12-22 17:29:16', '', '6GcmDKgkz5I7cubx', '', 264 ]
+supportkey :  
+insert into proposal_log_information(PROPOSAL_ID,LOG_ACTION,DESCRIPTION,LOG_DATETIME,LOG_TYPE,USER_ID,OLD_STAGE_ID,NEW_STAGE_ID,CLIENT_ID) values (0,'Logged logged in the system.',CONCAT((select NAME from user_master where ID = 264),' logged in the system.'),'2022-12-22 17:29:16','I',264,0,0,1)
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 13407,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:29:16 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1  AND MANAGER_ID=264
+[ RowDataPacket { cnt: 0 } ]
+select * from view_branch_master where 1  AND MANAGER_ID=264 order by ID DESC
+12/22/2022, 5:29:24 PM  Requested Method : - POST /user/login public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+SELECT * FROM view_user_master  WHERE  (MOBILE_NUMBER =? or EMAIL_ID=?) and PASSWORD =? and IS_ACTIVE = 1 [ 'dattawad.bm', 'dattawad.bm', '07e1cd7dca89a1678042477183b7ac3f' ]
+supportkey :  
+UPDATE  user_master SET LAST_LOGIN_DATETIME = ?, CLOUD_ID = ?, DEVICE_ID= ?,APP_VERSION =? where ID = ? [ '2022-12-22 17:29:24', '', '6GcmDKgkz5I7cubx', '', 264 ]
+supportkey :  
+insert into proposal_log_information(PROPOSAL_ID,LOG_ACTION,DESCRIPTION,LOG_DATETIME,LOG_TYPE,USER_ID,OLD_STAGE_ID,NEW_STAGE_ID,CLIENT_ID) values (0,'Logged logged in the system.',CONCAT((select NAME from user_master where ID = 264),' logged in the system.'),'2022-12-22 17:29:24','I',264,0,0,1)
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 13408,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:29:24 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1  AND MANAGER_ID=264
+[ RowDataPacket { cnt: 0 } ]
+select * from view_branch_master where 1  AND MANAGER_ID=264 order by ID DESC
+12/22/2022, 5:30:08 PM  Requested Method : - POST /user/login public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+SELECT * FROM view_user_master  WHERE  (MOBILE_NUMBER =? or EMAIL_ID=?) and PASSWORD =? and IS_ACTIVE = 1 [
+  'sbcdwd@gmail.com',
+  'sbcdwd@gmail.com',
+  'bba059c080050db0015b8d0aba8ffcbe'
+]
+supportkey :  
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:30:38 PM  Requested Method : - POST /api/applicantDocument/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_applicant_documents where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 36 } ]
+select * from view_applicant_documents where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by CREATED_MODIFIED_DATE desc
+12/22/2022, 5:30:38 PM  Requested Method : - POST /api/applicantExtraInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_applicant_extra_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B'
+12/22/2022, 5:30:38 PM  Requested Method : - POST /api/incomeSource/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+  {
+  pageIndex: 0,
+  pageSize: 0,
+  sortKey: 'ID',
+  sortValue: 'asc',
+  filter: ''
+}
+  ID asc
+select count(*) as cnt from view_income_source where 1 
+[ RowDataPacket { cnt: 5 } ]
+select * from view_income_source where 1  order by ID asc
+[ RowDataPacket { cnt: 8 } ]
+select * from view_applicant_extra_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B' order by SEQ_NO asc
+12/22/2022, 5:30:38 PM  Requested Method : - POST /api/installmentFrequency/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_installment_frequency where 1 AND IS_ACTIVE = '1'
+[ RowDataPacket { cnt: 7 } ]
+select * from view_installment_frequency where 1 AND IS_ACTIVE = '1' order by ID asc
+12/22/2022, 5:30:38 PM  Requested Method : - POST /api/term/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+1 20
+0 20
+select count(*) as cnt from view_term_master where 1 
+12/22/2022, 5:30:38 PM  Requested Method : - POST /api/loanTypes/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_types_master where 1  AND STATUS=1
+[ RowDataPacket { cnt: 14 } ]
+select * from view_loan_types_master where 1  AND STATUS=1 order by ID asc
+[ RowDataPacket { cnt: 8 } ]
+select * from view_term_master where 1  order by ID asc LIMIT 0,20
+12/22/2022, 5:30:38 PM  Requested Method : - POST /api/guarantorInformation/getAllInformation/ public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+select * from guarantor_information where PROPOSAL_ID = ? AND VISIBILITY = 1 [ 406 ]
+resultsGuarentor  [
+  RowDataPacket {
+    ID: 463,
+    PROPOSAL_ID: 406,
+    NAME: 'RAMAGOUDA  CHAKRAVARTI BOLAWADE',
+    MOBILE_NUMBER: '8861336178',
+    CREATED_MODIFIED_DATE: '2022-12-22 16:41:36',
+    READ_ONLY: 'N',
+    ARCHIVE_FLAG: 'F',
+    CLIENT_ID: 1,
+    VISIBILITY: 1,
+    APPLICANT_ID: 604
+  },
+  RowDataPacket {
+    ID: 464,
+    PROPOSAL_ID: 406,
+    NAME: 'BABURAO TAMMANI BALIKAI',
+    MOBILE_NUMBER: '9731842727',
+    CREATED_MODIFIED_DATE: '2022-12-22 16:42:40',
+    READ_ONLY: 'N',
+    ARCHIVE_FLAG: 'F',
+    CLIENT_ID: 1,
+    VISIBILITY: 1,
+    APPLICANT_ID: 605
+  }
+]
+select * from view_personal_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+SET SESSION group_concat_max_len = 4294967290;
+                                        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'PROPOSAL_ID',PROPOSAL_ID,'INCOME_SOURCE_ID',INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID',OTHER_INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID2',OTHER_INCOME_SOURCE_ID2,'IS_SAVED',IS_SAVED,'IS_HOLD_AGRICULTURE_LAND',IS_HOLD_AGRICULTURE_LAND,'CLIENT_ID',CLIENT_ID,
+                                          'SALARIED_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'PLACE_OF_EMPLOYMENT',PLACE_OF_EMPLOYMENT,'ORGANISATION_NAME',ORGANISATION_NAME,'CONTACT_NO_OF_EMPLOYER',CONTACT_NO_OF_EMPLOYER,'POST_OF_EMPLOYMENT',POST_OF_EMPLOYMENT,'GROSS_SALARY',GROSS_SALARY,'TOTAL_DEDUCTION',TOTAL_DEDUCTION,'NET_SALARY',NET_SALARY,'CLIENT_ID',CLIENT_ID,'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data5 FROM view_address_information where ID = i.PLACE_OF_EMPLOYMENT ),'[]'))),']'),'"[','['),']"',']') as data6 FROM view_salaried_information i where INCOME_INFORMATION_ID = m.ID),'[]')),					
+                                          'BUSINESS_FIRM_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CAPITAL',CAPITAL,'TURNOVER_YEARLY',TURNOVER_YEARLY,'INCOME_YEARLY',INCOME_YEARLY,'ID',ID,'TYPE',TYPE,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'NATURE_OF_FIRM',NATURE_OF_FIRM,'ADDRESS_ID',ADDRESS_ID,'CLIENT_ID',CLIENT_ID,
+                                                              'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data4 FROM view_address_information where ID = l.ADDRESS_ID ),'[]')
+                                                                                                                  
+                                          )),']'),'"[','['),']"',']') as data3 FROM view_business_firm_information l where INCOME_INFORMATION_ID = m.ID),'[]')),							
+                                          'AGRICULTURE_LAND_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CURRENT_AGRICULTURE_PRODUCT',CURRENT_AGRICULTURE_PRODUCT,'ANNUAL_INCOME_FROM_THIS_LAND',ANNUAL_INCOME_FROM_THIS_LAND)),']'),'"[','['),']"',']') as data1 FROM view_agriculture_land_information k where INCOME_INFORMATION_ID = m.ID),'[]'))
+                                          )),']'),'"[','['),']"',']') as data FROM view_income_information m where PROPOSAL_ID =? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+select * from financial_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+select * from credit_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+select * from view_property_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+here : []
+select * from view_personal_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+SET SESSION group_concat_max_len = 4294967290;
+                                        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'PROPOSAL_ID',PROPOSAL_ID,'INCOME_SOURCE_ID',INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID',OTHER_INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID2',OTHER_INCOME_SOURCE_ID2,'IS_SAVED',IS_SAVED,'IS_HOLD_AGRICULTURE_LAND',IS_HOLD_AGRICULTURE_LAND,'CLIENT_ID',CLIENT_ID,
+                                          'SALARIED_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'PLACE_OF_EMPLOYMENT',PLACE_OF_EMPLOYMENT,'ORGANISATION_NAME',ORGANISATION_NAME,'CONTACT_NO_OF_EMPLOYER',CONTACT_NO_OF_EMPLOYER,'POST_OF_EMPLOYMENT',POST_OF_EMPLOYMENT,'GROSS_SALARY',GROSS_SALARY,'TOTAL_DEDUCTION',TOTAL_DEDUCTION,'NET_SALARY',NET_SALARY,'CLIENT_ID',CLIENT_ID,'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data5 FROM view_address_information where ID = i.PLACE_OF_EMPLOYMENT ),'[]'))),']'),'"[','['),']"',']') as data6 FROM view_salaried_information i where INCOME_INFORMATION_ID = m.ID),'[]')),					
+                                          'BUSINESS_FIRM_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CAPITAL',CAPITAL,'TURNOVER_YEARLY',TURNOVER_YEARLY,'INCOME_YEARLY',INCOME_YEARLY,'ID',ID,'TYPE',TYPE,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'NATURE_OF_FIRM',NATURE_OF_FIRM,'ADDRESS_ID',ADDRESS_ID,'CLIENT_ID',CLIENT_ID,
+                                                              'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data4 FROM view_address_information where ID = l.ADDRESS_ID ),'[]')
+                                                                                                                  
+                                          )),']'),'"[','['),']"',']') as data3 FROM view_business_firm_information l where INCOME_INFORMATION_ID = m.ID),'[]')),							
+                                          'AGRICULTURE_LAND_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CURRENT_AGRICULTURE_PRODUCT',CURRENT_AGRICULTURE_PRODUCT,'ANNUAL_INCOME_FROM_THIS_LAND',ANNUAL_INCOME_FROM_THIS_LAND)),']'),'"[','['),']"',']') as data1 FROM view_agriculture_land_information k where INCOME_INFORMATION_ID = m.ID),'[]'))
+                                          )),']'),'"[','['),']"',']') as data FROM view_income_information m where PROPOSAL_ID =? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+select * from financial_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+select * from credit_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+select * from view_property_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+here : []
+12/22/2022, 5:30:38 PM  Requested Method : - POST /api/applicantExtraInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_applicant_extra_information where 1  AND EXTRA_INFORMATION_ID=12 AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 0 } ]
+select * from view_applicant_extra_information where 1  AND EXTRA_INFORMATION_ID=12 AND PROPOSAL_ID=406 order by SEQ_NO asc
+12/22/2022, 5:30:38 PM  Requested Method : - POST /api/expenditureInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:30:38 PM  Requested Method : - POST /api/agricultureLandInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:30:38 PM  Requested Method : - POST /api/loanDemand/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_demand where 1  AND PROPOSAL_ID=406
+12/22/2022, 5:30:38 PM  Requested Method : - POST /api/propertyInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_property_information where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_loan_demand where 1  AND PROPOSAL_ID=406 order by ID asc
+[ RowDataPacket { cnt: 1 } ]
+select * from view_property_information where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by ID asc
+12/22/2022, 5:30:39 PM  Requested Method : - POST /api/financialInformation/getFinancialInfo public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+            SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('SHARE_ACCOUNT_NO',SHARE_ACCOUNT_NO,'PERIODS',PERIODS,'TYPE_OF_ACCOUNT',TYPE_OF_ACCOUNT,'IS_PAY_SALES_TAX_FILED',IS_PAY_SALES_TAX_FILED,'FINANCIAL_YEAR_SALES_TAX',FINANCIAL_YEAR_SALES_TAX,'SALES_TAX_PAID_AMOUNT',SALES_TAX_PAID_AMOUNT,'IS_HAVE_TERM_DEPOSIT',IS_HAVE_TERM_DEPOSIT,'IS_HAVE_CURRENT_DEPOSIT',IS_HAVE_CURRENT_DEPOSIT,'IS_HAVE_RECURRING_DEPOSIT',IS_HAVE_RECURRING_DEPOSIT,'BALANCE_AMOUNT2',BALANCE_AMOUNT2,'OTHER_DEPOSIT_ACC_NO2',OTHER_DEPOSIT_ACC_NO2,'ACCOUNT_NO',ACCOUNT_NO,'ACCOUNT_BALANCE',ACCOUNT_BALANCE,'LOAN_TAKEN_YEARS',LOAN_TAKEN_YEARS,'CC_LOAN_TERNOVER',CC_LOAN_TERNOVER,'INCOME_SOURCE_AMOUNT',INCOME_SOURCE_AMOUNT,'YEARLY_INCOME',YEARLY_INCOME,'SAVING_ACCOUNT_NO',SAVING_ACCOUNT_NO,'SAVING_AMOUNT',SAVING_AMOUNT,'OTHER_DEPOSIT_ACC_NO',OTHER_DEPOSIT_ACC_NO,'BALANCE_AMOUNT',BALANCE_AMOUNT,'ID',ID,'PROPOSAL_ID',PROPOSAL_ID,'IS_INCOME_TAX_FILED',IS_INCOME_TAX_FILED,'FINANCIAL_YEAR',FINANCIAL_YEAR,'INCOME_AMOUNT',INCOME_AMOUNT,'TAX_PAID_AMOUNT',TAX_PAID_AMOUNT,'AGRICULTURE_INCOME',AGRICULTURE_INCOME,'OTHER_INCOME',OTHER_INCOME,'MONTHLY_HOUSEHOLD_EXPENSES',MONTHLY_HOUSEHOLD_EXPENSES,'IS_PIGMY',IS_PIGMY,'BANK_NAME',BANK_NAME,'PIGMY_BALANCE',PIGMY_BALANCE,'DAILY_PIGMY_AMOUNT',DAILY_PIGMY_AMOUNT,'CLIENT_ID',CLIENT_ID,'LAST_3_YEAR_INFORMATION',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'TYPE',TYPE,'FINANCIAL_YEAR',FINANCIAL_YEAR,'INCOME_AMOUNT',INCOME_AMOUNT
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_last_3_year_information where FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'TERM_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'T' and FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'RECURING_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'R' and FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'CURRENT_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'C' and FINANCIAL_INFORMATION_ID = m.ID),'[]')
+)),']'),'"[','['),']"',']') as data FROM view_financial_information m  where PROPOSAL_ID = 406 AND TYPE = 'B' 
+[{"ID": 894, "PERIODS": null, "IS_PIGMY": 0, "BANK_NAME": "", "CLIENT_ID": 1, "ACCOUNT_NO": null, "PROPOSAL_ID": 406, "OTHER_INCOME": 0.00, "TERM_DEPOSIT": [], "INCOME_AMOUNT": 0.00, "PIGMY_BALANCE": null, "SAVING_AMOUNT": 500.00, "YEARLY_INCOME": null, "BALANCE_AMOUNT": 0.00, "FINANCIAL_YEAR": 0, "ACCOUNT_BALANCE": null, "BALANCE_AMOUNT2": 0.00, "CURRENT_DEPOSIT": [], "TAX_PAID_AMOUNT": 0.00, "TYPE_OF_ACCOUNT": null, "CC_LOAN_TERNOVER": null, "LOAN_TAKEN_YEARS": null, "RECURING_DEPOSIT": [], "SHARE_ACCOUNT_NO": null, "SAVING_ACCOUNT_NO": "00771010000082", "AGRICULTURE_INCOME": 0.00, "DAILY_PIGMY_AMOUNT": null, "IS_INCOME_TAX_FILED": 0, "INCOME_SOURCE_AMOUNT": "", "IS_HAVE_TERM_DEPOSIT": 0, "OTHER_DEPOSIT_ACC_NO": null, "OTHER_DEPOSIT_ACC_NO2": null, "SALES_TAX_PAID_AMOUNT": 0.00, "IS_PAY_SALES_TAX_FILED": 0, "IS_HAVE_CURRENT_DEPOSIT": 0, "LAST_3_YEAR_INFORMATION": [], "FINANCIAL_YEAR_SALES_TAX": 0, "IS_HAVE_RECURRING_DEPOSIT": 0, "MONTHLY_HOUSEHOLD_EXPENSES": 0.00}]
+12/22/2022, 5:30:39 PM  Requested Method : - POST /api/creditInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_credit_information where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_credit_information where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by ID asc
+12/22/2022, 5:30:39 PM  Requested Method : - POST /api/subPropertyInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_sub_property_information where 1  AND PROPOSAL_ID=406
+12/22/2022, 5:30:39 PM  Requested Method : - POST /api/incomeInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_sub_property_information where 1  AND PROPOSAL_ID=406 order by ID desc
+[ RowDataPacket { cnt: 1 } ]
+select * from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by ID asc
+12/22/2022, 5:30:39 PM  Requested Method : - POST /api/jointAccountInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+1 1
+0 1
+select count(*) as cnt from view_joint_account_information where 1 AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 1 } ]
+select * from view_joint_account_information where 1 AND PROPOSAL_ID=406 order by ID asc LIMIT 0,1
+12/22/2022, 5:30:39 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_praposal_master where 1  AND PROPOSAL_ID=406
+Error: ER_BAD_FIELD_ERROR: Unknown column 'PROPOSAL_ID' in 'where clause'
+    at Sequence._packetToError (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Pool.query (D:\project\backend\node_modules\mysql\lib\Pool.js:199:23)
+    at exports.executeQuery (D:\project\backend\utilities\globalModule.js:194:20)
+    at exports.get (D:\project\backend\services\praposal.js:96:12)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\project\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\project\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\project\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\project\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\project\backend\node_modules\express\lib\router\index.js:275:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'PROPOSAL_ID' in 'where clause'",
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select count(*) as cnt from view_praposal_master where 1  AND PROPOSAL_ID=406'
+}
+12/22/2022, 5:30:39 PM  Requested Method : - POST /api/loanPurpose/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_purpose_master where 1 
+[ RowDataPacket { cnt: 106 } ]
+select * from view_loan_purpose_master where 1  order by ID asc
+addErrlog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:30:39 PM  Requested Method : - POST /api/incomeInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B' order by ID ASC
+12/22/2022, 5:30:40 PM  Requested Method : - POST /api/agricultureLandInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:30:40 PM  Requested Method : - POST /api/expenditureInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:30:40 PM  Requested Method : - POST /api/personalInformation/getPersonalInfo public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+select * from view_personal_information where PROPOSAL_ID = 406 AND TYPE = 'B' 
+select * from view_address_information where ID = 2201
+select * from view_address_information where ID = 2205
+select * from view_family_details where PERSONAL_INFORMATION_ID = 894
+12/22/2022, 5:30:40 PM  Requested Method : - POST /api/addressInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_address_information where 1  AND ID=2206
+[ RowDataPacket { cnt: 1 } ]
+select * from view_address_information where 1  AND ID=2206 order by ID desc
+12/22/2022, 5:30:41 PM  Requested Method : - POST /api/loanTakenInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_taken_information where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_loan_taken_information where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[
+  RowDataPacket {
+    ID: 249,
+    CREDIT_INFORMATION_ID: 893,
+    BANK_OR_INSTITUTE_NAME: ' ',
+    BRANCH_NAME: ' ',
+    LOAN_TYPE_ID: 0,
+    SANCTIONED_AMOUNT: 0,
+    INSTALLMENT_AMOUNT: 0,
+    LOAN_OUTSTANDING: 105000,
+    LOAN_OVERDUE_AMOUNT: 0,
+    DUE_DATE: null,
+    SECURITY_OFFERED: null,
+    IS_SUB: 0,
+    CREATED_MODIFIED_DATE: '2022-12-22 16:31:11',
+    READ_ONLY: 'N',
+    ARCHIVE_FLAG: 'F',
+    CLIENT_ID: 1,
+    ACCOUNT_NUMBER: null,
+    IS_SELECTED: '0',
+    SANCTION_DATE: null,
+    REMARK: 'REGULAR',
+    YEAR: 0,
+    LOAN_TYPE_NAME_MR: null,
+    LOAN_TYPE_NAME_EN: null,
+    LOAN_TYPE_NAME_KN: null,
+    REPAYMENT_DATE: null,
+    LOAN_TYPE: 'PKPS MOLAWAD'
+  }
+]
+12/22/2022, 5:30:41 PM  Requested Method : - POST /api/guarantorForLoans/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_guarantor_for_loan where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+12/22/2022, 5:30:41 PM  Requested Method : - POST /api/earlierLoanHistory/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_earlier_loan_history where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_guarantor_for_loan where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[ RowDataPacket { cnt: 0 } ]
+select * from view_earlier_loan_history where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[]
+12/22/2022, 5:30:41 PM  Requested Method : - POST /api/depositsInBank/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_deposits_in_bank where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_deposits_in_bank where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+12/22/2022, 5:30:41 PM  Requested Method : - POST /api/houseShopRentInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+1 20
+0 20
+select count(*) as cnt from view_house_shop_rent_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 0 } ]
+select * from view_house_shop_rent_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc LIMIT 0,20
+12/22/2022, 5:30:41 PM  Requested Method : - POST /api/businessFirmInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_business_firm_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_business_firm_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:30:41 PM  Requested Method : - POST /api/addressInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_address_information where 1  AND ID=2211
+[ RowDataPacket { cnt: 1 } ]
+select * from view_address_information where 1  AND ID=2211 order by ID desc
+12/22/2022, 5:30:56 PM  Requested Method : - POST /api/applicantDocument/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_applicant_documents where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 36 } ]
+select * from view_applicant_documents where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by CREATED_MODIFIED_DATE desc
+12/22/2022, 5:30:56 PM  Requested Method : - POST /api/incomeSource/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+  {
+  pageIndex: 0,
+  pageSize: 0,
+  sortKey: 'ID',
+  sortValue: 'asc',
+  filter: ''
+}
+  ID asc
+select count(*) as cnt from view_income_source where 1 
+[ RowDataPacket { cnt: 5 } ]
+select * from view_income_source where 1  order by ID asc
+12/22/2022, 5:30:56 PM  Requested Method : - POST /api/installmentFrequency/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_installment_frequency where 1 AND IS_ACTIVE = '1'
+[ RowDataPacket { cnt: 7 } ]
+select * from view_installment_frequency where 1 AND IS_ACTIVE = '1' order by ID asc
+12/22/2022, 5:30:56 PM  Requested Method : - POST /api/loanTypes/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_types_master where 1  AND STATUS=1
+12/22/2022, 5:30:56 PM  Requested Method : - POST /api/applicantExtraInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_applicant_extra_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B'
+[ RowDataPacket { cnt: 14 } ]
+select * from view_loan_types_master where 1  AND STATUS=1 order by ID asc
+[ RowDataPacket { cnt: 8 } ]
+select * from view_applicant_extra_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B' order by SEQ_NO asc
+12/22/2022, 5:30:56 PM  Requested Method : - POST /api/term/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+1 20
+0 20
+select count(*) as cnt from view_term_master where 1 
+[ RowDataPacket { cnt: 8 } ]
+select * from view_term_master where 1  order by ID asc LIMIT 0,20
+12/22/2022, 5:30:57 PM  Requested Method : - POST /api/applicantExtraInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_applicant_extra_information where 1  AND EXTRA_INFORMATION_ID=12 AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 0 } ]
+select * from view_applicant_extra_information where 1  AND EXTRA_INFORMATION_ID=12 AND PROPOSAL_ID=406 order by SEQ_NO asc
+12/22/2022, 5:30:57 PM  Requested Method : - POST /api/guarantorInformation/getAllInformation/ public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+select * from guarantor_information where PROPOSAL_ID = ? AND VISIBILITY = 1 [ 406 ]
+resultsGuarentor  [
+  RowDataPacket {
+    ID: 463,
+    PROPOSAL_ID: 406,
+    NAME: 'RAMAGOUDA  CHAKRAVARTI BOLAWADE',
+    MOBILE_NUMBER: '8861336178',
+    CREATED_MODIFIED_DATE: '2022-12-22 16:41:36',
+    READ_ONLY: 'N',
+    ARCHIVE_FLAG: 'F',
+    CLIENT_ID: 1,
+    VISIBILITY: 1,
+    APPLICANT_ID: 604
+  },
+  RowDataPacket {
+    ID: 464,
+    PROPOSAL_ID: 406,
+    NAME: 'BABURAO TAMMANI BALIKAI',
+    MOBILE_NUMBER: '9731842727',
+    CREATED_MODIFIED_DATE: '2022-12-22 16:42:40',
+    READ_ONLY: 'N',
+    ARCHIVE_FLAG: 'F',
+    CLIENT_ID: 1,
+    VISIBILITY: 1,
+    APPLICANT_ID: 605
+  }
+]
+select * from view_personal_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+SET SESSION group_concat_max_len = 4294967290;
+                                        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'PROPOSAL_ID',PROPOSAL_ID,'INCOME_SOURCE_ID',INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID',OTHER_INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID2',OTHER_INCOME_SOURCE_ID2,'IS_SAVED',IS_SAVED,'IS_HOLD_AGRICULTURE_LAND',IS_HOLD_AGRICULTURE_LAND,'CLIENT_ID',CLIENT_ID,
+                                          'SALARIED_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'PLACE_OF_EMPLOYMENT',PLACE_OF_EMPLOYMENT,'ORGANISATION_NAME',ORGANISATION_NAME,'CONTACT_NO_OF_EMPLOYER',CONTACT_NO_OF_EMPLOYER,'POST_OF_EMPLOYMENT',POST_OF_EMPLOYMENT,'GROSS_SALARY',GROSS_SALARY,'TOTAL_DEDUCTION',TOTAL_DEDUCTION,'NET_SALARY',NET_SALARY,'CLIENT_ID',CLIENT_ID,'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data5 FROM view_address_information where ID = i.PLACE_OF_EMPLOYMENT ),'[]'))),']'),'"[','['),']"',']') as data6 FROM view_salaried_information i where INCOME_INFORMATION_ID = m.ID),'[]')),					
+                                          'BUSINESS_FIRM_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CAPITAL',CAPITAL,'TURNOVER_YEARLY',TURNOVER_YEARLY,'INCOME_YEARLY',INCOME_YEARLY,'ID',ID,'TYPE',TYPE,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'NATURE_OF_FIRM',NATURE_OF_FIRM,'ADDRESS_ID',ADDRESS_ID,'CLIENT_ID',CLIENT_ID,
+                                                              'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data4 FROM view_address_information where ID = l.ADDRESS_ID ),'[]')
+                                                                                                                  
+                                          )),']'),'"[','['),']"',']') as data3 FROM view_business_firm_information l where INCOME_INFORMATION_ID = m.ID),'[]')),							
+                                          'AGRICULTURE_LAND_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CURRENT_AGRICULTURE_PRODUCT',CURRENT_AGRICULTURE_PRODUCT,'ANNUAL_INCOME_FROM_THIS_LAND',ANNUAL_INCOME_FROM_THIS_LAND)),']'),'"[','['),']"',']') as data1 FROM view_agriculture_land_information k where INCOME_INFORMATION_ID = m.ID),'[]'))
+                                          )),']'),'"[','['),']"',']') as data FROM view_income_information m where PROPOSAL_ID =? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+select * from financial_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+select * from credit_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+select * from view_property_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 604 ]
+here : []
+select * from view_personal_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+SET SESSION group_concat_max_len = 4294967290;
+                                        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'PROPOSAL_ID',PROPOSAL_ID,'INCOME_SOURCE_ID',INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID',OTHER_INCOME_SOURCE_ID,'OTHER_INCOME_SOURCE_ID2',OTHER_INCOME_SOURCE_ID2,'IS_SAVED',IS_SAVED,'IS_HOLD_AGRICULTURE_LAND',IS_HOLD_AGRICULTURE_LAND,'CLIENT_ID',CLIENT_ID,
+                                          'SALARIED_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'PLACE_OF_EMPLOYMENT',PLACE_OF_EMPLOYMENT,'ORGANISATION_NAME',ORGANISATION_NAME,'CONTACT_NO_OF_EMPLOYER',CONTACT_NO_OF_EMPLOYER,'POST_OF_EMPLOYMENT',POST_OF_EMPLOYMENT,'GROSS_SALARY',GROSS_SALARY,'TOTAL_DEDUCTION',TOTAL_DEDUCTION,'NET_SALARY',NET_SALARY,'CLIENT_ID',CLIENT_ID,'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data5 FROM view_address_information where ID = i.PLACE_OF_EMPLOYMENT ),'[]'))),']'),'"[','['),']"',']') as data6 FROM view_salaried_information i where INCOME_INFORMATION_ID = m.ID),'[]')),					
+                                          'BUSINESS_FIRM_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CAPITAL',CAPITAL,'TURNOVER_YEARLY',TURNOVER_YEARLY,'INCOME_YEARLY',INCOME_YEARLY,'ID',ID,'TYPE',TYPE,'INCOME_INFORMATION_ID',INCOME_INFORMATION_ID,'NATURE_OF_FIRM',NATURE_OF_FIRM,'ADDRESS_ID',ADDRESS_ID,'CLIENT_ID',CLIENT_ID,
+                                                              'ADDRESS',IFNULL(( SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'STATE',STATE,'DISTRICT',DISTRICT,'TALUKA',TALUKA,'VILLAGE',VILLAGE,'PINCODE',PINCODE,'LANDMARK',LANDMARK,'BUILDING',BUILDING,'HOUSE_NO',HOUSE_NO,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data4 FROM view_address_information where ID = l.ADDRESS_ID ),'[]')
+                                                                                                                  
+                                          )),']'),'"[','['),']"',']') as data3 FROM view_business_firm_information l where INCOME_INFORMATION_ID = m.ID),'[]')),							
+                                          'AGRICULTURE_LAND_INFORMATION',(IFNULL((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('CURRENT_AGRICULTURE_PRODUCT',CURRENT_AGRICULTURE_PRODUCT,'ANNUAL_INCOME_FROM_THIS_LAND',ANNUAL_INCOME_FROM_THIS_LAND)),']'),'"[','['),']"',']') as data1 FROM view_agriculture_land_information k where INCOME_INFORMATION_ID = m.ID),'[]'))
+                                          )),']'),'"[','['),']"',']') as data FROM view_income_information m where PROPOSAL_ID =? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+select * from financial_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+select * from credit_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+select * from view_property_information where PROPOSAL_ID = ? AND TYPE = 'G' and APPLICANT_ID = ? [ 406, 605 ]
+here : []
+12/22/2022, 5:30:57 PM  Requested Method : - POST /api/expenditureInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:30:57 PM  Requested Method : - POST /api/agricultureLandInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:30:57 PM  Requested Method : - POST /api/loanDemand/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_demand where 1  AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 1 } ]
+select * from view_loan_demand where 1  AND PROPOSAL_ID=406 order by ID asc
+12/22/2022, 5:30:57 PM  Requested Method : - POST /api/financialInformation/getFinancialInfo public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+            SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('SHARE_ACCOUNT_NO',SHARE_ACCOUNT_NO,'PERIODS',PERIODS,'TYPE_OF_ACCOUNT',TYPE_OF_ACCOUNT,'IS_PAY_SALES_TAX_FILED',IS_PAY_SALES_TAX_FILED,'FINANCIAL_YEAR_SALES_TAX',FINANCIAL_YEAR_SALES_TAX,'SALES_TAX_PAID_AMOUNT',SALES_TAX_PAID_AMOUNT,'IS_HAVE_TERM_DEPOSIT',IS_HAVE_TERM_DEPOSIT,'IS_HAVE_CURRENT_DEPOSIT',IS_HAVE_CURRENT_DEPOSIT,'IS_HAVE_RECURRING_DEPOSIT',IS_HAVE_RECURRING_DEPOSIT,'BALANCE_AMOUNT2',BALANCE_AMOUNT2,'OTHER_DEPOSIT_ACC_NO2',OTHER_DEPOSIT_ACC_NO2,'ACCOUNT_NO',ACCOUNT_NO,'ACCOUNT_BALANCE',ACCOUNT_BALANCE,'LOAN_TAKEN_YEARS',LOAN_TAKEN_YEARS,'CC_LOAN_TERNOVER',CC_LOAN_TERNOVER,'INCOME_SOURCE_AMOUNT',INCOME_SOURCE_AMOUNT,'YEARLY_INCOME',YEARLY_INCOME,'SAVING_ACCOUNT_NO',SAVING_ACCOUNT_NO,'SAVING_AMOUNT',SAVING_AMOUNT,'OTHER_DEPOSIT_ACC_NO',OTHER_DEPOSIT_ACC_NO,'BALANCE_AMOUNT',BALANCE_AMOUNT,'ID',ID,'PROPOSAL_ID',PROPOSAL_ID,'IS_INCOME_TAX_FILED',IS_INCOME_TAX_FILED,'FINANCIAL_YEAR',FINANCIAL_YEAR,'INCOME_AMOUNT',INCOME_AMOUNT,'TAX_PAID_AMOUNT',TAX_PAID_AMOUNT,'AGRICULTURE_INCOME',AGRICULTURE_INCOME,'OTHER_INCOME',OTHER_INCOME,'MONTHLY_HOUSEHOLD_EXPENSES',MONTHLY_HOUSEHOLD_EXPENSES,'IS_PIGMY',IS_PIGMY,'BANK_NAME',BANK_NAME,'PIGMY_BALANCE',PIGMY_BALANCE,'DAILY_PIGMY_AMOUNT',DAILY_PIGMY_AMOUNT,'CLIENT_ID',CLIENT_ID,'LAST_3_YEAR_INFORMATION',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'TYPE',TYPE,'FINANCIAL_YEAR',FINANCIAL_YEAR,'INCOME_AMOUNT',INCOME_AMOUNT
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_last_3_year_information where FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'TERM_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'T' and FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'RECURING_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'R' and FINANCIAL_INFORMATION_ID = m.ID),'[]'),
+'CURRENT_DEPOSIT',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('ID',ID,'FINANCIAL_INFORMATION_ID',FINANCIAL_INFORMATION_ID,'DEPOSIT_TYPE',DEPOSIT_TYPE,'IS_HAVE_DEPOSIT',IS_HAVE_DEPOSIT,'ACC_NO',ACC_NO,'ACC_AMOUNT',ACC_AMOUNT,'MATURITY_DUE',MATURITY_DUE
+,'CLIENT_ID',CLIENT_ID)),']'),'"[','['),']"',']') as data1 FROM view_financial_deposit_information where DEPOSIT_TYPE = 'C' and FINANCIAL_INFORMATION_ID = m.ID),'[]')
+)),']'),'"[','['),']"',']') as data FROM view_financial_information m  where PROPOSAL_ID = 406 AND TYPE = 'B' 
+12/22/2022, 5:30:57 PM  Requested Method : - POST /api/propertyInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_property_information where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_property_information where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by ID asc
+[{"ID": 894, "PERIODS": null, "IS_PIGMY": 0, "BANK_NAME": "", "CLIENT_ID": 1, "ACCOUNT_NO": null, "PROPOSAL_ID": 406, "OTHER_INCOME": 0.00, "TERM_DEPOSIT": [], "INCOME_AMOUNT": 0.00, "PIGMY_BALANCE": null, "SAVING_AMOUNT": 500.00, "YEARLY_INCOME": null, "BALANCE_AMOUNT": 0.00, "FINANCIAL_YEAR": 0, "ACCOUNT_BALANCE": null, "BALANCE_AMOUNT2": 0.00, "CURRENT_DEPOSIT": [], "TAX_PAID_AMOUNT": 0.00, "TYPE_OF_ACCOUNT": null, "CC_LOAN_TERNOVER": null, "LOAN_TAKEN_YEARS": null, "RECURING_DEPOSIT": [], "SHARE_ACCOUNT_NO": null, "SAVING_ACCOUNT_NO": "00771010000082", "AGRICULTURE_INCOME": 0.00, "DAILY_PIGMY_AMOUNT": null, "IS_INCOME_TAX_FILED": 0, "INCOME_SOURCE_AMOUNT": "", "IS_HAVE_TERM_DEPOSIT": 0, "OTHER_DEPOSIT_ACC_NO": null, "OTHER_DEPOSIT_ACC_NO2": null, "SALES_TAX_PAID_AMOUNT": 0.00, "IS_PAY_SALES_TAX_FILED": 0, "IS_HAVE_CURRENT_DEPOSIT": 0, "LAST_3_YEAR_INFORMATION": [], "FINANCIAL_YEAR_SALES_TAX": 0, "IS_HAVE_RECURRING_DEPOSIT": 0, "MONTHLY_HOUSEHOLD_EXPENSES": 0.00}]
+12/22/2022, 5:30:57 PM  Requested Method : - POST /api/incomeInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by ID asc
+12/22/2022, 5:30:57 PM  Requested Method : - POST /api/creditInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_credit_information where 1  AND PROPOSAL_ID=406 AND TYPE='B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_credit_information where 1  AND PROPOSAL_ID=406 AND TYPE='B' order by ID asc
+12/22/2022, 5:30:57 PM  Requested Method : - POST /api/jointAccountInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+1 1
+0 1
+select count(*) as cnt from view_joint_account_information where 1 AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 1 } ]
+select * from view_joint_account_information where 1 AND PROPOSAL_ID=406 order by ID asc LIMIT 0,1
+12/22/2022, 5:30:57 PM  Requested Method : - POST /api/subPropertyInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_sub_property_information where 1  AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 0 } ]
+select * from view_sub_property_information where 1  AND PROPOSAL_ID=406 order by ID desc
+12/22/2022, 5:30:57 PM  Requested Method : - POST /api/loanPurpose/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_purpose_master where 1 
+[ RowDataPacket { cnt: 106 } ]
+select * from view_loan_purpose_master where 1  order by ID asc
+12/22/2022, 5:30:57 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_praposal_master where 1  AND PROPOSAL_ID=406
+12/22/2022, 5:30:57 PM  Requested Method : - POST /api/realEstateResidentialLoan/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_real_estate_residential_loan where 1 AND PROPOSAL_ID=406
+[ RowDataPacket { cnt: 0 } ]
+select * from view_real_estate_residential_loan where 1 AND PROPOSAL_ID=406 order by ID asc
+Error: ER_BAD_FIELD_ERROR: Unknown column 'PROPOSAL_ID' in 'where clause'
+    at Sequence._packetToError (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Pool.query (D:\project\backend\node_modules\mysql\lib\Pool.js:199:23)
+    at exports.executeQuery (D:\project\backend\utilities\globalModule.js:194:20)
+    at exports.get (D:\project\backend\services\praposal.js:96:12)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\project\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\project\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\project\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\project\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\project\backend\node_modules\express\lib\router\index.js:275:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'PROPOSAL_ID' in 'where clause'",
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select count(*) as cnt from view_praposal_master where 1  AND PROPOSAL_ID=406'
+}
+12/22/2022, 5:30:57 PM  Requested Method : - POST /api/incomeInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_income_information where 1  AND PROPOSAL_ID=406 AND TYPE = 'B' order by ID ASC
+addErrlog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:30:58 PM  Requested Method : - POST /api/agricultureLandInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_agriculture_land_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:30:58 PM  Requested Method : - POST /api/expenditureInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_expenditure_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:30:58 PM  Requested Method : - POST /api/addressInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_address_information where 1  AND ID=2206
+[ RowDataPacket { cnt: 1 } ]
+select * from view_address_information where 1  AND ID=2206 order by ID desc
+12/22/2022, 5:30:58 PM  Requested Method : - POST /api/personalInformation/getPersonalInfo public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+select * from view_personal_information where PROPOSAL_ID = 406 AND TYPE = 'B' 
+12/22/2022, 5:30:58 PM  Requested Method : - POST /api/houseShopRentInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+1 20
+0 20
+select count(*) as cnt from view_house_shop_rent_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 0 } ]
+select * from view_house_shop_rent_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc LIMIT 0,20
+select * from view_address_information where ID = 2201
+select * from view_address_information where ID = 2205
+select * from view_family_details where PERSONAL_INFORMATION_ID = 894
+12/22/2022, 5:30:58 PM  Requested Method : - POST /api/loanTakenInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_taken_information where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 1 } ]
+select * from view_loan_taken_information where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[
+  RowDataPacket {
+    ID: 249,
+    CREDIT_INFORMATION_ID: 893,
+    BANK_OR_INSTITUTE_NAME: ' ',
+    BRANCH_NAME: ' ',
+    LOAN_TYPE_ID: 0,
+    SANCTIONED_AMOUNT: 0,
+    INSTALLMENT_AMOUNT: 0,
+    LOAN_OUTSTANDING: 105000,
+    LOAN_OVERDUE_AMOUNT: 0,
+    DUE_DATE: null,
+    SECURITY_OFFERED: null,
+    IS_SUB: 0,
+    CREATED_MODIFIED_DATE: '2022-12-22 16:31:11',
+    READ_ONLY: 'N',
+    ARCHIVE_FLAG: 'F',
+    CLIENT_ID: 1,
+    ACCOUNT_NUMBER: null,
+    IS_SELECTED: '0',
+    SANCTION_DATE: null,
+    REMARK: 'REGULAR',
+    YEAR: 0,
+    LOAN_TYPE_NAME_MR: null,
+    LOAN_TYPE_NAME_EN: null,
+    LOAN_TYPE_NAME_KN: null,
+    REPAYMENT_DATE: null,
+    LOAN_TYPE: 'PKPS MOLAWAD'
+  }
+]
+12/22/2022, 5:30:58 PM  Requested Method : - POST /api/businessFirmInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_business_firm_information where 1 AND INCOME_INFORMATION_ID = 854
+[ RowDataPacket { cnt: 1 } ]
+select * from view_business_firm_information where 1 AND INCOME_INFORMATION_ID = 854 order by ID asc
+12/22/2022, 5:30:58 PM  Requested Method : - POST /api/guarantorForLoans/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_guarantor_for_loan where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_guarantor_for_loan where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+12/22/2022, 5:30:58 PM  Requested Method : - POST /api/depositsInBank/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_deposits_in_bank where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+12/22/2022, 5:30:58 PM  Requested Method : - POST /api/earlierLoanHistory/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_earlier_loan_history where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F'
+[ RowDataPacket { cnt: 0 } ]
+select * from view_deposits_in_bank where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[ RowDataPacket { cnt: 0 } ]
+select * from view_earlier_loan_history where 1 AND CREDIT_INFORMATION_ID = 893 AND ARCHIVE_FLAG = 'F' order by ID asc
+[]
+12/22/2022, 5:30:58 PM  Requested Method : - POST /api/addressInformation/get public Ip : undefined supportkey :  uyBGIWJ12221643
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_address_information where 1  AND ID=2211
+[ RowDataPacket { cnt: 1 } ]
+select * from view_address_information where 1  AND ID=2211 order by ID desc
+12/22/2022, 5:31:31 PM  Requested Method : - POST /user/login public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+SELECT * FROM view_user_master  WHERE  (MOBILE_NUMBER =? or EMAIL_ID=?) and PASSWORD =? and IS_ACTIVE = 1 [
+  'DATTAWAD BRANCH',
+  'DATTAWAD BRANCH',
+  '07e1cd7dca89a1678042477183b7ac3f'
+]
+supportkey :  
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:31:40 PM  Requested Method : - POST /user/login public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+SELECT * FROM view_user_master  WHERE  (MOBILE_NUMBER =? or EMAIL_ID=?) and PASSWORD =? and IS_ACTIVE = 1 [ 'dattawad.ba', 'dattawad.ba', '07e1cd7dca89a1678042477183b7ac3f' ]
+supportkey :  
+UPDATE  user_master SET LAST_LOGIN_DATETIME = ?, CLOUD_ID = ?, DEVICE_ID= ?,APP_VERSION =? where ID = ? [ '2022-12-22 17:31:40', '', '6GcmDKgkz5I7cubx', '', 263 ]
+supportkey :  
+insert into proposal_log_information(PROPOSAL_ID,LOG_ACTION,DESCRIPTION,LOG_DATETIME,LOG_TYPE,USER_ID,OLD_STAGE_ID,NEW_STAGE_ID,CLIENT_ID) values (0,'Logged logged in the system.',CONCAT((select NAME from user_master where ID = 263),' logged in the system.'),'2022-12-22 17:31:40','I',263,0,0,1)
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 13409,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:31:40 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1  AND ASSISTANT_ID=263
+[ RowDataPacket { cnt: 0 } ]
+select * from view_branch_master where 1  AND ASSISTANT_ID=263 order by ID DESC
+addDblog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:31:48 PM  Requested Method : - POST /user/login public Ip : undefined supportkey :  
+Checking apiKey
+true
+in function
+SELECT * FROM view_user_master  WHERE  (MOBILE_NUMBER =? or EMAIL_ID=?) and PASSWORD =? and IS_ACTIVE = 1 [ 'dattawad.ba', 'dattawad.ba', '07e1cd7dca89a1678042477183b7ac3f' ]
+supportkey :  
+UPDATE  user_master SET LAST_LOGIN_DATETIME = ?, CLOUD_ID = ?, DEVICE_ID= ?,APP_VERSION =? where ID = ? [ '2022-12-22 17:31:48', '', '6GcmDKgkz5I7cubx', '', 263 ]
+supportkey :  
+insert into proposal_log_information(PROPOSAL_ID,LOG_ACTION,DESCRIPTION,LOG_DATETIME,LOG_TYPE,USER_ID,OLD_STAGE_ID,NEW_STAGE_ID,CLIENT_ID) values (0,'Logged logged in the system.',CONCAT((select NAME from user_master where ID = 263),' logged in the system.'),'2022-12-22 17:31:48','I',263,0,0,1)
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 13410,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}

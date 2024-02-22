@@ -1,0 +1,2614 @@
+select * from view_loan_purpose_master where 1  order by ID asc
+12/22/2022, 5:37:54 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:37:54',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+12/22/2022, 5:37:54 PM  Requested Method : - POST /api/loanPurpose/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_purpose_master where 1 AND LOAN_TYPE_ID =undefined
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208750,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Sequence._packetToError (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Pool.query (D:\project\backend\node_modules\mysql\lib\Pool.js:199:23)
+    at exports.executeQuery (D:\project\backend\utilities\globalModule.js:194:20)
+    at exports.get (D:\project\backend\services\loanpurpose.js:64:12)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\project\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\project\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\project\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\project\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\project\backend\node_modules\express\lib\router\index.js:275:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'undefined' in 'where clause'",
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select count(*) as cnt from view_loan_purpose_master where 1 AND LOAN_TYPE_ID =undefined'
+}
+12/22/2022, 5:37:54 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:37:54',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208751,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+addErrlog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+addDblog Response :  success
+12/22/2022, 5:37:54 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1 
+12/22/2022, 5:37:54 PM  Requested Method : - POST /api/incomeyear/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_income_year where 1 
+[ RowDataPacket { cnt: 11 } ]
+select * from view_income_year where 1  order by ID desc
+[ RowDataPacket { cnt: 155 } ]
+select * from view_branch_master where 1  order by ID asc
+12/22/2022, 5:37:54 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:37:54',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+12/22/2022, 5:37:54 PM  Requested Method : - POST /api/installmentFrequency/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_installment_frequency where 1 AND IS_ACTIVE = '1'
+[ RowDataPacket { cnt: 7 } ]
+select * from view_installment_frequency where 1 AND IS_ACTIVE = '1' order by ID asc
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208752,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:37:54 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:37:54',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208753,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+12/22/2022, 5:37:55 PM  Requested Method : - POST /api/term/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+1 20
+0 20
+select count(*) as cnt from view_term_master where 1 
+[ RowDataPacket { cnt: 8 } ]
+select * from view_term_master where 1  order by ID asc LIMIT 0,20
+12/22/2022, 5:37:55 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_EN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": "Other", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+addDblog Response :  success
+12/22/2022, 5:37:55 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_EN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": "Other", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+12/22/2022, 5:37:55 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:37:55',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+12/22/2022, 5:37:55 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+12/22/2022, 5:37:55 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_EN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:37:55',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208754,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+[{"key": 1, "title": "Other", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+12/22/2022, 5:37:55 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+12/22/2022, 5:37:55 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_EN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:37:55',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+[{"key": 1, "title": "Other", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208755,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208756,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+12/22/2022, 5:37:55 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_EN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": "Other", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+addDblog Response :  success
+addDblog Response :  success
+12/22/2022, 5:37:55 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_EN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": "Other", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+12/22/2022, 5:37:55 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_EN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+12/22/2022, 5:37:55 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_EN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": "Other", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+[{"key": 1, "title": "Other", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+12/22/2022, 5:38:00 PM  Requested Method : - PUT /api/user/update/ public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+{
+  ID: 51,
+  ROLE_ID: 3,
+  BRANCH_ID: 0,
+  NAME: 'Loan Admin',
+  EMAIL_ID: 'loanadmin',
+  MOBILE_NUMBER: '7567767767',
+  IS_ACTIVE: 1,
+  STATUS: 'Active',
+  PASSWORD: 'c4ca4238a0b923820dcc509a6f75849b',
+  CREATED_MODIFIED_DATE: '2022-12-22 17:36:36',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  LAST_LOGIN_DATETIME: '2022-12-22 17:36:36',
+  CLOUD_ID: '',
+  DEVICE_ID: 'LDBdtX0RHL9FKJCS',
+  APP_VERSION: '',
+  LOAN_LIMIT: 0
+}
+here 1
+UPDATE user_master SET ROLE_ID= ? , NAME= ? , EMAIL_ID= ? , MOBILE_NUMBER= ? , IS_ACTIVE= ? , PASSWORD= ? , CLIENT_ID= ? ,  CREATED_MODIFIED_DATE = '2022-12-22 17:38:00' where ID = 51  [
+  3,
+  'Loan Admin',
+  'loanadmin',
+  '7567767767',
+  '1',
+  'c4ca4238a0b923820dcc509a6f75849b',
+  1
+]
+here 2
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  serverStatus: 3,
+  warningCount: 0,
+  message: '(Rows matched: 1  Changed: 1  Warnings: 0',
+  protocol41: true,
+  changedRows: 1
+}
+12/22/2022, 5:38:00 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_user_master where 1  AND ( NAME like '%admin%' OR EMAIL_ID like '%admin%' OR MOBILE_NUMBER like '%admin%' OR PASSWORD like '%admin%' )
+[ RowDataPacket { cnt: 4 } ]
+select * from view_user_master where 1  AND ( NAME like '%admin%' OR EMAIL_ID like '%admin%' OR MOBILE_NUMBER like '%admin%' OR PASSWORD like '%admin%' ) order by ID desc LIMIT 0,10
+12/22/2022, 5:38:09 PM  Requested Method : - POST /api/role/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+{
+  pageIndex: 1,
+  pageSize: 10,
+  sortKey: 'ID',
+  sortValue: 'desc',
+  filter: ''
+}
+1 10
+0 10
+select count(*) as cnt from view_role_master where 1 
+[ RowDataPacket { cnt: 8 } ]
+select * from view_role_master where 1  order by ID desc LIMIT 0,10
+12/22/2022, 5:38:09 PM  Requested Method : - POST /api/role/get public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+{
+  pageIndex: 0,
+  pageSize: 0,
+  sortKey: '',
+  sortValue: '',
+  filter: ' AND PARENT_ID=0'
+}
+ 
+select count(*) as cnt from view_role_master where 1  AND PARENT_ID=0
+[ RowDataPacket { cnt: 8 } ]
+select * from view_role_master where 1  AND PARENT_ID=0 order by ID DESC
+12/22/2022, 5:38:16 PM  Requested Method : - POST /api/roleDetails/getData public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+in get 
+SELECT * FROM view_role_master where ID = 3
+SELECT m.ID AS FORM_ID,m.*,If((SELECT IS_ALLOWED FROM view_role_details  WHERE FORM_ID=m.ID AND ROLE_ID='3')=1,1,0) AS IS_ALLOWED,IF(IFNULL((SELECT SEQ_NO FROM view_role_details WHERE FORM_ID=m.ID AND ROLE_ID='3'),'')='',0,(SELECT SEQ_NO FROM view_role_details WHERE FORM_ID=m.ID AND ROLE_ID='3')) AS SEQ_NO,(SELECT SHOW_IN_MENU FROM view_role_details WHERE FORM_ID=m.ID AND ROLE_ID='3') AS SHOW_IN_MENU FROM view_form_master m 
+12/22/2022, 5:38:23 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'ApplicantProposal - Sort on asc SEQUENCE_NUMBER',
+  ACTIVITY_TIME: '2022-12-22 17:38:23',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+12/22/2022, 5:38:23 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'ApplicantProposal - Search For  ',
+  ACTIVITY_TIME: '2022-12-22 17:38:23',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+12/22/2022, 5:38:23 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_praposal_master where 1 AND BRANCH_ID=166
+[ RowDataPacket { cnt: 0 } ]
+select * from view_praposal_master where 1 AND BRANCH_ID=166 order by SEQUENCE_NUMBER asc LIMIT 0,10
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208757,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208758,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+12/22/2022, 5:38:23 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_praposal_master where 1 AND BRANCH_ID=166
+[ RowDataPacket { cnt: 0 } ]
+select * from view_praposal_master where 1 AND BRANCH_ID=166 order by SEQUENCE_NUMBER asc
+addDblog Response :  success
+12/22/2022, 5:38:24 PM  Requested Method : - POST /api/user/getForms public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4294967290;SELECT replace(REPLACE(( CONCAT('[',GROUP_CONCAT(JSON_OBJECT('level',1,'title',m.FORM_NAME,'icon',m.ICON,'link',m.link,'SEQ_NO',SEQ_NO,'children',( IFNULL((SELECT replace(REPLACE(( CONCAT('[',GROUP_CONCAT(JSON_OBJECT('level',2,'title',FORM_NAME,'icon',ICON,'link',link,'SEQ_NO',SEQ_NO)),']')),'"[','['),']"',']') FROM view_role_details WHERE PARENT_ID = m.FORM_ID AND ROLE_ID = m.ROLE_ID  and IS_ALLOWED=1 AND SHOW_IN_MENU = 1 order by SEQ_NO ASC),'[]') )
+            )),']')),'"[','['),']"',']') AS data FROM view_role_details m WHERE PARENT_ID = 0 AND ROLE_ID = 5 AND IS_ALLOWED = 1 AND SHOW_IN_MENU = 1 order by SEQ_NO ASC
+12/22/2022, 5:38:24 PM  Requested Method : - POST /api/globalSettings/getPagesInformation public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+select VALUE from global_settings where KEYWORD in ('PAGE1', 'PAGE2','PAGE3','PAGE4','PAGE0','SUPPORT','BANK_NAME','ABOUT_US_URL')
+12/22/2022, 5:38:31 PM  Requested Method : - POST /api/roleDetails/getData public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+in get 
+SELECT * FROM view_role_master where ID = 3
+SELECT m.ID AS FORM_ID,m.*,If((SELECT IS_ALLOWED FROM view_role_details  WHERE FORM_ID=m.ID AND ROLE_ID='3')=1,1,0) AS IS_ALLOWED,IF(IFNULL((SELECT SEQ_NO FROM view_role_details WHERE FORM_ID=m.ID AND ROLE_ID='3'),'')='',0,(SELECT SEQ_NO FROM view_role_details WHERE FORM_ID=m.ID AND ROLE_ID='3')) AS SEQ_NO,(SELECT SHOW_IN_MENU FROM view_role_details WHERE FORM_ID=m.ID AND ROLE_ID='3') AS SHOW_IN_MENU FROM view_form_master m 
+12/22/2022, 5:38:32 PM  Requested Method : - POST /api/user/getLoanTypeLineChart public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SELECT ID AS LOAN_TYPE_ID,NAME_MR,NAME_EN,NAME_KN,ifnull(a.COUNT,0) AS CNT,ifnull(a.TOTAL_AMOUNT,0) AS TOTAL_AMOUNT
+	FROM view_loan_scheme_master LEFT JOIN (select 
+		LOAN_TYPE_ID AS LOAN_TYPE_ID,
+		COUNT(*) AS COUNT,
+		SUM(LOAN_AMOUNT) AS TOTAL_AMOUNT
+            FROM view_praposal_master WHERE 1  AND ( CREATED_ON_DATETIME BETWEEN '2022-12-22:00:00:00' AND '2022-12-22:23:59:59' ) 
+                group by LOAN_TYPE_ID ) a on (view_loan_scheme_master.ID = a.LOAN_TYPE_ID) ;
+12/22/2022, 5:38:32 PM  Requested Method : - POST /api/user/getPraposalChartData public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SELECT
+            AAA.date_field,
+            IFNULL(BBB.COUNT,0) AS COUNT
+        FROM(SELECT date_field
+        FROM
+        (
+            SELECT
+                MAKEDATE(2022,1) +
+                INTERVAL (12-1) MONTH +
+                INTERVAL daynum DAY date_field
+            FROM
+            (
+                SELECT t*10+u daynum
+                FROM
+                    (SELECT 0 t UNION SELECT 1 UNION SELECT 2 UNION SELECT 3) A,
+                    (SELECT 0 u UNION SELECT 1 UNION SELECT 2 UNION SELECT 3
+                    UNION SELECT 4 UNION SELECT 5 UNION SELECT 6 UNION SELECT 7
+                    UNION SELECT 8 UNION SELECT 9) B
+                ORDER BY daynum
+            ) AA
+        ) AAA
+        WHERE MONTH(date_field) = '12') AAA LEFT JOIN (select DISTINCT(DATE_FORMAT(CREATED_ON_DATETIME, '%Y-%m-%d')) AS date_field ,sum(LOAN_AMOUNT) as COUNT from view_praposal_master where MONTH(CREATED_ON_DATETIME)= '12' AND YEAR(CREATED_ON_DATETIME)='2022' and CURRENT_STAGE_ID=2 GROUP BY DATE_FORMAT(CREATED_ON_DATETIME, '%Y-%m-%d')) BBB
+        USING (date_field) order by date_field;
+12/22/2022, 5:38:32 PM  Requested Method : - POST /api/user/getBranchLineChart public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SELECT  ID,view_branch_master.NAME_MR,view_branch_master.NAME_EN,view_branch_master.NAME_KN,ifnull(a.COUNT,0) AS CNT,ifnull(a.TOTAL_AMOUNT,0) AS TOTAL_AMOUNT
+    FROM view_branch_master LEFT JOIN (select
+            BRANCH_NAME,
+            COUNT(*) AS COUNT,
+            SUM(LOAN_AMOUNT) AS TOTAL_AMOUNT
+               FROM view_praposal_master where 1  AND ( CREATED_ON_DATETIME BETWEEN '2022-12-22:00:00:00' AND '2022-12-22:23:59:59' ) 
+                 group by BRANCH_NAME ) a on (view_branch_master.NAME_MR = a.BRANCH_NAME);;
+12/22/2022, 5:38:32 PM  Requested Method : - POST /api/user/getDashboardCounts public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SELECT COUNT(*) AS TOTAL_BRANCHES FROM view_branch_master;
+        SELECT COUNT(*) AS TOTAL_USERS FROM view_user_master;
+        SELECT COUNT(*) AS TOTAL_DOCUMENTS FROM view_document_master;
+        SELECT COUNT(*) AS TOTAL_LOAN_TYPES FROM view_loan_scheme_master;
+    
+        SELECT COUNT(*) AS TOTAL_PRAPOSALS,
+        (SELECT COUNT(*) FROM view_praposal_master WHERE CURRENT_STAGE_ID NOT IN(6,13))AS IN_PROCESS_PRAPOSALS,
+        (SELECT COUNT(*) FROM view_praposal_master WHERE CURRENT_STAGE_ID=13)AS DISBURSED_PRAPOSALS ,
+        (SELECT COUNT(*) FROM view_praposal_master WHERE CURRENT_STAGE_ID=6)AS REJECTED_PRAPOSALS
+        FROM view_praposal_master;
+
+        SELECT SUM(LOAN_AMOUNT) AS TOTAL_LOAN_AMOUNT,
+        (SELECT SUM(LOAN_AMOUNT) FROM view_praposal_master WHERE CURRENT_STAGE_ID NOT IN(6,13))AS IN_PROCESS_LOAN_AMOUNT,
+        (SELECT SUM(LOAN_AMOUNT) FROM view_praposal_master WHERE CURRENT_STAGE_ID=13)AS DISBURSED_LOAN_AMOUNT,
+        (SELECT SUM(LOAN_AMOUNT) FROM view_praposal_master WHERE CURRENT_STAGE_ID=6)AS REJECTED_LOAN_AMOUNT
+        FROM view_praposal_master;
+
+        SELECT COUNT(*) AS TOTAL_APPLICANT_DOCUMENTS, 
+        (SELECT COUNT(*) FROM view_applicant_documents WHERE IS_UPLOADED=0)AS PENDING_DOCUMENTS ,
+        (SELECT COUNT(*) FROM view_applicant_documents WHERE IS_APPROVED=1)AS APPROVED_DOCUMENTS,
+        (SELECT COUNT(*) FROM view_applicant_documents WHERE IS_APPROVED=0)AS REJECTED_DOCUMENTS 
+        FROM view_applicant_documents;
+
+        SELECT COUNT(*)AS TOTAL_APPLICANTS,
+        (SELECT COUNT(APPLICANT_ID) from view_praposal_master where CURRENT_STAGE_ID=13)AS LOAN_DISBURSED_APPLICANTS,
+        (SELECT COUNT(APPLICANT_ID) from view_praposal_master where CURRENT_STAGE_ID=6)AS LOAN_REJECTED_APPLICANTS,
+        (SELECT COUNT(distinct APPLICANT_ID) from view_praposal_master where CURRENT_STAGE_ID NOT IN(6,13))AS LOAN_IN_PROCESS_APPLICANTS FROM view_applicant_master;
+12/22/2022, 5:38:32 PM  Requested Method : - POST /api/proposalLogInformation/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_proposal_log_information where 1 
+12/22/2022, 5:38:32 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1 
+[ RowDataPacket { cnt: 155 } ]
+select * from view_branch_master where 1  order by ID DESC
+12/22/2022, 5:38:32 PM  Requested Method : - POST /api/user/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_user_master where 1 
+[ RowDataPacket { cnt: 327 } ]
+select * from view_user_master where 1  order by ID DESC
+12/22/2022, 5:38:32 PM  Requested Method : - POST /api/praposal/getPraposalNumber public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SELECT ID,LOAN_KEY AS PRAPOSAL_NUMBER FROM view_praposal_master WHERE 1  ;
+[ RowDataPacket { cnt: 13423 } ]
+select * from view_proposal_log_information where 1  order by id desc LIMIT 0,10
+12/22/2022, 5:38:32 PM  Requested Method : - POST /api/loanScheme/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_scheme_master where 1 
+[ RowDataPacket { cnt: 15 } ]
+select * from view_loan_scheme_master where 1  order by ID asc
+12/22/2022, 5:38:49 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+12/22/2022, 5:38:49 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'ApplicantProposal - Sort on desc id',
+  ACTIVITY_TIME: '2022-12-22 17:38:49',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:49',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208759,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208760,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:38:49 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'ApplicantProposal - Search For  ',
+  ACTIVITY_TIME: '2022-12-22 17:38:49',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208761,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:38:49 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_praposal_master where 1 
+addDblog Response :  success
+12/22/2022, 5:38:49 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_praposal_master where 1 
+addDblog Response :  success
+12/22/2022, 5:38:49 PM  Requested Method : - POST /api/proposalStage/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_proposal_stage_master where 1 AND STATUS=1
+[ RowDataPacket { cnt: 14 } ]
+select * from view_proposal_stage_master where 1 AND STATUS=1 order by SEQUENCE_NUMBER asc
+[ RowDataPacket { cnt: 391 } ]
+select * from view_praposal_master where 1  order by id desc LIMIT 0,10
+[ RowDataPacket { cnt: 391 } ]
+select * from view_praposal_master where 1  order by id desc
+addDblog Response :  success
+12/22/2022, 5:38:49 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1 
+[ RowDataPacket { cnt: 155 } ]
+select * from view_branch_master where 1  order by ID asc
+12/22/2022, 5:38:49 PM  Requested Method : - POST /api/loanScheme/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_scheme_master where 1 
+[ RowDataPacket { cnt: 15 } ]
+select * from view_loan_scheme_master where 1  order by ID desc
+12/22/2022, 5:38:49 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'ApplicantProposal - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:49',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208762,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1 
+[ RowDataPacket { cnt: 155 } ]
+select * from view_branch_master where 1  order by ID asc
+addDblog Response :  success
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/loanScheme/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_scheme_master where 1  AND IS_ACTIVE = 1
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:50',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+[ RowDataPacket { cnt: 15 } ]
+select * from view_loan_scheme_master where 1  AND IS_ACTIVE = 1 order by ID asc
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/addressInformation/getAddress/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_pincode_master where 1 
+[ RowDataPacket { cnt: 4454 } ]
+select * from view_pincode_master where 1  order by TALUKA asc
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208763,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1 
+[ RowDataPacket { cnt: 155 } ]
+select * from view_branch_master where 1  order by ID asc
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/loanPurpose/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_purpose_master where 1 AND LOAN_TYPE_ID =undefined
+Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Sequence._packetToError (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Pool.query (D:\project\backend\node_modules\mysql\lib\Pool.js:199:23)
+    at exports.executeQuery (D:\project\backend\utilities\globalModule.js:194:20)
+    at exports.get (D:\project\backend\services\loanpurpose.js:64:12)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\project\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\project\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\project\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\project\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\project\backend\node_modules\express\lib\router\index.js:275:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'undefined' in 'where clause'",
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select count(*) as cnt from view_loan_purpose_master where 1 AND LOAN_TYPE_ID =undefined'
+}
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/loanPurpose/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_purpose_master where 1 
+[ RowDataPacket { cnt: 106 } ]
+select * from view_loan_purpose_master where 1  order by ID asc
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/incomeyear/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_income_year where 1 
+[ RowDataPacket { cnt: 11 } ]
+select * from view_income_year where 1  order by ID desc
+addErrlog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:50',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208764,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/term/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+1 20
+0 20
+select count(*) as cnt from view_term_master where 1 
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/installmentFrequency/get public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_installment_frequency where 1 AND IS_ACTIVE = '1'
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+addDblog Response :  success
+[ RowDataPacket { cnt: 8 } ]
+select * from view_term_master where 1  order by ID asc LIMIT 0,20
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:50',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:50',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+[ RowDataPacket { cnt: 7 } ]
+select * from view_installment_frequency where 1 AND IS_ACTIVE = '1' order by ID asc
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208765,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208766,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+addDblog Response :  success
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_KN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_KN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_KN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": " ಇತರೆ", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+[{"key": 1, "title": " ಇತರೆ", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+[{"key": 1, "title": " ಇತರೆ", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:50',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+12/22/2022, 5:38:50 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208767,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:50',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208768,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:38:51 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_KN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+12/22/2022, 5:38:51 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_KN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": " ಇತರೆ", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+[{"key": 1, "title": " ಇತರೆ", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+addDblog Response :  success
+addDblog Response :  success
+12/22/2022, 5:38:51 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_KN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": " ಇತರೆ", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+12/22/2022, 5:38:51 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_KN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+12/22/2022, 5:38:51 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 169,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:51',
+  CLIENT_ID: 1
+}
+supportkey :  eVs2A7s12211249
+[{"key": 1, "title": " ಇತರೆ", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208769,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+12/22/2022, 5:38:51 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  eVs2A7s12211249
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_KN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_KN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": " ಇತರೆ", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+12/22/2022, 5:38:56 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'ApplicantProposal - Sort on desc id',
+  ACTIVITY_TIME: '2022-12-22 17:38:56',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+12/22/2022, 5:38:56 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+12/22/2022, 5:38:56 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:56',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'ApplicantProposal - Search For  ',
+  ACTIVITY_TIME: '2022-12-22 17:38:56',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208770,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208772,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208771,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:38:56 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+1 10
+0 10
+select count(*) as cnt from view_praposal_master where 1 AND BRANCH_ID=166
+12/22/2022, 5:38:56 PM  Requested Method : - POST /api/praposal/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_praposal_master where 1 AND BRANCH_ID=166
+[ RowDataPacket { cnt: 0 } ]
+select * from view_praposal_master where 1 AND BRANCH_ID=166 order by id desc
+[ RowDataPacket { cnt: 0 } ]
+select * from view_praposal_master where 1 AND BRANCH_ID=166 order by id desc LIMIT 0,10
+12/22/2022, 5:38:56 PM  Requested Method : - POST /api/proposalStage/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_proposal_stage_master where 1 AND STATUS=1
+[ RowDataPacket { cnt: 14 } ]
+select * from view_proposal_stage_master where 1 AND STATUS=1 order by SEQUENCE_NUMBER asc
+addDblog Response :  success
+12/22/2022, 5:38:56 PM  Requested Method : - POST /api/loanScheme/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_scheme_master where 1 
+addDblog Response :  success
+[ RowDataPacket { cnt: 15 } ]
+select * from view_loan_scheme_master where 1  order by ID desc
+12/22/2022, 5:38:56 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'ApplicantProposal - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:56',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+addDblog Response :  success
+12/22/2022, 5:38:56 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:56',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+12/22/2022, 5:38:56 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1 
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208773,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+[ RowDataPacket { cnt: 155 } ]
+select * from view_branch_master where 1  order by ID asc
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208774,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:38:56 PM  Requested Method : - POST /api/addressInformation/getAddress/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_pincode_master where 1 
+[ RowDataPacket { cnt: 4454 } ]
+select * from view_pincode_master where 1  order by TALUKA asc
+12/22/2022, 5:38:56 PM  Requested Method : - POST /api/loanScheme/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_scheme_master where 1  AND IS_ACTIVE = 1
+[ RowDataPacket { cnt: 15 } ]
+select * from view_loan_scheme_master where 1  AND IS_ACTIVE = 1 order by ID asc
+12/22/2022, 5:38:56 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:56',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208775,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+addDblog Response :  success
+12/22/2022, 5:38:56 PM  Requested Method : - POST /api/loanPurpose/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_purpose_master where 1 
+[ RowDataPacket { cnt: 106 } ]
+select * from view_loan_purpose_master where 1  order by ID asc
+addDblog Response :  success
+12/22/2022, 5:38:56 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:56',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+12/22/2022, 5:38:56 PM  Requested Method : - POST /api/loanPurpose/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_loan_purpose_master where 1 AND LOAN_TYPE_ID =undefined
+Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Sequence._packetToError (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\project\backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\project\backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\project\backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\project\backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Pool.query (D:\project\backend\node_modules\mysql\lib\Pool.js:199:23)
+    at exports.executeQuery (D:\project\backend\utilities\globalModule.js:194:20)
+    at exports.get (D:\project\backend\services\loanpurpose.js:64:12)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\project\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\project\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\project\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\project\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\project\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\project\backend\node_modules\express\lib\router\index.js:275:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'undefined' in 'where clause'",
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select count(*) as cnt from view_loan_purpose_master where 1 AND LOAN_TYPE_ID =undefined'
+}
+12/22/2022, 5:38:56 PM  Requested Method : - POST /api/branch/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_branch_master where 1 
+[ RowDataPacket { cnt: 155 } ]
+select * from view_branch_master where 1  order by ID asc
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208776,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+addErrlog Response :  { code: 400, message: 'Parametrs missing deviceId and applicationkey' }
+12/22/2022, 5:38:57 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:57',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208777,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+addDblog Response :  success
+12/22/2022, 5:38:57 PM  Requested Method : - POST /api/incomeyear/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_income_year where 1 
+[ RowDataPacket { cnt: 11 } ]
+select * from view_income_year where 1  order by ID desc
+12/22/2022, 5:38:57 PM  Requested Method : - POST /api/installmentFrequency/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+ 
+select count(*) as cnt from view_installment_frequency where 1 AND IS_ACTIVE = '1'
+[ RowDataPacket { cnt: 7 } ]
+select * from view_installment_frequency where 1 AND IS_ACTIVE = '1' order by ID asc
+12/22/2022, 5:38:57 PM  Requested Method : - POST /api/term/get public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+1 20
+0 20
+select count(*) as cnt from view_term_master where 1 
+[ RowDataPacket { cnt: 8 } ]
+select * from view_term_master where 1  order by ID asc LIMIT 0,20
+12/22/2022, 5:38:57 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_EN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": "Other", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+12/22/2022, 5:38:57 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:57',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208778,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:38:57 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+12/22/2022, 5:38:57 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_EN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:57',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+addDblog Response :  success
+[{"key": 1, "title": "Other", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208779,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:38:57 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_EN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": "Other", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+addDblog Response :  success
+12/22/2022, 5:38:57 PM  Requested Method : - POST /api/userActivityLog/create/ public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+12/22/2022, 5:38:57 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_EN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+INSERT INTO user_activity_log SET ? {
+  USER_ID: 48,
+  ACTIVITY_DETAILS: 'LoanTypes - Opened',
+  ACTIVITY_TIME: '2022-12-22 17:38:57',
+  CLIENT_ID: 1
+}
+supportkey :  LmEoYRH12211659
+[{"key": 1, "title": "Other", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 208780,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+12/22/2022, 5:38:58 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_EN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+12/22/2022, 5:38:58 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_EN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": "Other", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+addDblog Response :  success
+[{"key": 1, "title": "Other", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+12/22/2022, 5:38:58 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_EN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": "Other", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+12/22/2022, 5:38:58 PM  Requested Method : - POST /api/documentGroup/getDocumentsMultiselect public Ip : undefined supportkey :  LmEoYRH12211659
+Checking apiKey
+true
+in function
+checking token
+SET SESSION group_concat_max_len = 4000000;
+        SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',d.ID,'title',d.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = d.ID),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = d.ID AND STATUS = 1),
+        
+        'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',g.ID,'title',g.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = g.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = g.ID AND STATUS = 1),
+        'children',ifnull((			
+         SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',s.ID,'title',s.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = s.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = s.ID AND STATUS = 1),
+         
+         'children',ifnull((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',j.ID,'title',j.NAME_EN,'disabled',(select if(count(*) > 0 ,'true','false') from view_document_group_master where PARENT_ID = j.ID and STATUS = 1),'expanded','false','isLeaf',(select if(IS_PARENT = 0 ,'true','false') from view_document_group_master where ID = j.ID AND STATUS = 1),
+         
+         'children',ifnull(((SELECT replace(REPLACE(CONCAT('[',GROUP_CONCAT(JSON_OBJECT('key',k.ID,'title',k.NAME_EN,'disabled','false','expanded','false','isLeaf','true')),']'),'"[','['),']"',']') as data FROM view_document_group_master k where STATUS = 1 and PARENT_ID = j.ID )),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master j where STATUS = 1 and PARENT_ID = s.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master s where STATUS = 1 and PARENT_ID = g.ID				
+        ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master g where STATUS = 1 and PARENT_ID = d.ID ),'[]'))),']'),'"[','['),']"',']') as data FROM view_document_group_master d where STATUS = 1 AND PARENT_ID = 0  AND ID=1
+[{"key": 1, "title": "Other", "isLeaf": false, "children": [], "disabled": false, "expanded": false}]
+12/22/2022, 5:38:58 PM  Requested Method : - POST /api/roleDetails/addBulk public Ip : undefined supportkey :  HMSKNNn12161614
+Checking apiKey
+true
+in function
+checking token
+{
+  ROLE_ID: 3,
+  data: [
+    {
+      FORM_ID: 1,
+      ID: 1,
+      NAME: 'Forms & Roles',
+      PARENT_ID: 0,
+      LINK: '#',
+      ICON: 'menu',
+      CREATED_MODIFIED_DATE: '2020-05-28 16:14:45',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: null,
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 2,
+      ID: 2,
+      NAME: 'Manage Forms',
+      PARENT_ID: 1,
+      LINK: '/forms',
+      ICON: '',
+      CREATED_MODIFIED_DATE: '2020-05-28 15:53:38',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: 'Forms & Roles',
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 3,
+      ID: 3,
+      NAME: 'Manage Roles',
+      PARENT_ID: 1,
+      LINK: '/roles',
+      ICON: '',
+      CREATED_MODIFIED_DATE: '2020-05-28 15:54:00',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: 'Forms & Roles',
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 4,
+      ID: 4,
+      NAME: 'Masters',
+      PARENT_ID: 0,
+      LINK: '#',
+      ICON: 'menu',
+      CREATED_MODIFIED_DATE: '2020-05-28 16:14:32',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: null,
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 5,
+      ID: 5,
+      NAME: 'Document Group Master',
+      PARENT_ID: 4,
+      LINK: '/documentgroups',
+      ICON: '',
+      CREATED_MODIFIED_DATE: '2020-05-28 15:54:55',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: 'Masters',
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 6,
+      ID: 6,
+      NAME: 'Document Master',
+      PARENT_ID: 4,
+      LINK: '/documents',
+      ICON: '',
+      CREATED_MODIFIED_DATE: '2020-05-28 15:55:09',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: 'Masters',
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 7,
+      ID: 7,
+      NAME: 'Manage Loan Types',
+      PARENT_ID: 4,
+      LINK: '/loantypes',
+      ICON: '',
+      CREATED_MODIFIED_DATE: '2020-05-28 15:55:43',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: 'Masters',
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 8,
+      ID: 8,
+      NAME: 'Manage Applicant Types',
+      PARENT_ID: 4,
+      LINK: '/applicanttypes',
+      ICON: '',
+      CREATED_MODIFIED_DATE: '2020-05-28 15:56:10',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: 'Masters',
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 9,
+      ID: 9,
+      NAME: 'Manage Branches',
+      PARENT_ID: 4,
+      LINK: '/branches',
+      ICON: '',
+      CREATED_MODIFIED_DATE: '2020-05-28 15:56:30',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: 'Masters',
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 10,
+      ID: 10,
+      NAME: 'Manage Proposals Stage',
+      PARENT_ID: 4,
+      LINK: '/proposalstages',
+      ICON: '',
+      CREATED_MODIFIED_DATE: '2020-05-28 15:57:30',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: 'Masters',
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 11,
+      ID: 11,
+      NAME: 'Manage Home Page Banners',
+      PARENT_ID: 4,
+      LINK: '/homepagebanners',
+      ICON: '',
+      CREATED_MODIFIED_DATE: '2020-05-28 16:06:47',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: 'Masters',
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 12,
+      ID: 12,
+      NAME: 'Applicant Info',
+      PARENT_ID: 0,
+      LINK: '#',
+      ICON: 'menu',
+      CREATED_MODIFIED_DATE: '2020-05-28 16:16:57',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: null,
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 13,
+      ID: 13,
+      NAME: 'View Applicants',
+      PARENT_ID: 0,
+      LINK: '/applicants',
+      ICON: 'menu',
+      CREATED_MODIFIED_DATE: '2020-05-29 18:38:07',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: null,
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 14,
+      ID: 14,
+      NAME: 'Logs',
+      PARENT_ID: 0,
+      LINK: '#',
+      ICON: 'menu',
+      CREATED_MODIFIED_DATE: '2020-05-29 18:18:27',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: null,
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 15,
+      ID: 15,
+      NAME: 'User Activity',
+      PARENT_ID: 0,
+      LINK: '/useractivitylogs',
+      ICON: 'menu',
+      CREATED_MODIFIED_DATE: '2020-05-29 18:38:01',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: null,
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 16,
+      ID: 16,
+      NAME: 'Dashboard',
+      PARENT_ID: 0,
+      LINK: '/home',
+      ICON: 'dashboard',
+      CREATED_MODIFIED_DATE: '2021-04-29 09:33:39',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: null,
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 17,
+      ID: 17,
+      NAME: 'Manage Users',
+      PARENT_ID: 0,
+      LINK: '/users',
+      ICON: 'user',
+      CREATED_MODIFIED_DATE: '2020-05-29 18:06:31',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: null,
+      IS_ALLOWED: true,
+      SEQ_NO: '2',
+      SHOW_IN_MENU: true
+    },
+    {
+      FORM_ID: 18,
+      ID: 18,
+      NAME: 'View Proposals',
+      PARENT_ID: 0,
+      LINK: '/proposals',
+      ICON: 'menu',
+      CREATED_MODIFIED_DATE: '2020-05-29 23:44:56',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: null,
+      IS_ALLOWED: 1,
+      SEQ_NO: 1,
+      SHOW_IN_MENU: 1
+    },
+    {
+      FORM_ID: 19,
+      ID: 19,
+      NAME: 'View Payments',
+      PARENT_ID: 0,
+      LINK: '/payments',
+      ICON: 'menu',
+      CREATED_MODIFIED_DATE: '2020-07-29 21:27:38',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: null,
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 20,
+      ID: 20,
+      NAME: 'Notifications',
+      PARENT_ID: 0,
+      LINK: '/notifications',
+      ICON: 'menu',
+      CREATED_MODIFIED_DATE: '2021-04-25 18:42:16',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: null,
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 21,
+      ID: 21,
+      NAME: 'Reports',
+      PARENT_ID: 0,
+      LINK: '#',
+      ICON: 'menu',
+      CREATED_MODIFIED_DATE: '2021-05-01 23:34:21',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: null,
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 22,
+      ID: 22,
+      NAME: 'Branch Wise Loantype Wise Counts',
+      PARENT_ID: 21,
+      LINK: '/loantypewiseloancount',
+      ICON: '',
+      CREATED_MODIFIED_DATE: '2021-05-01 23:35:16',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: 'Reports',
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 23,
+      ID: 23,
+      NAME: 'Branch Wise Loantype Wise Amounts',
+      PARENT_ID: 21,
+      LINK: '/loantypewiseloanamount',
+      ICON: '',
+      CREATED_MODIFIED_DATE: '2021-05-01 23:37:18',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: 'Reports',
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 24,
+      ID: 24,
+      NAME: 'Manage Gold Items',
+      PARENT_ID: 4,
+      LINK: '/golditems',
+      ICON: '',
+      CREATED_MODIFIED_DATE: '2021-10-27 10:58:12',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: 'Masters',
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 25,
+      ID: 25,
+      NAME: 'abc',
+      PARENT_ID: 16,
+      LINK: '/abc',
+      ICON: '',
+      CREATED_MODIFIED_DATE: '2022-09-26 11:34:29',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: 'Dashboard',
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 26,
+      ID: 26,
+      NAME: 'My List',
+      PARENT_ID: 0,
+      LINK: '/mylist',
+      ICON: 'menu',
+      CREATED_MODIFIED_DATE: '2022-11-05 17:21:23',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: null,
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 27,
+      ID: 27,
+      NAME: 'Pending List',
+      PARENT_ID: 0,
+      LINK: '/loanoff',
+      ICON: 'menu',
+      CREATED_MODIFIED_DATE: '2022-11-05 17:21:20',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: null,
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: 0
+    },
+    {
+      FORM_ID: 28,
+      ID: 28,
+      NAME: 'My List',
+      PARENT_ID: 0,
+      LINK: '/mylistforho',
+      ICON: 'menu',
+      CREATED_MODIFIED_DATE: '2022-11-08 22:30:38',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: null,
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: null
+    },
+    {
+      FORM_ID: 29,
+      ID: 29,
+      NAME: 'Assign Branch To HO 1',
+      PARENT_ID: 4,
+      LINK: '/assignbranchtoho',
+      ICON: '',
+      CREATED_MODIFIED_DATE: '2022-11-11 17:22:27',
+      READ_ONLY: 'N',
+      ARCHIVE_FLAG: 'F',
+      CLIENT_ID: 1,
+      PARENT_NAME: 'Masters',
+      IS_ALLOWED: 0,
+      SEQ_NO: 0,
+      SHOW_IN_MENU: null
+    }
+  ]
+}
+ROLE_ID 3
+roleDetailsItem :  {
+  FORM_ID: 1,
+  ID: 1,
+  NAME: 'Forms & Roles',
+  PARENT_ID: 0,
+  LINK: '#',
+  ICON: 'menu',
+  CREATED_MODIFIED_DATE: '2020-05-28 16:14:45',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: null,
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '1'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '20' 
+roleDetailsItem :  {
+  FORM_ID: 2,
+  ID: 2,
+  NAME: 'Manage Forms',
+  PARENT_ID: 1,
+  LINK: '/forms',
+  ICON: '',
+  CREATED_MODIFIED_DATE: '2020-05-28 15:53:38',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: 'Forms & Roles',
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '2'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '21' 
+roleDetailsItem :  {
+  FORM_ID: 3,
+  ID: 3,
+  NAME: 'Manage Roles',
+  PARENT_ID: 1,
+  LINK: '/roles',
+  ICON: '',
+  CREATED_MODIFIED_DATE: '2020-05-28 15:54:00',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: 'Forms & Roles',
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '3'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '22' 
+roleDetailsItem :  {
+  FORM_ID: 4,
+  ID: 4,
+  NAME: 'Masters',
+  PARENT_ID: 0,
+  LINK: '#',
+  ICON: 'menu',
+  CREATED_MODIFIED_DATE: '2020-05-28 16:14:32',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: null,
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '4'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '23' 
+roleDetailsItem :  {
+  FORM_ID: 5,
+  ID: 5,
+  NAME: 'Document Group Master',
+  PARENT_ID: 4,
+  LINK: '/documentgroups',
+  ICON: '',
+  CREATED_MODIFIED_DATE: '2020-05-28 15:54:55',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: 'Masters',
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '5'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '24' 
+roleDetailsItem :  {
+  FORM_ID: 6,
+  ID: 6,
+  NAME: 'Document Master',
+  PARENT_ID: 4,
+  LINK: '/documents',
+  ICON: '',
+  CREATED_MODIFIED_DATE: '2020-05-28 15:55:09',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: 'Masters',
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '6'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '25' 
+roleDetailsItem :  {
+  FORM_ID: 7,
+  ID: 7,
+  NAME: 'Manage Loan Types',
+  PARENT_ID: 4,
+  LINK: '/loantypes',
+  ICON: '',
+  CREATED_MODIFIED_DATE: '2020-05-28 15:55:43',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: 'Masters',
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '7'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '26' 
+roleDetailsItem :  {
+  FORM_ID: 8,
+  ID: 8,
+  NAME: 'Manage Applicant Types',
+  PARENT_ID: 4,
+  LINK: '/applicanttypes',
+  ICON: '',
+  CREATED_MODIFIED_DATE: '2020-05-28 15:56:10',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: 'Masters',
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '8'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '27' 
+roleDetailsItem :  {
+  FORM_ID: 9,
+  ID: 9,
+  NAME: 'Manage Branches',
+  PARENT_ID: 4,
+  LINK: '/branches',
+  ICON: '',
+  CREATED_MODIFIED_DATE: '2020-05-28 15:56:30',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: 'Masters',
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '9'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '28' 
+roleDetailsItem :  {
+  FORM_ID: 10,
+  ID: 10,
+  NAME: 'Manage Proposals Stage',
+  PARENT_ID: 4,
+  LINK: '/proposalstages',
+  ICON: '',
+  CREATED_MODIFIED_DATE: '2020-05-28 15:57:30',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: 'Masters',
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '10'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '29' 
+roleDetailsItem :  {
+  FORM_ID: 11,
+  ID: 11,
+  NAME: 'Manage Home Page Banners',
+  PARENT_ID: 4,
+  LINK: '/homepagebanners',
+  ICON: '',
+  CREATED_MODIFIED_DATE: '2020-05-28 16:06:47',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: 'Masters',
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '11'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '30' 
+roleDetailsItem :  {
+  FORM_ID: 12,
+  ID: 12,
+  NAME: 'Applicant Info',
+  PARENT_ID: 0,
+  LINK: '#',
+  ICON: 'menu',
+  CREATED_MODIFIED_DATE: '2020-05-28 16:16:57',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: null,
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '12'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '31' 
+roleDetailsItem :  {
+  FORM_ID: 13,
+  ID: 13,
+  NAME: 'View Applicants',
+  PARENT_ID: 0,
+  LINK: '/applicants',
+  ICON: 'menu',
+  CREATED_MODIFIED_DATE: '2020-05-29 18:38:07',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: null,
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '13'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '32' 
+roleDetailsItem :  {
+  FORM_ID: 14,
+  ID: 14,
+  NAME: 'Logs',
+  PARENT_ID: 0,
+  LINK: '#',
+  ICON: 'menu',
+  CREATED_MODIFIED_DATE: '2020-05-29 18:18:27',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: null,
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '14'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '33' 
+roleDetailsItem :  {
+  FORM_ID: 15,
+  ID: 15,
+  NAME: 'User Activity',
+  PARENT_ID: 0,
+  LINK: '/useractivitylogs',
+  ICON: 'menu',
+  CREATED_MODIFIED_DATE: '2020-05-29 18:38:01',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: null,
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '15'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '34' 
+roleDetailsItem :  {
+  FORM_ID: 16,
+  ID: 16,
+  NAME: 'Dashboard',
+  PARENT_ID: 0,
+  LINK: '/home',
+  ICON: 'dashboard',
+  CREATED_MODIFIED_DATE: '2021-04-29 09:33:39',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: null,
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '16'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '35' 
+roleDetailsItem :  {
+  FORM_ID: 17,
+  ID: 17,
+  NAME: 'Manage Users',
+  PARENT_ID: 0,
+  LINK: '/users',
+  ICON: 'user',
+  CREATED_MODIFIED_DATE: '2020-05-29 18:06:31',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: null,
+  IS_ALLOWED: true,
+  SEQ_NO: '2',
+  SHOW_IN_MENU: true
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '17'
+update role_details set SHOW_IN_MENU = true ,IS_ALLOWED ='1',SEQ_NO = '2' where  ID = '36' 
+roleDetailsItem :  {
+  FORM_ID: 18,
+  ID: 18,
+  NAME: 'View Proposals',
+  PARENT_ID: 0,
+  LINK: '/proposals',
+  ICON: 'menu',
+  CREATED_MODIFIED_DATE: '2020-05-29 23:44:56',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: null,
+  IS_ALLOWED: 1,
+  SEQ_NO: 1,
+  SHOW_IN_MENU: 1
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '18'
+update role_details set SHOW_IN_MENU = 1 ,IS_ALLOWED ='1',SEQ_NO = '1' where  ID = '37' 
+roleDetailsItem :  {
+  FORM_ID: 19,
+  ID: 19,
+  NAME: 'View Payments',
+  PARENT_ID: 0,
+  LINK: '/payments',
+  ICON: 'menu',
+  CREATED_MODIFIED_DATE: '2020-07-29 21:27:38',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: null,
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '19'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '38' 
+roleDetailsItem :  {
+  FORM_ID: 20,
+  ID: 20,
+  NAME: 'Notifications',
+  PARENT_ID: 0,
+  LINK: '/notifications',
+  ICON: 'menu',
+  CREATED_MODIFIED_DATE: '2021-04-25 18:42:16',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: null,
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
+select * from  view_role_details where ROLE_ID = '3' and FORM_ID = '20'
+update role_details set SHOW_IN_MENU = 0 ,IS_ALLOWED ='0',SEQ_NO = '0' where  ID = '129' 
+roleDetailsItem :  {
+  FORM_ID: 21,
+  ID: 21,
+  NAME: 'Reports',
+  PARENT_ID: 0,
+  LINK: '#',
+  ICON: 'menu',
+  CREATED_MODIFIED_DATE: '2021-05-01 23:34:21',
+  READ_ONLY: 'N',
+  ARCHIVE_FLAG: 'F',
+  CLIENT_ID: 1,
+  PARENT_NAME: null,
+  IS_ALLOWED: 0,
+  SEQ_NO: 0,
+  SHOW_IN_MENU: 0
+} 3
